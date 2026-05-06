@@ -1,0 +1,5 @@
+apiVersion: v2
+name: dclaw-cost
+description: Cloud cost optimization
+version: 0.1.0
+appVersion: 0.1.0
