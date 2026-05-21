@@ -46,6 +46,13 @@ class BaseRepository(Generic[T]):
         await self.db.delete(obj)
         await self.db.commit()
 
+    async def update(self, obj: T, data: dict) -> T:
+        for key, value in data.items():
+            setattr(obj, key, value)
+        await self.db.commit()
+        await self.db.refresh(obj)
+        return obj
+
     async def count(self) -> int:
         result = await self.db.execute(select(func.count()).select_from(self.model))
         return result.scalar() or 0

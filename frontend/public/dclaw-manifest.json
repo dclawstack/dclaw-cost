@@ -1,0 +1,47 @@
+{
+  "app_id": "cost",
+  "name": "DClaw Cost",
+  "description": "AI-powered cloud cost optimization and FinOps platform",
+  "version": "1.0.0",
+  "category": "FinOps",
+  "color": "#3B82F6",
+  "icon": "dollar-sign",
+  "tagline": "Cloud cost optimization",
+  "ports": {
+    "frontend": 3034,
+    "backend": 8034
+  },
+  "database": "dclaw_cost",
+  "health_endpoint": "/health/",
+  "api_base": "/api/v1",
+  "tags": ["finops", "cloud-cost", "optimization", "ai", "multi-cloud"],
+  "maturity": "tier2",
+  "routes": [
+    { "path": "/dashboard",       "label": "Dashboard",        "icon": "layout-dashboard" },
+    { "path": "/cloud-accounts",  "label": "Cloud Accounts",   "icon": "cloud" },
+    { "path": "/billing",         "label": "Billing",          "icon": "receipt" },
+    { "path": "/budgets",         "label": "Budgets & Alerts", "icon": "piggy-bank" },
+    { "path": "/recommendations", "label": "Recommendations",  "icon": "lightbulb" },
+    { "path": "/ri-planner",      "label": "RI Planner",       "icon": "landmark" },
+    { "path": "/waste",           "label": "Waste Detection",  "icon": "trash-2" },
+    { "path": "/cost-allocation", "label": "Cost Allocation",  "icon": "tag" },
+    { "path": "/container-costs", "label": "Container Costs",  "icon": "container" },
+    { "path": "/reports",         "label": "FinOps Reports",   "icon": "bar-chart-3" },
+    { "path": "/spot-strategy",   "label": "Spot Strategy",    "icon": "zap" },
+    { "path": "/saas",            "label": "SaaS Spend",       "icon": "shopping-cart" },
+    { "path": "/carbon",          "label": "Carbon & Green",   "icon": "leaf" },
+    { "path": "/copilot",         "label": "AI Copilot",       "icon": "bot" }
+  ],
+  "ai_copilot": {
+    "enabled": true,
+    "endpoint": "/api/v1/copilot/chat",
+    "history_endpoint": "/api/v1/copilot/history/{session_id}",
+    "model": "moonshotai/kimi-k2",
+    "provider": "openrouter"
+  },
+  "features": {
+    "p0": ["ai_cost_copilot", "multi_cloud_billing", "resource_right_sizing", "budget_alerts"],
+    "p1": ["reserved_instance_planner", "waste_detection", "cost_allocation", "container_cost_analysis"],
+    "p2": ["finops_reporting", "spot_instance_strategy", "saas_spend_management", "carbon_cost"]
+  }
+}
