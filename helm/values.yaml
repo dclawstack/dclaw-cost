@@ -36,3 +36,22 @@ autoscaling:
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
+postgresql:
+  enabled: true
+  instances: 2
+  version: "16"
+  database: dclaw_cost
+  username: dclaw_cost
+  storage:
+    size: 10Gi
+    storageClass: ""
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+    limits:
+      memory: 1Gi
+      cpu: 500m
+  monitoring:
+    enablePodMonitor: false

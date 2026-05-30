@@ -51,56 +51,106 @@ async def build_context(db: AsyncSession) -> str:
     return "\n".join(lines)
 
 
+async def _stream_openrouter(
+    messages: list[dict],
+) -> AsyncGenerator[str, None]:
+    async with httpx.AsyncClient(timeout=90.0) as client:
+        async with client.stream(
+            "POST",
+            "https://openrouter.ai/api/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {settings.openrouter_api_key}",
+                "HTTP-Referer": "https://dclaw.cost",
+                "X-Title": "DClaw Cost Copilot",
+            },
+            json={
+                "model": settings.openrouter_model,
+                "messages": messages,
+                "stream": True,
+            },
+        ) as response:
+            if response.status_code != 200:
+                body = await response.aread()
+                raise RuntimeError(f"OpenRouter {response.status_code}: {body.decode()[:200]}")
+
+            async for line in response.aiter_lines():
+                if not line.startswith("data: "):
+                    continue
+                chunk = line[6:].strip()
+                if chunk == "[DONE]":
+                    break
+                try:
+                    data = json.loads(chunk)
+                    content = data["choices"][0]["delta"].get("content", "")
+                    if content:
+                        yield content
+                except (json.JSONDecodeError, KeyError, IndexError):
+                    continue
+
+
+async def _stream_ollama(
+    messages: list[dict],
+) -> AsyncGenerator[str, None]:
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        async with client.stream(
+            "POST",
+            f"{settings.ollama_base_url}/api/chat",
+            json={
+                "model": settings.ollama_model,
+                "messages": messages,
+                "stream": True,
+            },
+        ) as response:
+            if response.status_code != 200:
+                body = await response.aread()
+                raise RuntimeError(f"Ollama {response.status_code}: {body.decode()[:200]}")
+
+            async for line in response.aiter_lines():
+                if not line:
+                    continue
+                try:
+                    data = json.loads(line)
+                    content = data.get("message", {}).get("content", "")
+                    if content:
+                        yield content
+                    if data.get("done"):
+                        break
+                except (json.JSONDecodeError, KeyError):
+                    continue
+
+
 async def stream_chat(
     message: str,
     context: str,
     history: list[dict],
 ) -> AsyncGenerator[str, None]:
-    if not settings.openrouter_api_key:
-        yield "OpenRouter API key is not configured. Set OPENROUTER_API_KEY in the backend .env file."
-        return
-
     messages = [
         {"role": "system", "content": _SYSTEM_PROMPT + "\n\n" + context},
         *history[-12:],  # keep last 12 turns for context window efficiency
         {"role": "user", "content": message},
     ]
 
+    # Use OpenRouter when key is available; fall back to local Ollama
+    use_openrouter = bool(settings.openrouter_api_key)
+
     try:
-        async with httpx.AsyncClient(timeout=90.0) as client:
-            async with client.stream(
-                "POST",
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {settings.openrouter_api_key}",
-                    "HTTP-Referer": "https://dclaw.cost",
-                    "X-Title": "DClaw Cost Copilot",
-                },
-                json={
-                    "model": settings.openrouter_model,
-                    "messages": messages,
-                    "stream": True,
-                },
-            ) as response:
-                if response.status_code != 200:
-                    body = await response.aread()
-                    yield f"LLM error {response.status_code}: {body.decode()[:200]}"
-                    return
-
-                async for line in response.aiter_lines():
-                    if not line.startswith("data: "):
-                        continue
-                    chunk = line[6:].strip()
-                    if chunk == "[DONE]":
-                        break
-                    try:
-                        data = json.loads(chunk)
-                        content = data["choices"][0]["delta"].get("content", "")
-                        if content:
-                            yield content
-                    except (json.JSONDecodeError, KeyError, IndexError):
-                        continue
-
+        if use_openrouter:
+            async for token in _stream_openrouter(messages):
+                yield token
+        else:
+            async for token in _stream_ollama(messages):
+                yield token
+    except httpx.ConnectError:
+        if use_openrouter:
+            # OpenRouter unreachable — try Ollama
+            try:
+                yield "[OpenRouter unavailable — switching to local Ollama]\n\n"
+                async for token in _stream_ollama(messages):
+                    yield token
+            except Exception as exc:
+                yield f"\n\n[Both OpenRouter and Ollama unavailable: {exc}]"
+        else:
+            yield "\n\n[Ollama is not running. Start it with: ollama serve]"
     except httpx.TimeoutException:
         yield "\n\n[Copilot timed out — try a shorter question or check your network.]"
     except Exception as exc:

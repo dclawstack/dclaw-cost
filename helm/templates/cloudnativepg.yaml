@@ -1,0 +1,30 @@
+{{- if .Values.postgresql.enabled -}}
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: {{ include "dclaw-app.fullname" . }}-pg
+  labels:
+    app: {{ include "dclaw-app.name" . }}
+spec:
+  instances: {{ .Values.postgresql.instances }}
+  imageName: ghcr.io/cloudnative-pg/postgresql:{{ .Values.postgresql.version }}
+
+  bootstrap:
+    initdb:
+      database: {{ .Values.postgresql.database }}
+      owner: {{ .Values.postgresql.username }}
+      secret:
+        name: {{ include "dclaw-app.fullname" . }}-pg-credentials
+
+  storage:
+    size: {{ .Values.postgresql.storage.size }}
+    {{- if .Values.postgresql.storage.storageClass }}
+    storageClass: {{ .Values.postgresql.storage.storageClass }}
+    {{- end }}
+
+  resources:
+    {{- toYaml .Values.postgresql.resources | nindent 4 }}
+
+  monitoring:
+    enablePodMonitor: {{ .Values.postgresql.monitoring.enablePodMonitor }}
+{{- end }}

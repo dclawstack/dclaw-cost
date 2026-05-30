@@ -1,0 +1,62 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [Build Backend, Build Frontend]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Target environment
+        required: true
+        default: staging
+        type: choice
+        options: [staging, production]
+      image_tag:
+        description: Image tag to deploy (defaults to latest)
+        required: false
+        default: latest
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    environment: ${{ github.event.inputs.environment || 'staging' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v3
+        with:
+          version: v3.14.0
+
+      - name: Configure kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG }}" | base64 -d > ~/.kube/config
+
+      - name: Determine image tag
+        id: tag
+        run: |
+          TAG="${{ github.event.inputs.image_tag || 'latest' }}"
+          if [ "$TAG" = "latest" ] && [ "${{ github.event_name }}" = "workflow_run" ]; then
+            TAG="sha-$(echo ${{ github.event.workflow_run.head_sha }} | cut -c1-7)"
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Helm upgrade
+        run: |
+          helm upgrade --install dclaw-cost ./helm \
+            --namespace dclaw \
+            --create-namespace \
+            --set image.backend.tag=${{ steps.tag.outputs.tag }} \
+            --set image.frontend.tag=${{ steps.tag.outputs.tag }} \
+            --set ingress.enabled=true \
+            --values helm/values.${{ github.event.inputs.environment || 'staging' }}.yaml \
+            --wait \
+            --timeout 5m

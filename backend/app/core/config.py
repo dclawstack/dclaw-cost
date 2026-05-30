@@ -18,6 +18,9 @@ class Settings(BaseSettings):
     openrouter_api_key: str = ""
     openrouter_model: str = "moonshotai/kimi-k2"
 
+    ollama_base_url: str = "http://localhost:11434"
+    ollama_model: str = "llama3.2"
+
 
 @lru_cache()
 def get_settings() -> Settings:
