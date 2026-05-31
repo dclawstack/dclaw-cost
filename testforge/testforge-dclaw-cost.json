@@ -1,0 +1,320 @@
+{
+  "repo": "/work/project/dclaw-cost",
+  "branch": "local",
+  "analyzedAt": "2026-05-31T13:05:21.932Z",
+  "codebase": {
+    "totalFiles": 7807,
+    "totalLines": 1107381,
+    "endpoints": 136,
+    "techStack": [
+      "FastAPI",
+      "SQLAlchemy",
+      "Pydantic",
+      "Alembic",
+      "pytest",
+      "HTTP client (httpx/requests)",
+      "PostgreSQL",
+      "Uvicorn/Gunicorn"
+    ],
+    "dependencies": 10,
+    "languageCoverage": {
+      "nativelyAnalyzedFiles": 6068,
+      "unsupportedFiles": 1,
+      "coveragePercent": 100,
+      "unsupportedLanguages": [
+        {
+          "language": "PHP",
+          "files": 1
+        }
+      ],
+      "skippedLargeFiles": 38,
+      "analysisTruncated": true
+    }
+  },
+  "security": {
+    "findings": 933,
+    "critical": 540,
+    "high": 386,
+    "medium": 1,
+    "low": 3,
+    "items": [
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 221,
+        "column": 17,
+        "codeSnippet": "return write('[' + objType + ']');"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 245,
+        "column": 8,
+        "codeSnippet": "write('object:' + keys.length + ':');"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 262,
+        "column": 6,
+        "codeSnippet": "write('array:' + arr.length + ':');"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 293,
+        "column": 13,
+        "codeSnippet": "return write('date:' + date.toJSON());"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 296,
+        "column": 13,
+        "codeSnippet": "return write('symbol:' + sym.toString());"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 299,
+        "column": 13,
+        "codeSnippet": "return write('error:' + err.toString());"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 302,
+        "column": 13,
+        "codeSnippet": "return write('bool:' + bool.toString());"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 305,
+        "column": 6,
+        "codeSnippet": "write('string:' + string.length + ':');"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 328,
+        "column": 13,
+        "codeSnippet": "return write('number:' + number.toString());"
+      },
+      {
+        "severity": "high",
+        "confidence": "low",
+        "title": "XSS via `write()` helper",
+        "description": "`write(...)` passes its argument into a xss sink inside the helper. The argument here is built from variables.",
+        "fixSuggestion": "Either sanitize the argument before passing it to `write`, or rewrite `write` to use the safe alternative (parameterized queries, escape, etc.) internally.",
+        "category": "XSS",
+        "filePath": "web/node_modules/object-hash/index.js",
+        "lineNumber": 331,
+        "column": 13,
+        "codeSnippet": "return write('xml:' + xml.toString());"
+      }
+    ]
+  },
+  "unit": {
+    "coverage": 67,
+    "testFiles": 54,
+    "totalTests": 275,
+    "frameworks": [
+      "pytest"
+    ],
+    "findings": 3
+  },
+  "load": {
+    "maxUsers": 1000,
+    "rateLimiting": false,
+    "caching": false,
+    "recommendations": [
+      "Install rate limiting on all API endpoints immediately",
+      "Add Redis caching for frequently accessed data",
+      "Configure database connection pooling",
+      "Enable gzip/brotli compression for API responses",
+      "Set up a /health endpoint with dependency checks",
+      "Configure request timeouts (server + external calls)",
+      "Add request logging with correlation IDs for debugging"
+    ]
+  },
+  "accessibility": {
+    "score": 38,
+    "issues": 158,
+    "applicable": true,
+    "totalHtmlFiles": 57
+  },
+  "vision": {
+    "score": 81,
+    "summary": "Product-engineering vision signals look strong: observability + analytics + feature flags wired up.",
+    "findings": [
+      {
+        "severity": "high",
+        "title": "No observability stack detected",
+        "description": "No APM (OpenTelemetry/Datadog/NewRelic/Honeycomb) and no error tracking (Sentry/Rollbar/Bugsnag) dep detected. Without these, you can't correlate user-impacting issues with code changes.",
+        "category": "Observability",
+        "fixSuggestion": "Start with Sentry — fastest path to crash/error visibility. Add OpenTelemetry if you need full tracing. Wire up alerts to a notification channel humans actually read."
+      },
+      {
+        "severity": "medium",
+        "title": "No feature-flag platform",
+        "description": "Feature flags decouple deploy from release: kill-switch on regressions, staged rollouts to a % of users, A/B test cohorts. Releases without them are all-or-nothing.",
+        "category": "Delivery Velocity",
+        "fixSuggestion": "For early-stage: Posthog (free tier, JS-SDK-only). For larger teams: LaunchDarkly / Statsig. Even a homegrown flags table beats no kill-switch."
+      },
+      {
+        "severity": "high",
+        "title": "No product analytics dependency",
+        "description": "No Posthog / Mixpanel / Amplitude / Segment / Heap / Plausible / Fathom dep detected. Without telemetry on feature adoption + user journeys, you can't close the loop between code shipped and value delivered.",
+        "category": "Product Intelligence",
+        "fixSuggestion": "PostHog (open source, generous free tier) is the lowest-friction start. Track 3-5 key events: signup, activation, first-value-moment, retention, churn signal."
+      }
+    ]
+  },
+  "scope": {
+    "coverage": 250,
+    "documentedFeatures": 4,
+    "implementedFeatures": 10,
+    "missingFeatures": []
+  },
+  "stack": {
+    "score": 47,
+    "strengths": [],
+    "weaknesses": [
+      "No testing framework — cannot verify code correctness",
+      "No ORM — direct DB access is error-prone"
+    ],
+    "recommendations": [
+      "Add a testing framework immediately",
+      "Consider TypeScript migration",
+      "Review dependencies monthly for security updates",
+      "Ensure database backups are automated",
+      "Add a runtime validation library at the request boundary"
+    ]
+  },
+  "contract": {
+    "score": 98,
+    "totalEndpoints": 136
+  },
+  "visualRegression": {
+    "score": 95,
+    "htmlFiles": 57,
+    "cssFiles": 0
+  },
+  "edgeCases": {
+    "score": 65,
+    "potentialCases": 133
+  },
+  "propertyBased": {
+    "score": 50,
+    "invariantsDetected": 197
+  },
+  "chaos": {
+    "score": 100,
+    "resilienceLevel": "High — application has graceful shutdown, error handler, and retry/timeout patterns.",
+    "findings": []
+  },
+  "mutation": {
+    "score": 32,
+    "estimatedMutationScore": 32,
+    "totalMutants": 34494,
+    "killedMutants": 11038
+  },
+  "predictive": {
+    "score": 93,
+    "riskLevel": "Medium — 2 file(s) carry measurable risk; web/src/app/page.tsx is the hottest.",
+    "predictedFailures": 2
+  },
+  "supplyChain": {
+    "score": 100,
+    "knownVulnerable": 0
+  },
+  "nPlusOne": {
+    "score": 71,
+    "potentialNPlusOne": 2
+  },
+  "deadCode": {
+    "score": 98,
+    "unusedDeps": []
+  },
+  "license": {
+    "score": 89
+  },
+  "dora": {
+    "score": 25,
+    "deploymentFreq": "Capability: Good — CI + automated deploy",
+    "leadTime": "Capability: Partial — CI exists but no test framework detected",
+    "mttr": "Capability: Weak — no observability or structured logging detected",
+    "changeFailRate": "Capability: Weak — no test framework detected"
+  },
+  "owasp": {
+    "coverage": 80,
+    "missingCategories": [
+      "A08:2021 — Software and Data Integrity Failures",
+      "A10:2021 — Server-Side Request Forgery"
+    ]
+  },
+  "agentic": {
+    "score": 91,
+    "resilienceLevel": "Agent-Ready — Your API can handle 2000+ concurrent AI agents",
+    "maxPredictedAgents": 100,
+    "predictedBottleneck": "Database connection pool",
+    "failurePatterns": [
+      "Auth endpoint saturation: agents refreshing tokens every request = 2x load amplification"
+    ],
+    "findings": [
+      {
+        "severity": "high",
+        "title": "Auth Endpoints Not Rate Limited",
+        "description": "AI agents frequently re-authenticate (token refresh, retry on 401). Without auth rate limiting, agents can brute-force or DoS your auth system.",
+        "fixSuggestion": "Rate limit auth endpoints separately: 5 attempts/min per IP. Add account locking after 10 failures. Monitor for unusual auth patterns.",
+        "category": "Agentic Scale"
+      }
+    ]
+  }
+}

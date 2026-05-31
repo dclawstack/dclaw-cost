@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>DClaw Cost — Infographic · One Convergence × DKube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ── OC Design Tokens ─────────────────────────── */
+:root {
+  /* Purple identity — DClaw Cost */
+  --p25:   #FAF6FD;
+  --p50:   #F5EEFB;
+  --p100:  #E7D8F4;
+  --p300:  #B180F8;
+  --p500:  #7030A0;
+  --p700:  #4A1F6C;
+  --p900:  #2B0E45;
+  --dk:    #6E55A4;
+  --dl:    #9783C0;
+  --dfl:   #D5D5D5;
+  --ink:   #141414;
+  --ink2:  #2A2A2A;
+  --ink3:  #5A5A5A;
+  --ink4:  #8A8A8A;
+  --rule:  #E5E5E5;
+  --paper: #FFFFFF;
+  --cool:  #F6F5F7;
+  --warm:  #FAF8F4;
+  --ok:    #10B981;
+  --warn:  #F59E0B;
+  --err:   #EF4444;
+  --display: "Manrope", "Inter", sans-serif;
+  --sans:    "Inter", sans-serif;
+  --mono:    "JetBrains Mono", monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+@page { size: 1200px 6400px; margin: 0; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  width: 1200px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sec { width: 1200px; padding: 0 64px; }
+.sec-inner { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+.sec-inner.no-border { border-bottom: none; }
+
+.ey {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink4);
+  margin-bottom: 10px;
+}
+.ey.blue  { color: var(--p500); }
+.ey.light { color: rgba(255,255,255,0.5); }
+
+h1 { font-family: var(--display); font-size: 80px; font-weight: 800; line-height: 0.9; letter-spacing: -0.05em; }
+h2 { font-family: var(--display); font-size: 40px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+h3 { font-family: var(--sans); font-size: 22px; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+h4 { font-family: var(--sans); font-size: 15px; font-weight: 600; line-height: 1.3; }
+p  { font-family: var(--sans); font-size: 14px; line-height: 1.65; color: var(--ink3); }
+
+.stat-num {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--p500);
+}
+.stat-num.white { color: var(--paper); }
+.stat-num.ink   { color: var(--ink); }
+.stat-lbl {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink4);
+  margin-top: 4px;
+}
+.stat-lbl.light { color: rgba(255,255,255,0.45); }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--p50);
+  color: var(--p700);
+  border: 1px solid var(--p100);
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--sans);
+  padding: 3px 9px;
+  border-radius: 2px;
+}
+.tag.dark    { background: rgba(177,128,248,.1); color: var(--p300); border-color: rgba(177,128,248,.25); }
+.tag.ok      { background: #ECFDF5; color: var(--ok); border-color: #A7F3D0; }
+.tag.warn    { background: #FFFBEB; color: var(--warn); border-color: #FDE68A; }
+.tag.err     { background: #FEF2F2; color: var(--err); border-color: #FECACA; }
+.tag.ink     { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tag.neutral { background: var(--cool); color: var(--ink3); border-color: var(--rule); }
+
+hr { border: none; border-top: 1px solid var(--rule); }
+hr.light { border-top: 1px solid rgba(255,255,255,0.12); }
+
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.row { display: flex; align-items: flex-start; gap: 40px; }
+
+.cell {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 20px 22px;
+  background: var(--paper);
+}
+.cell.blue-bg  { background: var(--p25); border-color: var(--p100); }
+.cell.dark     { border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); }
+
+.bar-track { height: 6px; background: var(--rule); border-radius: 0; margin-top: 6px; }
+.bar-fill  { height: 6px; background: var(--p500); }
+
+.accent { border-left: 3px solid var(--p500); padding-left: 14px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink4);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--ink);
+}
+tbody td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+.mono { font-family: var(--mono); }
+
+.feat-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--p50);
+  border: 1px solid var(--p100);
+  border-radius: 2px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.div-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.div-label::before, .div-label::after { content: ''; flex: 1; border-top: 1px solid var(--rule); }
+
+.seg-bar { display: flex; height: 10px; border-radius: 0; overflow: hidden; gap: 2px; margin: 10px 0 6px; }
+.seg { height: 10px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 0; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════════════ -->
+<div style="background:var(--ink);width:1200px;padding:0 64px;">
+  <div style="padding:56px 0 40px;">
+
+    <!-- Top bar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1);">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/>
+          <polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/>
+          <polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/>
+        </svg>
+        <div>
+          <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.4);margin-bottom:2px;">One Convergence · DKube</div>
+          <div style="font-family:var(--display);font-size:14px;font-weight:700;color:rgba(255,255,255,0.9);letter-spacing:-0.01em;">Product Intelligence Report</div>
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;">MAY 2026 · v1.4 · CONFIDENTIAL</div>
+    </div>
+
+    <!-- Hero text -->
+    <div style="display:flex;align-items:flex-end;gap:60px;">
+      <div style="flex:1;">
+        <div class="ey light" style="margin-bottom:16px;">Cloud cost optimization · FinOps platform</div>
+        <h1 style="color:var(--paper);margin-bottom:8px;">DClaw<br/>Cost</h1>
+        <div style="width:56px;height:2px;background:var(--p300);margin:24px 0;"></div>
+        <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.65);max-width:480px;">
+          AI-powered cloud cost intelligence for platform engineers and FinOps teams.
+          Unified billing, proactive waste detection, and a copilot that knows your
+          cloud spend as well as you do.
+        </p>
+      </div>
+
+      <!-- Hero stats -->
+      <div style="flex:0 0 340px;display:flex;flex-direction:column;gap:1px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);">
+          <div style="background:var(--p500);padding:24px 20px;">
+            <div class="stat-num white" style="font-size:48px;">136</div>
+            <div class="stat-lbl light">API endpoints</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:24px 20px;">
+            <div class="stat-num" style="font-size:48px;color:var(--p300);">13</div>
+            <div class="stat-lbl light">Domain entities</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:24px 20px;">
+            <div class="stat-num" style="font-size:48px;color:var(--p300);">8</div>
+            <div class="stat-lbl light">AI features</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);padding:24px 20px;">
+            <div class="stat-num" style="font-size:48px;color:var(--p300);">275</div>
+            <div class="stat-lbl light">Test cases</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tag row -->
+    <div style="display:flex;gap:8px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;">
+      <span class="tag dark">FastAPI · Python 3.11</span>
+      <span class="tag dark">Next.js 14 App Router</span>
+      <span class="tag dark">PostgreSQL 16</span>
+      <span class="tag dark">Docker · Kubernetes · Helm</span>
+      <span class="tag dark">OpenRouter · Ollama</span>
+      <span class="tag dark">Tailwind CSS · SQLAlchemy 2.0</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 2 — WHAT IS DCLAW COST
+══════════════════════════════════════════════ -->
+<div class="sec" style="background:var(--warm);">
+  <div class="sec-inner">
+    <div class="row" style="gap:56px;align-items:center;">
+      <div style="flex:0 0 420px;">
+        <div class="ey blue">The platform</div>
+        <h2 style="margin-bottom:16px;">One platform.<br/>All your cloud spend.</h2>
+        <p style="margin-bottom:20px;">
+          DClaw Cost is a full-stack FinOps platform that unifies billing across every
+          cloud provider, surfaces waste before it compounds, and delivers AI-driven
+          savings recommendations at the moment engineers can act on them.
+        </p>
+        <p>
+          Built on the One Convergence design system and DKube's private AI
+          infrastructure philosophy — your cost data stays in your infrastructure,
+          full control, no vendor lock-in on the intelligence layer.
+        </p>
+      </div>
+      <!-- Problem stats -->
+      <div style="flex:1;">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div class="cell blue-bg">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div class="feat-icon">💸</div>
+              <div>
+                <h4 style="margin-bottom:4px;">$26B wasted annually</h4>
+                <p style="font-size:13px;">Cloud waste — idle instances, orphaned volumes, over-provisioned resources — most teams discover it months late.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell blue-bg">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div class="feat-icon">📊</div>
+              <div>
+                <h4 style="margin-bottom:4px;">4 billing dashboards, 0 unified view</h4>
+                <p style="font-size:13px;">AWS Console · GCP Billing · Azure Cost Management · SaaS tools. No single source of truth, no cross-cloud comparison.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cell blue-bg">
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div class="feat-icon">⏱️</div>
+              <div>
+                <h4 style="margin-bottom:4px;">Reactive by design</h4>
+                <p style="font-size:13px;">Budget alerts fire when the month is already over. FinOps teams spend hours on what AI can surface in seconds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 3 — FEATURE MAP
+══════════════════════════════════════════════ -->
+<div class="sec">
+  <div class="sec-inner">
+    <div class="ey blue">Feature coverage</div>
+    <h2 style="margin-bottom:8px;">13 features. 4 cloud providers. One interface.</h2>
+    <p style="margin-bottom:40px;max-width:600px;">Every FinOps discipline — from unified billing to carbon reporting — shipped and integrated.</p>
+
+    <!-- P0 -->
+    <div class="div-label" style="margin-bottom:20px;">P0 · Foundation</div>
+    <div class="g4" style="margin-bottom:32px;">
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🤖</div>
+        <h4 style="margin-bottom:6px;">AI Cost Copilot</h4>
+        <p style="font-size:12px;">Streaming chat on every page. Context-aware: live spend, alerts, top drivers. OpenRouter → Ollama fallback.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">☁️</div>
+        <h4 style="margin-bottom:6px;">Multi-Cloud Billing</h4>
+        <p style="font-size:12px;">Unified cost explorer across AWS, GCP, Azure, and on-prem. Filter by service, region, and tag.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">📐</div>
+        <h4 style="margin-bottom:6px;">Resource Right-Sizing</h4>
+        <p style="font-size:12px;">AI-generated recommendations with confidence scoring. Right-size, delete, schedule, or spot.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🔔</div>
+        <h4 style="margin-bottom:6px;">Budget Alerts</h4>
+        <p style="font-size:12px;">Threshold + forecast + anomaly detection. 7-day-ahead spend prediction per budget.</p>
+      </div>
+    </div>
+
+    <!-- P1 -->
+    <div class="div-label" style="margin-bottom:20px;">P1 · Platform</div>
+    <div class="g4" style="margin-bottom:32px;">
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">📅</div>
+        <h4 style="margin-bottom:6px;">RI Planner</h4>
+        <p style="font-size:12px;">90-day analysis. 6 commitment variants (1yr/3yr × upfront). Break-even and annual savings modeling.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🗑️</div>
+        <h4 style="margin-bottom:6px;">Waste Detection</h4>
+        <p style="font-size:12px;">5-type scanner: idle, orphaned, unused IPs, unattached volumes, old snapshots. On-demand deep scan.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🏷️</div>
+        <h4 style="margin-bottom:6px;">Cost Allocation</h4>
+        <p style="font-size:12px;">Tag → team/project rules. Showback + chargeback reports. Unallocated spend tracking.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🐳</div>
+        <h4 style="margin-bottom:6px;">Container Costs</h4>
+        <p style="font-size:12px;">Per-namespace and per-pod cost breakdown for Kubernetes workloads. CPU + memory cost attribution.</p>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="div-label" style="margin-bottom:20px;">P2 · Scale</div>
+    <div class="g4">
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">📈</div>
+        <h4 style="margin-bottom:6px;">FinOps Reports</h4>
+        <p style="font-size:12px;">12-month spend trend. 6 unit economics metrics. AI-generated executive insights.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">⚡</div>
+        <h4 style="margin-bottom:6px;">Spot Strategy</h4>
+        <p style="font-size:12px;">Workload classifier (batch/stateless/stateful). Interruption risk scoring. 70% discount modeling.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">💼</div>
+        <h4 style="margin-bottom:6px;">SaaS Spend</h4>
+        <p style="font-size:12px;">Subscription CRUD. Renewal alerts. Cost-per-seat analysis. Category breakdown.</p>
+      </div>
+      <div class="cell">
+        <div class="feat-icon" style="margin-bottom:12px;">🌿</div>
+        <h4 style="margin-bottom:6px;">Carbon Footprint</h4>
+        <p style="font-size:12px;">19-region carbon intensity table. CO₂ by service and region. Green migration suggestions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 4 — AI COPILOT
+══════════════════════════════════════════════ -->
+<div class="sec" style="background:var(--ink);">
+  <div class="sec-inner no-border">
+    <div class="ey light" style="margin-bottom:8px;">AI · Copilot architecture</div>
+    <h2 style="color:var(--paper);margin-bottom:32px;">A copilot that knows your numbers<br/>before you ask.</h2>
+
+    <div class="row" style="align-items:flex-start;gap:48px;">
+
+      <!-- Left — context assembly -->
+      <div style="flex:1;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:16px;">Context assembly (parallel DB queries)</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div class="cell dark" style="display:flex;align-items:center;gap:12px;">
+            <div style="font-family:var(--mono);font-size:11px;color:var(--p300);width:24px;">01</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--paper);">Monthly spend to date</div>
+              <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);">billing_repo.total_spend(first_of_month, today)</div>
+            </div>
+          </div>
+          <div class="cell dark" style="display:flex;align-items:center;gap:12px;">
+            <div style="font-family:var(--mono);font-size:11px;color:var(--p300);width:24px;">02</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--paper);">Unacknowledged alerts</div>
+              <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);">alert_repo.count_unacknowledged()</div>
+            </div>
+          </div>
+          <div class="cell dark" style="display:flex;align-items:center;gap:12px;">
+            <div style="font-family:var(--mono);font-size:11px;color:var(--p300);width:24px;">03</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--paper);">Open savings opportunities</div>
+              <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);">recommendation_repo.total_savings()</div>
+            </div>
+          </div>
+          <div class="cell dark" style="display:flex;align-items:center;gap:12px;">
+            <div style="font-family:var(--mono);font-size:11px;color:var(--p300);width:24px;">04</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:var(--paper);">Top 5 cost drivers</div>
+              <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.35);">billing_repo.spend_by_service(first, limit=5)</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px;background:rgba(112,48,160,0.12);border:1px solid rgba(177,128,248,0.2);border-radius:2px;">
+          <div style="font-family:var(--mono);font-size:10px;color:var(--p300);">All 4 queries run via asyncio.gather() — single round-trip latency</div>
+        </div>
+      </div>
+
+      <!-- Right — streaming flow -->
+      <div style="flex:1;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:16px;">Streaming delivery (SSE)</div>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:20px;">
+          <pre style="font-family:var(--mono);font-size:12px;color:rgba(255,255,255,0.75);line-height:1.8;">POST /api/v1/copilot/chat
+  → persist user CopilotMessage
+  → build_context()  ← parallel queries
+  → stream_chat(msg, context, history[-12:])
+
+  OpenRouter (kimi-k2 / claude-*)
+  ↓ stream: true
+  data: {"content": "Your EC2..."}\n\n
+  data: {"content": " costs..."}\n\n
+  data: [DONE]\n\n
+
+  → persist assistant reply (fresh session)</pre>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:10px;">Fallback chain</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;">
+            <span style="background:var(--p500);color:var(--paper);padding:4px 10px;border-radius:2px;font-weight:600;">OpenRouter</span>
+            <span style="color:rgba(255,255,255,0.3);">ConnectError →</span>
+            <span style="background:rgba(255,255,255,0.1);color:var(--paper);padding:4px 10px;border-radius:2px;font-weight:600;">Ollama</span>
+            <span style="color:rgba(255,255,255,0.3);">→</span>
+            <span style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);padding:4px 10px;border-radius:2px;">error msg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 5 — TECHNICAL ARCHITECTURE
+══════════════════════════════════════════════ -->
+<div class="sec">
+  <div class="sec-inner">
+    <div class="ey blue">Architecture</div>
+    <h2 style="margin-bottom:32px;">Production-grade. Nothing exotic.</h2>
+
+    <div class="row" style="gap:48px;align-items:flex-start;">
+
+      <!-- Architecture stack diagram -->
+      <div style="flex:1;">
+        <div style="border:1px solid var(--rule);border-radius:2px;overflow:hidden;">
+          <!-- Layer: Frontend -->
+          <div style="background:var(--p25);padding:16px 20px;border-bottom:1px solid var(--p100);">
+            <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--p500);margin-bottom:8px;">Frontend · Next.js 14 App Router · Port 3036</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Landing /</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Billing</span>
+              <span class="tag">Budgets</span>
+              <span class="tag">Recommendations</span>
+              <span class="tag">Copilot</span>
+              <span class="tag">RI Planner</span>
+              <span class="tag">Cost Allocation</span>
+              <span class="tag">Container Costs</span>
+              <span class="tag">Reports</span>
+              <span class="tag">Spot Strategy</span>
+              <span class="tag">SaaS</span>
+              <span class="tag">Carbon</span>
+              <span class="tag">+2 more</span>
+            </div>
+          </div>
+          <!-- Arrow -->
+          <div style="text-align:center;padding:8px;font-family:var(--mono);font-size:10px;color:var(--ink4);background:var(--cool);">↓ Server-side API proxy (BACKEND_URL — never exposed to browser)</div>
+          <!-- Layer: Backend -->
+          <div style="background:var(--paper);padding:16px 20px;border-bottom:1px solid var(--rule);">
+            <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink4);margin-bottom:10px;">Backend · FastAPI · Port 8122</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div>
+                <div style="font-size:11px;font-weight:600;margin-bottom:6px;color:var(--ink2);">17 Route Modules · 136 Endpoints</div>
+                <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);line-height:1.7;">/health · /cloud-accounts · /billing-records<br/>/budgets · /cost-alerts · /recommendations<br/>/waste-items · /dashboard · /copilot<br/>/ri-plans · /waste-scan · /cost-allocation<br/>/container-costs · /reports · /spot-strategy<br/>/saas · /carbon</div>
+              </div>
+              <div>
+                <div style="font-size:11px;font-weight:600;margin-bottom:6px;color:var(--ink2);">Services Layer</div>
+                <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);line-height:1.7;">copilot_service.py<br/>alert_service.py<br/>analyzer_service.py<br/>waste_scanner_service.py<br/>ri_planner_service.py<br/>cost_allocation_service.py<br/>spot_strategy_service.py<br/>carbon_service.py</div>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow -->
+          <div style="text-align:center;padding:8px;font-family:var(--mono);font-size:10px;color:var(--ink4);background:var(--cool);">↓ SQLAlchemy 2.0 async · asyncpg</div>
+          <!-- Layer: Data -->
+          <div style="background:var(--paper);padding:16px 20px;border-bottom:1px solid var(--rule);">
+            <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink4);margin-bottom:10px;">Data · PostgreSQL 16 · dclaw_cost</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag neutral">cloud_accounts</span><span class="tag neutral">billing_records</span><span class="tag neutral">budgets</span><span class="tag neutral">cost_alerts</span><span class="tag neutral">resource_recommendations</span><span class="tag neutral">waste_items</span><span class="tag neutral">copilot_messages</span><span class="tag neutral">ri_plans</span><span class="tag neutral">tag_allocations</span><span class="tag neutral">container_costs</span><span class="tag neutral">saas_subscriptions</span><span class="tag neutral">spot_strategies</span><span class="tag neutral">carbon_records</span>
+            </div>
+          </div>
+          <!-- Arrow -->
+          <div style="text-align:center;padding:8px;font-family:var(--mono);font-size:10px;color:var(--ink4);background:var(--cool);">↓ httpx.AsyncClient · streaming</div>
+          <!-- Layer: AI -->
+          <div style="background:var(--p25);padding:16px 20px;">
+            <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--p500);margin-bottom:8px;">AI Providers</div>
+            <div style="display:flex;gap:12px;">
+              <div style="flex:1;padding:12px;background:var(--paper);border:1px solid var(--p100);border-radius:2px;">
+                <div style="font-weight:600;font-size:13px;margin-bottom:4px;">OpenRouter</div>
+                <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);">kimi-k2 · claude-sonnet-4-6<br/>Primary provider · streaming</div>
+              </div>
+              <div style="flex:1;padding:12px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;">
+                <div style="font-weight:600;font-size:13px;margin-bottom:4px;">Ollama</div>
+                <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);">llama3.2 · localhost:11434<br/>Local fallback</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: K8s + CI -->
+      <div style="flex:0 0 340px;display:flex;flex-direction:column;gap:20px;">
+        <div class="cell blue-bg">
+          <h4 style="margin-bottom:12px;">Deployment</h4>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--ink3);">Docker Compose</span><span class="tag ok">Local</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--ink3);">Helm Chart</span><span class="tag ok">K8s</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--ink3);">CloudNativePG</span><span class="tag ok">Postgres</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--ink3);">GHCR images</span><span class="tag ok">CI/CD</span></div>
+          </div>
+        </div>
+        <div class="cell">
+          <h4 style="margin-bottom:12px;">CI/CD Workflows</h4>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;font-family:var(--mono);color:var(--ink3);">
+            <div>ci.yml — pytest + frontend build</div>
+            <div>build-backend.yml — Docker → GHCR</div>
+            <div>build-frontend.yml — Docker → GHCR</div>
+            <div>deploy.yml — Helm upgrade</div>
+            <div>claude.yml — AI code review</div>
+          </div>
+        </div>
+        <div class="cell">
+          <h4 style="margin-bottom:12px;">Test Coverage</h4>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span style="color:var(--ink3);">Function coverage</span><span style="font-weight:600;">67%</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:67%;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span style="color:var(--ink3);">Test files</span><span style="font-weight:600;">15</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:75%;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span style="color:var(--ink3);">Test cases</span><span style="font-weight:600;">275</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:60%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 6 — API SURFACE
+══════════════════════════════════════════════ -->
+<div class="sec" style="background:var(--warm);">
+  <div class="sec-inner">
+    <div class="ey blue">API surface</div>
+    <h2 style="margin-bottom:8px;">136 endpoints. 17 route groups.</h2>
+    <p style="margin-bottom:32px;max-width:600px;">Every FinOps workflow is available as a first-class REST API. Interactive docs at <span style="font-family:var(--mono);font-size:12px;">http://localhost:8122/docs</span></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Route Group</th>
+          <th>Methods</th>
+          <th>Purpose</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="mono">/health</td><td>GET</td><td>Health check</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/cloud-accounts</td><td>CRUD</td><td>Multi-cloud account management</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/billing-records</td><td>GET, POST ingest</td><td>Cost data ingest + explorer</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/budgets</td><td>CRUD</td><td>Budget management</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/cost-alerts</td><td>GET, PUT acknowledge</td><td>Alert management</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/recommendations</td><td>GET, PUT, POST analyze</td><td>Right-sizing recommendations</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/waste-items</td><td>GET, PUT status</td><td>Waste item management</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/dashboard</td><td>GET</td><td>Aggregate cost stats</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/copilot</td><td>POST chat, GET history</td><td>AI streaming chat + history</td><td><span class="tag ok">P0</span></td></tr>
+        <tr><td class="mono">/api/v1/ri-plans</td><td>GET, POST analyze, PUT status</td><td>RI commitment analysis</td><td><span class="tag">P1</span></td></tr>
+        <tr><td class="mono">/api/v1/waste-scan</td><td>POST scan</td><td>On-demand waste scan</td><td><span class="tag">P1</span></td></tr>
+        <tr><td class="mono">/api/v1/cost-allocation</td><td>CRUD rules, GET showback</td><td>Tag rules + showback reports</td><td><span class="tag">P1</span></td></tr>
+        <tr><td class="mono">/api/v1/container-costs</td><td>POST ingest, GET namespaces</td><td>K8s cost ingest + breakdown</td><td><span class="tag">P1</span></td></tr>
+        <tr><td class="mono">/api/v1/reports</td><td>GET finops</td><td>12-month FinOps report</td><td><span class="tag neutral">P2</span></td></tr>
+        <tr><td class="mono">/api/v1/spot-strategy</td><td>POST analyze, GET, PUT status</td><td>Spot workload analysis</td><td><span class="tag neutral">P2</span></td></tr>
+        <tr><td class="mono">/api/v1/saas</td><td>CRUD, GET summary</td><td>SaaS subscription management</td><td><span class="tag neutral">P2</span></td></tr>
+        <tr><td class="mono">/api/v1/carbon</td><td>POST calculate, GET summary</td><td>Carbon footprint estimation</td><td><span class="tag neutral">P2</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 7 — HARDENING ROADMAP (P0.5)
+══════════════════════════════════════════════ -->
+<div class="sec">
+  <div class="sec-inner">
+    <div class="ey blue">Roadmap · PLAN-v1.4 P0.5</div>
+    <h2 style="margin-bottom:8px;">Security & Reliability Hardening</h2>
+    <p style="margin-bottom:32px;max-width:600px;">All P0–P2 product features are complete. The current sprint focuses on hardening for production deployment.</p>
+
+    <div class="g2" style="gap:32px;">
+      <!-- Critical -->
+      <div>
+        <div class="div-label" style="margin-bottom:16px;">Critical — Production Blockers</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="cell" style="border-left:3px solid var(--err);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.1 — Fix Frontend CI Pipeline</h4>
+              <span class="tag err">Critical</span>
+            </div>
+            <p style="font-size:12px;"><span style="font-family:var(--mono);">build-frontend.yml</span> references <span style="font-family:var(--mono);">./frontend</span> — directory doesn't exist. Change to <span style="font-family:var(--mono);">./web</span>.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--err);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.2 — Logto JWT Authentication</h4>
+              <span class="tag err">Critical</span>
+            </div>
+            <p style="font-size:12px;">PRD mandates Logto JWT on all <span style="font-family:var(--mono);">/api/v1/*</span> routes. All 136 endpoints are currently public.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--err);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.3 — Remove Hardcoded Secret Key</h4>
+              <span class="tag err">Critical</span>
+            </div>
+            <p style="font-size:12px;"><span style="font-family:var(--mono);">secret_key: str = "change-me-in-production"</span> must be a required env var with no default.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--err);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.4 — Copilot Security</h4>
+              <span class="tag err">Critical</span>
+            </div>
+            <p style="font-size:12px;">Auth, rate limiting (30 req/min), session ownership validation, error sanitization on SSE stream.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- High + Medium -->
+      <div>
+        <div class="div-label" style="margin-bottom:16px;">High + Medium Priority</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div class="cell" style="border-left:3px solid var(--warn);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.5 — Fix CORS Configuration</h4>
+              <span class="tag warn">High</span>
+            </div>
+            <p style="font-size:12px;"><span style="font-family:var(--mono);">allow_origins=["*"]</span> + <span style="font-family:var(--mono);">allow_credentials=True</span> is browser-rejected. Scope to explicit origins.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--warn);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.6 — Billing Ingest Idempotency</h4>
+              <span class="tag warn">High</span>
+            </div>
+            <p style="font-size:12px;">Add <span style="font-family:var(--mono);">source_record_id</span> unique column. Pipeline retries create duplicate billing data without it.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--warn);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.7 — Observability Stack</h4>
+              <span class="tag warn">High</span>
+            </div>
+            <p style="font-size:12px;">structlog + Prometheus metrics + Sentry DSN. PRD mandates structlog — no print() statements.</p>
+          </div>
+          <div class="cell" style="border-left:3px solid var(--p300);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+              <h4>P0.5.8–11 — Service Tests, Frontend Tests, DPanel Manifest</h4>
+              <span class="tag">Medium</span>
+            </div>
+            <p style="font-size:12px;">Mutation score 32% → target 60%. Vitest for frontend. <span style="font-family:var(--mono);">dclaw-manifest.json</span> for DPanel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION 8 — GETTING STARTED
+══════════════════════════════════════════════ -->
+<div class="sec" style="background:var(--warm);">
+  <div class="sec-inner no-border">
+    <div class="ey blue">Quick start</div>
+    <h2 style="margin-bottom:32px;">Running in 3 commands.</h2>
+
+    <div class="g3" style="gap:32px;">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink4);margin-bottom:12px;">Option A — Docker</div>
+        <div style="background:var(--ink);border-radius:2px;padding:20px;">
+          <pre style="font-family:var(--mono);font-size:12px;color:rgba(255,255,255,0.8);line-height:1.8;">cp backend/.env.example \
+  backend/.env
+# add OPENROUTER_API_KEY
+
+docker compose up --build -d
+
+docker compose exec backend \
+  alembic upgrade head
+
+# → http://localhost:3036
+# → http://localhost:8122/docs</pre>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink4);margin-bottom:12px;">Option B — Local Dev</div>
+        <div style="background:var(--ink);border-radius:2px;padding:20px;">
+          <pre style="font-family:var(--mono);font-size:12px;color:rgba(255,255,255,0.8);line-height:1.8;">cd backend
+pip install -r requirements.txt
+uvicorn app.api.main:app \
+  --reload --port 8122
+
+cd web
+npm install && npm run dev
+# → http://localhost:3036</pre>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:var(--ink4);margin-bottom:12px;">Option C — Kubernetes</div>
+        <div style="background:var(--ink);border-radius:2px;padding:20px;">
+          <pre style="font-family:var(--mono);font-size:12px;color:rgba(255,255,255,0.8);line-height:1.8;">helm upgrade --install \
+  dclaw-cost ./helm \
+  --namespace dclaw \
+  --create-namespace \
+  --values helm/values.yaml \
+  --wait</pre>
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--ink4);">CloudNativePG manages PostgreSQL. K8s Secrets for API keys.</div>
+      </div>
+    </div>
+
+    <!-- Environment vars summary -->
+    <div style="margin-top:40px;">
+      <div class="div-label" style="margin-bottom:16px;">Environment Variables</div>
+      <table>
+        <thead>
+          <tr><th>Variable</th><th>Required</th><th>Default</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">DATABASE_URL</td><td><span class="tag ok">Yes</span></td><td class="mono" style="font-size:11px;">postgresql+asyncpg://...dclaw_cost</td><td>PostgreSQL connection</td></tr>
+          <tr><td class="mono">OPENROUTER_API_KEY</td><td><span class="tag warn">Yes*</span></td><td>—</td><td>LLM provider (Copilot + AI features)</td></tr>
+          <tr><td class="mono">OPENROUTER_MODEL</td><td><span class="tag neutral">No</span></td><td class="mono">moonshotai/kimi-k2</td><td>Default LLM model</td></tr>
+          <tr><td class="mono">OLLAMA_BASE_URL</td><td><span class="tag neutral">No</span></td><td class="mono">http://localhost:11434</td><td>Local Ollama endpoint</td></tr>
+          <tr><td class="mono">BACKEND_URL</td><td><span class="tag ok">Yes</span></td><td>—</td><td>Frontend server-side proxy target</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;margin-top:8px;color:var(--ink4);">* If OPENROUTER_API_KEY is absent, Copilot falls back to local Ollama. All other AI features require a working LLM endpoint.</p>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <svg width="24" height="24" viewBox="0 0 64 64" fill="none">
+          <polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/>
+          <polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/>
+          <polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/>
+        </svg>
+        <div>
+          <div style="font-family:var(--display);font-size:13px;font-weight:700;color:var(--ink);">DClaw Cost</div>
+          <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);">One Convergence · DKube · v1.4</div>
+        </div>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);">github.com/dclawstack/dclaw-cost · MAY 2026</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

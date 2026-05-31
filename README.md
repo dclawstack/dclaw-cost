@@ -1,95 +1,258 @@
-# DClaw Scaffold
+# DClaw Cost
 
-> **The single source of truth for new DClaw app development.**
-> Clone this repo, rename it, fill in your `PRODUCT-SPEC.md`, and hand it to your coding agents.
+> AI-powered cloud cost optimization for platform engineering and FinOps teams.
 
-## What This Is
+DClaw Cost is a full-stack FinOps platform that unifies multi-cloud billing, detects waste, forecasts spend, and delivers AI-driven savings recommendations — all in one operator-grade dashboard.
 
-This scaffold contains the **complete boilerplate** for any DClaw vertical SaaS app:
-- ✅ FastAPI backend with correct SQLAlchemy 2.0 setup
-- ✅ Next.js 14 frontend with Tailwind + pre-built UI components
-- ✅ Docker + docker-compose with working healthchecks
-- ✅ Helm chart for Kubernetes deployment
-- ✅ Alembic migrations setup
-- ✅ pytest test harness with pinned pytest-asyncio==0.24.0
-- ✅ GitHub Actions CI
-- ✅ `AGENTS.md` + `PLAN-v1.2.md` templates
-- ✅ Pre-built UI components (no shadcn CLI needed)
+---
 
-## How to Use
+## What It Does
+
+| Capability | Description |
+|------------|-------------|
+| **Multi-Cloud Billing** | Unified cost explorer across AWS, GCP, Azure, and on-premises |
+| **Budget Alerts** | Threshold + forecast alerts with AI anomaly detection |
+| **Resource Right-Sizing** | AI-generated recommendations with confidence scoring |
+| **Waste Detection** | 5-type scanner: idle, orphaned, unused IPs, unattached volumes, old snapshots |
+| **RI Planner** | 90-day analysis → 6 commitment variants with break-even modeling |
+| **Cost Allocation** | Tag-based showback + chargeback reports per team/project |
+| **Container Costs** | Per-namespace and per-pod cost breakdown for Kubernetes workloads |
+| **FinOps Reports** | 12-month trend analysis, unit economics, AI-generated insights |
+| **Spot Strategy** | Workload classification + interruption-risk scoring for spot savings |
+| **SaaS Spend** | Subscription tracker with renewal alerts and cost-per-seat analysis |
+| **Carbon Footprint** | CO₂ estimation by service and region with green migration suggestions |
+| **AI Cost Copilot** | Streaming chat interface with live cost context, available on every page |
+
+---
+
+## Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | Next.js 14 (App Router), Tailwind CSS, TypeScript |
+| Backend | FastAPI, SQLAlchemy 2.0 async, Pydantic v2 |
+| Database | PostgreSQL 16 (CloudNativePG in K8s) |
+| AI | OpenRouter → Ollama (local fallback) |
+| Migrations | Alembic |
+| Tests | pytest + pytest-asyncio |
+| Container | Docker + docker-compose |
+| Orchestration | Kubernetes + Helm |
+| CI/CD | GitHub Actions |
+
+---
+
+## Quick Start
+
+### Docker (recommended)
 
 ```bash
-# 1. Clone the scaffold
-git clone https://github.com/dclawstack/dclaw-scaffold.git dclaw-YOURAPP
-cd dclaw-YOURAPP
+# 1. Clone and configure
+git clone https://github.com/dclawstack/dclaw-cost
+cd dclaw-cost
+cp backend/.env.example backend/.env
+# Edit backend/.env — add OPENROUTER_API_KEY
 
-# 2. Find/replace placeholders
-# {APP_NAME}    -> Your app name (e.g., CRM)
-# {BACKEND_PORT}-> Next free port (see port registry below)
-# {FRONTEND_PORT}-> Next free port
-# {DB_NAME}     -> dclaw_yourapp
+# 2. Start all services
+docker compose up --build -d
 
-# 3. Write your PRODUCT-SPEC.md
-# See PRODUCT-SPEC.md.template for the format
+# 3. Apply migrations
+docker compose exec backend alembic upgrade head
 
-# 4. Hand to your coding agents
-# See SCALING-PLAYBOOK.md for the parallel agent workflow
+# 4. Open the app
+open http://localhost:3036
+# API docs: http://localhost:8122/docs
 ```
 
-## Critical Rules for Agents
+### Local Development
 
-### DO NOT install shadcn CLI
-The scaffold includes pre-built UI components in `frontend/src/components/ui/`. Installing `shadcn` v4 or `@base-ui/react` will break the Tailwind v3 build.
+```bash
+# Backend
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env   # add OPENROUTER_API_KEY
+uvicorn app.api.main:app --reload --port 8122
 
-### DO NOT change the Postgres test port
-`backend/tests/conftest.py` uses `localhost:5432`. GitHub Actions CI maps the Postgres service to port 5432. Changing this breaks CI.
+# Frontend (separate terminal)
+cd web
+npm install
+cp .env.example .env.local
+npm run dev   # → http://localhost:3036
+```
 
-### DO NOT delete `.github/workflows/ci.yml`
-This file is required for GitHub Actions to run tests on every push.
+### Kubernetes
 
-### DO NOT upgrade pytest-asyncio
-Keep `pytest-asyncio==0.24.0` pinned in `requirements.txt`. v1.3.0 breaks fixture scoping.
+```bash
+helm upgrade --install dclaw-cost ./helm \
+  --namespace dclaw \
+  --create-namespace \
+  --set image.backend.tag=latest \
+  --set image.frontend.tag=latest \
+  --values helm/values.yaml
+```
 
-## Port Registry
+---
 
-| App | Backend Port | Frontend Port | Database |
-|-----|-------------|---------------|----------|
-| dclaw-chat | 8090 | 3000 | dclaw_chat |
-| dclaw-med | 8092 | 3004 | dclaw_med |
-| dclaw-learn | 8093 | 3003 | dclaw_learn |
-| dclaw-code | 8094 | 3005 | dclaw_code |
-| dclaw-legal | 8099 | 3013 | dclaw_legal |
-| dclaw-crm | 8095 | 3006 | dclaw_crm |
-| dclaw-finance | 8096 | 3007 | dclaw_finance |
-| dclaw-hr | 8097 | 3008 | dclaw_hr |
-| **TBD #9** | **8098** | **3009** | **dclaw_xxx** |
-| **TBD #10** | **8100** | **3010** | **dclaw_xxx** |
+## Environment Variables
 
-> **Rule:** New apps take the next available port. Update this table when assigning.
+### Backend (`backend/.env`)
 
-## Files You Must Customize
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `DATABASE_URL` | Yes | `postgresql+asyncpg://postgres:postgres@localhost:5432/dclaw_cost` | PostgreSQL connection string |
+| `OPENROUTER_API_KEY` | Yes* | — | OpenRouter API key for LLM features |
+| `OPENROUTER_MODEL` | No | `moonshotai/kimi-k2` | LLM model via OpenRouter |
+| `OLLAMA_BASE_URL` | No | `http://localhost:11434` | Ollama endpoint (local fallback) |
+| `OLLAMA_MODEL` | No | `llama3.2` | Local model name |
+| `APP_ENV` | No | `dev` | `dev` or `production` |
 
-| File | What to Change |
-|------|---------------|
-| `backend/app/core/config.py` | `app_name`, default database name |
-| `backend/app/api/main.py` | Wire v1 routers |
-| `frontend/package.json` | Package name |
-| `frontend/src/app/layout.tsx` | Title, description |
-| `frontend/src/app/page.tsx` | Dashboard content |
-| `docker-compose.yml` | Port mappings |
-| `helm/Chart.yaml` | Chart name |
-| `helm/values.yaml` | Image repository names |
-| `AGENTS.md` | App identity, port numbers |
-| `PLAN-v1.2.md` | Feature backlog |
-| `PRODUCT-SPEC.md` | (Create this) Domain models, business logic |
+*If `OPENROUTER_API_KEY` is not set, the Copilot falls back to local Ollama.
 
-## What You Should NOT Change
+### Frontend (`web/.env.local`)
 
-- `app/models/base.py` — `DeclarativeBase` pattern
-- `app/core/database.py` — Engine/session factory
-- `docker-compose.yml` healthcheck commands
-- `frontend/Dockerfile` `ARG NEXT_PUBLIC_API_URL` pattern
-- `tests/conftest.py` — Test DB override pattern (keep `localhost:5432`)
-- `frontend/src/components/ui/*.tsx` — Pre-built components (use as-is)
-- `requirements.txt` — Keep `pytest-asyncio==0.24.0` pinned
-- `.github/workflows/ci.yml` — Do not delete
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `BACKEND_URL` | Yes | Backend base URL for server-side API proxy (e.g. `http://localhost:8122`) |
+
+---
+
+## API Overview
+
+The backend exposes **136 endpoints** across 17 route groups. All `/api/v1/*` routes will require Logto JWT auth (P0.5.2 — in progress).
+
+```
+GET  /health                              → Health check
+
+# Cloud & Billing
+/api/v1/cloud-accounts                   → CRUD
+/api/v1/billing-records                  → List + bulk ingest
+
+# Budgets & Alerts
+/api/v1/budgets                          → CRUD
+/api/v1/cost-alerts                      → List, acknowledge
+
+# Optimization
+/api/v1/recommendations                  → List, update status
+/api/v1/waste-items                      → List, update status
+/api/v1/dashboard                        → Aggregate stats
+
+# AI Copilot
+POST /api/v1/copilot/chat                → Streaming SSE response
+GET  /api/v1/copilot/history/{id}        → Conversation history
+
+# P1 — Platform
+/api/v1/ri-plans                         → RI analysis + CRUD
+/api/v1/waste-scan                       → On-demand waste scan
+/api/v1/cost-allocation                  → Allocation rules + showback
+/api/v1/container-costs                  → Namespace ingest + summary
+
+# P2 — Scale
+/api/v1/reports                          → FinOps report (12-month)
+/api/v1/spot-strategy                    → Spot opportunity analysis
+/api/v1/saas                             → SaaS subscription CRUD + summary
+/api/v1/carbon                           → Carbon calculation + summary
+```
+
+Interactive API docs: `http://localhost:8122/docs`
+
+---
+
+## Running Tests
+
+```bash
+cd backend
+
+# Requires a running PostgreSQL at localhost:5432
+# The test suite creates and drops dclaw_cost_test automatically
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run all tests
+python -m pytest -v --tb=short
+
+# Run a specific module
+python -m pytest tests/test_cloud_accounts.py -v
+```
+
+CI runs the full test suite on every push to `main` via `.github/workflows/ci.yml`.
+
+---
+
+## Project Structure
+
+```
+dclaw-cost/
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── main.py          # FastAPI app + router registration
+│   │   │   ├── routes/health.py
+│   │   │   └── v1/              # 15 route modules
+│   │   ├── core/
+│   │   │   ├── config.py        # Pydantic settings
+│   │   │   └── database.py      # Async engine + session
+│   │   ├── models/              # 13 SQLAlchemy models
+│   │   ├── repositories/        # Data access layer
+│   │   ├── schemas/             # Pydantic v2 request/response models
+│   │   └── services/            # Business logic + AI integrations
+│   ├── alembic/                 # Database migrations
+│   ├── tests/                   # 15 pytest test modules
+│   └── requirements.txt
+├── web/
+│   ├── src/
+│   │   ├── app/                 # Next.js App Router pages
+│   │   │   ├── page.tsx         # Marketing landing page
+│   │   │   └── (app)/           # Authenticated app routes (15 pages)
+│   │   ├── components/          # Shared UI components
+│   │   └── lib/api.ts           # Typed API client
+│   └── package.json
+├── helm/                        # Kubernetes Helm chart
+├── docs/                        # Developer documentation
+├── Infographics/                # Architecture diagrams + visual assets
+├── slides/                      # Presentation deck
+├── docker-compose.yml
+└── PLAN-v1.4.md                 # Current roadmap
+```
+
+---
+
+## Ports
+
+| Service | Port |
+|---------|------|
+| Frontend (Next.js) | 3036 |
+| Backend (FastAPI) | 8122 |
+| PostgreSQL | 5432 |
+
+---
+
+## Docs
+
+| Document | Purpose |
+|----------|---------|
+| `PLAN-v1.4.md` | Feature roadmap + current sprint |
+| `REVISED-PRD.md` | Product requirements (source of truth) |
+| `PRODUCT-SPEC.md` | Domain models, API spec, screen designs |
+| `AGENTS.md` | Coding agent instructions |
+| `docs/` | Getting started, guides, API reference |
+| `RUN.md` | Detailed run instructions |
+
+---
+
+## CI/CD
+
+| Workflow | Trigger | Action |
+|----------|---------|--------|
+| `ci.yml` | Push/PR to `main` | pytest backend tests + frontend build |
+| `build-backend.yml` | Push to `main` (backend changes) | Build + push Docker image to GHCR |
+| `build-frontend.yml` | Push to `main` (web changes) | Build + push Docker image to GHCR |
+| `deploy.yml` | Build success or manual trigger | Helm upgrade to staging/production |
+| `claude.yml` | `@claude` mention in issues/PRs | Claude Code agent response |
+| `claude-code-review.yml` | PR opened/updated | Automated code review |
+
+---
+
+## License
+
+Copyright © 2026 One Convergence / DClaw Stack. All rights reserved.

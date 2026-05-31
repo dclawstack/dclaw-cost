@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>DClaw Cost — Deck · One Convergence × DKube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --p25:  #FAF6FD;
+  --p50:  #F5EEFB;
+  --p100: #E7D8F4;
+  --p300: #B180F8;
+  --p500: #7030A0;
+  --p700: #4A1F6C;
+  --p900: #2B0E45;
+  --ink:  #141414;
+  --ink2: #2A2A2A;
+  --ink3: #5A5A5A;
+  --ink4: #8A8A8A;
+  --rule: #E5E5E5;
+  --paper:#FFFFFF;
+  --cool: #F6F5F7;
+  --warm: #FAF8F4;
+  --ok:   #10B981;
+  --warn: #F59E0B;
+  --err:  #EF4444;
+  --display:"Manrope","Inter",sans-serif;
+  --sans:"Inter",sans-serif;
+  --mono:"JetBrains Mono",monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: #111;
+}
+
+/* ── Slide base ───────────────────────────────── */
+.slide {
+  width: 1280px;
+  height: 720px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 4px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── Typography ───────────────────────────────── */
+h1 { font-family: var(--display); font-size: 72px; font-weight: 800; line-height: 0.9; letter-spacing: -0.04em; }
+h2 { font-family: var(--display); font-size: 44px; font-weight: 700; line-height: 1.0; letter-spacing: -0.03em; }
+h3 { font-family: var(--sans); font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
+h4 { font-family: var(--sans); font-size: 16px; font-weight: 600; }
+p  { font-family: var(--sans); font-size: 15px; line-height: 1.65; color: var(--ink3); }
+
+.ey {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink4);
+  margin-bottom: 10px;
+}
+.ey.blue  { color: var(--p500); }
+.ey.light { color: rgba(255,255,255,0.45); }
+
+/* ── Slide header bar ─────────────────────────── */
+.slide-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 64px;
+  border-bottom: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+.slide-hdr.dark {
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.slide-hdr.blue-bar {
+  background: var(--p500);
+  border-bottom: none;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-name {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.logo-name.white { color: var(--paper); }
+.slide-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink4);
+  letter-spacing: 0.08em;
+}
+.slide-num.light { color: rgba(255,255,255,0.3); }
+
+/* ── Slide body ───────────────────────────────── */
+.slide-body {
+  flex: 1;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-body.pad-sm { padding: 32px 64px; }
+.slide-body.no-pad { padding: 0; }
+
+/* ── Tag / badge ──────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--p50);
+  color: var(--p700);
+  border: 1px solid var(--p100);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 2px;
+}
+.tag.dark    { background: rgba(177,128,248,.12); color: var(--p300); border-color: rgba(177,128,248,.25); }
+.tag.ok      { background: #ECFDF5; color: var(--ok); border-color: #A7F3D0; }
+.tag.warn    { background: #FFFBEB; color: var(--warn); border-color: #FDE68A; }
+.tag.err     { background: #FEF2F2; color: var(--err); border-color: #FECACA; }
+.tag.neutral { background: var(--cool); color: var(--ink3); border-color: var(--rule); }
+
+/* ── Helpers ──────────────────────────────────── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+.row { display: flex; align-items: flex-start; gap: 40px; }
+
+.cell {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 18px 20px;
+  background: var(--paper);
+}
+.cell.blue-bg { background: var(--p25); border-color: var(--p100); }
+.cell.dark    { border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); }
+
+.bar-track { height: 5px; background: var(--rule); margin-top: 6px; }
+.bar-fill  { height: 5px; background: var(--p500); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink4);
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--ink);
+}
+tbody td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+.mono { font-family: var(--mono); font-size: 12px; }
+
+.feat-icon {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--p50);
+  border: 1px solid var(--p100);
+  border-radius: 2px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 1 — COVER
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <!-- Full-bleed dark background -->
+  <div style="position:absolute;inset:0;background:var(--ink);"></div>
+  <!-- Blue accent strip -->
+  <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--p500);"></div>
+
+  <div style="position:relative;z-index:1;padding:56px 72px;display:flex;flex-direction:column;justify-content:space-between;height:100%;">
+
+    <!-- Top: logo -->
+    <div style="display:flex;align-items:center;gap:12px;">
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+        <polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/>
+        <polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/>
+        <polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.5"/>
+      </svg>
+      <span style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.15em;color:rgba(255,255,255,0.35);">One Convergence · DKube · May 2026</span>
+    </div>
+
+    <!-- Center: headline -->
+    <div>
+      <div class="ey light" style="margin-bottom:20px;">Cloud cost optimization · FinOps</div>
+      <h1 style="color:var(--paper);margin-bottom:16px;">DClaw<br/>Cost</h1>
+      <div style="width:48px;height:3px;background:var(--p500);margin-bottom:24px;"></div>
+      <p style="font-size:20px;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.55;">
+        AI-powered cloud cost intelligence for platform engineers<br/>and FinOps teams. Every provider. One platform.
+      </p>
+    </div>
+
+    <!-- Bottom: stats row -->
+    <div style="display:flex;gap:2px;">
+      <div style="background:var(--p500);padding:16px 24px;"><div style="font-family:var(--display);font-size:32px;font-weight:800;color:var(--paper);">136</div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.6);margin-top:2px;">API endpoints</div></div>
+      <div style="background:rgba(255,255,255,0.05);padding:16px 24px;"><div style="font-family:var(--display);font-size:32px;font-weight:800;color:var(--p300);">13</div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-top:2px;">Domain models</div></div>
+      <div style="background:rgba(255,255,255,0.05);padding:16px 24px;"><div style="font-family:var(--display);font-size:32px;font-weight:800;color:var(--p300);">8</div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-top:2px;">AI features</div></div>
+      <div style="background:rgba(255,255,255,0.05);padding:16px 24px;"><div style="font-family:var(--display);font-size:32px;font-weight:800;color:var(--p300);">4</div><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);margin-top:2px;">Cloud providers</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 2 — THE PROBLEM
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row">
+      <svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg>
+      <span class="logo-name">DClaw Cost</span>
+    </div>
+    <span class="slide-num">02 / 12</span>
+  </div>
+  <div class="slide-body">
+    <div class="ey blue">The problem</div>
+    <h2 style="margin-bottom:36px;">Cloud bills are growing.<br/>Nobody knows why.</h2>
+    <div class="g3">
+      <div class="cell blue-bg">
+        <div style="font-size:32px;margin-bottom:12px;">💸</div>
+        <h4 style="margin-bottom:8px;">$26B wasted annually</h4>
+        <p style="font-size:13px;">Idle instances, orphaned volumes, and over-provisioned resources. Most teams discover it months late — after the damage is done.</p>
+      </div>
+      <div class="cell blue-bg">
+        <div style="font-size:32px;margin-bottom:12px;">📊</div>
+        <h4 style="margin-bottom:8px;">4 dashboards, 0 unified view</h4>
+        <p style="font-size:13px;">AWS Console. GCP Billing. Azure Cost Management. SaaS vendor portals. No cross-cloud comparison. No single source of truth.</p>
+      </div>
+      <div class="cell blue-bg">
+        <div style="font-size:32px;margin-bottom:12px;">⏱️</div>
+        <h4 style="margin-bottom:8px;">Reactive by design</h4>
+        <p style="font-size:13px;">Budget alerts fire when the month is already half over. FinOps teams spend hours on what AI can surface in seconds.</p>
+      </div>
+    </div>
+    <div style="margin-top:28px;padding:16px 20px;background:var(--p900);border-radius:2px;">
+      <p style="font-size:14px;color:rgba(255,255,255,0.75);">Cloud providers profit from complexity. <strong style="color:var(--paper);">DClaw Cost makes the opaque obvious — before the invoice arrives.</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 3 — THE SOLUTION
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">03 / 12</span>
+  </div>
+  <div class="slide-body">
+    <div class="row" style="align-items:center;">
+      <div style="flex:1;">
+        <div class="ey blue">The solution</div>
+        <h2 style="margin-bottom:20px;">One platform. Every cloud.<br/>AI that thinks ahead.</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:28px;height:28px;background:var(--p500);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--paper);font-weight:700;font-size:12px;flex-shrink:0;">01</div>
+            <div><h4 style="margin-bottom:4px;">Unified billing across AWS, GCP, Azure, and on-prem</h4><p style="font-size:13px;">Single ingest API. Filter by service, region, tag. Cost allocation to teams via tag rules.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:28px;height:28px;background:var(--p500);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--paper);font-weight:700;font-size:12px;flex-shrink:0;">02</div>
+            <div><h4 style="margin-bottom:4px;">AI copilot with live spend context on every page</h4><p style="font-size:13px;">Ask "which services drove last week's spike?" Get a streaming answer grounded in your actual billing data.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:28px;height:28px;background:var(--p500);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--paper);font-weight:700;font-size:12px;flex-shrink:0;">03</div>
+            <div><h4 style="margin-bottom:4px;">Proactive intelligence across 8 AI workflows</h4><p style="font-size:13px;">RI commitment modeling, spot workload classification, carbon footprint, SaaS spend — all in one operator-grade platform.</p></div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:0 0 340px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+          <div style="background:var(--p500);padding:20px 16px;"><div style="font-family:var(--display);font-size:28px;font-weight:800;color:var(--paper);">15</div><div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">App screens</div></div>
+          <div style="background:var(--p25);border:1px solid var(--p100);padding:20px 16px;"><div style="font-family:var(--display);font-size:28px;font-weight:800;color:var(--p700);">136</div><div style="font-family:var(--mono);font-size:9px;color:var(--ink4);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">API endpoints</div></div>
+          <div style="background:var(--p25);border:1px solid var(--p100);padding:20px 16px;"><div style="font-family:var(--display);font-size:28px;font-weight:800;color:var(--p700);">13</div><div style="font-family:var(--mono);font-size:9px;color:var(--ink4);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Data entities</div></div>
+          <div style="background:var(--p500);padding:20px 16px;"><div style="font-family:var(--display);font-size:28px;font-weight:800;color:var(--paper);">8</div><div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">AI features</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 4 — FEATURE MAP
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">04 / 12</span>
+  </div>
+  <div class="slide-body pad-sm">
+    <div class="ey blue">Product overview</div>
+    <h3 style="margin-bottom:20px;">13 features shipped across 3 priority tiers</h3>
+    <div style="display:flex;gap:12px;margin-bottom:16px;">
+      <span class="tag ok">P0 — Foundation</span>
+      <span class="tag">P1 — Platform</span>
+      <span class="tag neutral">P2 — Scale</span>
+    </div>
+    <div class="g4" style="gap:10px;">
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ok);">
+        <div style="font-size:18px;margin-bottom:6px;">🤖</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">AI Cost Copilot</h4>
+        <p style="font-size:11px;">Streaming chat, every page, live context</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ok);">
+        <div style="font-size:18px;margin-bottom:6px;">☁️</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Multi-Cloud Billing</h4>
+        <p style="font-size:11px;">AWS · GCP · Azure · On-prem unified</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ok);">
+        <div style="font-size:18px;margin-bottom:6px;">📐</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Right-Sizing</h4>
+        <p style="font-size:11px;">AI recommendations + confidence scoring</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ok);">
+        <div style="font-size:18px;margin-bottom:6px;">🔔</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Budget Alerts</h4>
+        <p style="font-size:11px;">Threshold + forecast + anomaly detection</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--p500);">
+        <div style="font-size:18px;margin-bottom:6px;">📅</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">RI Planner</h4>
+        <p style="font-size:11px;">6 commitment variants, break-even</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--p500);">
+        <div style="font-size:18px;margin-bottom:6px;">🗑️</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Waste Detection</h4>
+        <p style="font-size:11px;">5 waste types, on-demand deep scan</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--p500);">
+        <div style="font-size:18px;margin-bottom:6px;">🏷️</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Cost Allocation</h4>
+        <p style="font-size:11px;">Tag → team rules, showback reports</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--p500);">
+        <div style="font-size:18px;margin-bottom:6px;">🐳</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Container Costs</h4>
+        <p style="font-size:11px;">Per-namespace + per-pod K8s breakdown</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ink4);">
+        <div style="font-size:18px;margin-bottom:6px;">📈</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">FinOps Reports</h4>
+        <p style="font-size:11px;">12-month trend + unit economics</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ink4);">
+        <div style="font-size:18px;margin-bottom:6px;">⚡</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Spot Strategy</h4>
+        <p style="font-size:11px;">Workload classifier + risk scoring</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ink4);">
+        <div style="font-size:18px;margin-bottom:6px;">💼</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">SaaS Spend</h4>
+        <p style="font-size:11px;">Subscription CRUD + renewal alerts</p>
+      </div>
+      <div class="cell" style="padding:14px 16px;border-top:3px solid var(--ink4);">
+        <div style="font-size:18px;margin-bottom:6px;">🌿</div>
+        <h4 style="font-size:13px;margin-bottom:4px;">Carbon Footprint</h4>
+        <p style="font-size:11px;">19-region CO₂ + green migration</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 5 — AI FEATURES
+════════════════════════════════════════════════════════ -->
+<div class="slide" style="background:var(--ink);">
+  <div class="slide-hdr dark">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.5"/></svg><span class="logo-name white">DClaw Cost</span></div>
+    <span class="slide-num light">05 / 12</span>
+  </div>
+  <div class="slide-body" style="background:var(--ink);padding:40px 64px;">
+    <div class="ey light">AI features</div>
+    <h2 style="color:var(--paper);margin-bottom:24px;">8 AI workflows. Real work, not demo buttons.</h2>
+    <table style="color:var(--paper);">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Feature</th>
+          <th>Trigger</th>
+          <th>Delivery</th>
+        </tr>
+      </thead>
+      <tbody style="color:rgba(255,255,255,0.75);">
+        <tr><td class="mono" style="color:var(--p300);">01</td><td style="font-weight:600;color:var(--paper);">AI Cost Copilot</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">Chat input on any page</td><td><span class="tag dark">SSE streaming</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">02</td><td style="font-weight:600;color:var(--paper);">Spend Anomaly Detection</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">After every billing ingest</td><td><span class="tag dark">Auto CostAlert</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">03</td><td style="font-weight:600;color:var(--paper);">Spend Forecasting</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">After every billing ingest</td><td><span class="tag dark">7-day ahead alert</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">04</td><td style="font-weight:600;color:var(--paper);">Resource Right-Sizing</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">POST /recommendations/analyze</td><td><span class="tag dark">Confidence-scored</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">05</td><td style="font-weight:600;color:var(--paper);">Waste Detection</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">POST /waste-scan/scan</td><td><span class="tag dark">5-type scan</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">06</td><td style="font-weight:600;color:var(--paper);">RI Commitment Modeling</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">POST /ri-plans/analyze</td><td><span class="tag dark">6 variants + break-even</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">07</td><td style="font-weight:600;color:var(--paper);">Spot Workload Classifier</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">POST /spot-strategy/analyze</td><td><span class="tag dark">Risk-scored</span></td></tr>
+        <tr><td class="mono" style="color:var(--p300);">08</td><td style="font-weight:600;color:var(--paper);">Carbon Estimation</td><td style="font-size:12px;color:rgba(255,255,255,0.5);">POST /carbon/calculate</td><td><span class="tag dark">19-region intensity</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 6 — ARCHITECTURE
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">06 / 12</span>
+  </div>
+  <div class="slide-body pad-sm">
+    <div class="ey blue">Architecture</div>
+    <h3 style="margin-bottom:20px;">Production-grade stack. Nothing exotic.</h3>
+    <div class="row" style="gap:32px;align-items:flex-start;">
+      <div style="flex:1;">
+        <div style="border:1px solid var(--rule);border-radius:2px;overflow:hidden;font-size:13px;">
+          <div style="background:var(--p25);padding:12px 16px;border-bottom:1px solid var(--p100);font-family:var(--mono);font-size:10px;color:var(--p700);">Next.js 14 App Router · Port 3036 · 15 pages</div>
+          <div style="padding:8px 16px;background:var(--cool);text-align:center;font-family:var(--mono);font-size:10px;color:var(--ink4);">↓ Server-side API proxy (BACKEND_URL)</div>
+          <div style="background:var(--paper);padding:12px 16px;border-bottom:1px solid var(--rule);">
+            <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);margin-bottom:6px;">FastAPI · Port 8122 · 136 endpoints · 8 services</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px;">
+              <span class="tag" style="font-size:10px;">copilot_service</span><span class="tag" style="font-size:10px;">alert_service</span><span class="tag" style="font-size:10px;">analyzer_service</span><span class="tag" style="font-size:10px;">waste_scanner</span><span class="tag" style="font-size:10px;">ri_planner</span><span class="tag" style="font-size:10px;">cost_allocation</span><span class="tag" style="font-size:10px;">spot_strategy</span><span class="tag" style="font-size:10px;">carbon_service</span>
+            </div>
+          </div>
+          <div style="padding:8px 16px;background:var(--cool);text-align:center;font-family:var(--mono);font-size:10px;color:var(--ink4);">↓ SQLAlchemy 2.0 async · asyncpg</div>
+          <div style="background:var(--paper);padding:12px 16px;border-bottom:1px solid var(--rule);">
+            <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);margin-bottom:6px;">PostgreSQL 16 · dclaw_cost · 13 tables</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px;">
+              <span class="tag neutral" style="font-size:10px;">cloud_accounts</span><span class="tag neutral" style="font-size:10px;">billing_records</span><span class="tag neutral" style="font-size:10px;">budgets</span><span class="tag neutral" style="font-size:10px;">cost_alerts</span><span class="tag neutral" style="font-size:10px;">ri_plans</span><span class="tag neutral" style="font-size:10px;">copilot_messages</span><span class="tag neutral" style="font-size:10px;">+7 more</span>
+            </div>
+          </div>
+          <div style="padding:8px 16px;background:var(--cool);text-align:center;font-family:var(--mono);font-size:10px;color:var(--ink4);">↓ httpx.AsyncClient · SSE streaming</div>
+          <div style="background:var(--p25);padding:12px 16px;display:flex;gap:12px;">
+            <div style="flex:1;text-align:center;"><div style="font-family:var(--mono);font-size:10px;color:var(--p700);font-weight:600;">OpenRouter</div><div style="font-family:var(--mono);font-size:9px;color:var(--ink4);">kimi-k2 · primary</div></div>
+            <div style="width:1px;background:var(--p100);"></div>
+            <div style="flex:1;text-align:center;"><div style="font-family:var(--mono);font-size:10px;color:var(--ink3);font-weight:600;">Ollama</div><div style="font-family:var(--mono);font-size:9px;color:var(--ink4);">llama3.2 · fallback</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:0 0 280px;display:flex;flex-direction:column;gap:12px;">
+        <div class="cell blue-bg" style="padding:14px 16px;">
+          <h4 style="font-size:13px;margin-bottom:10px;">Stack</h4>
+          <div style="display:flex;flex-direction:column;gap:5px;font-size:12px;font-family:var(--mono);color:var(--ink3);">
+            <div>FastAPI · Pydantic v2</div>
+            <div>SQLAlchemy 2.0 · asyncpg</div>
+            <div>Alembic · migrations</div>
+            <div>Next.js 14 · Tailwind CSS</div>
+            <div>Docker · Helm · GHCR</div>
+            <div>pytest · pytest-asyncio</div>
+          </div>
+        </div>
+        <div class="cell" style="padding:14px 16px;">
+          <h4 style="font-size:13px;margin-bottom:10px;">Test Coverage</h4>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px;"><span>Function coverage</span><span style="font-weight:600;">67%</span></div><div class="bar-track"><div class="bar-fill" style="width:67%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px;"><span>Test cases</span><span style="font-weight:600;">275</span></div><div class="bar-track"><div class="bar-fill" style="width:55%;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px;"><span>Modules covered</span><span style="font-weight:600;">15</span></div><div class="bar-track"><div class="bar-fill" style="width:78%;"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 7 — COPILOT DEEP DIVE
+════════════════════════════════════════════════════════ -->
+<div class="slide" style="background:var(--ink);">
+  <div class="slide-hdr dark">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.5"/></svg><span class="logo-name white">DClaw Cost</span></div>
+    <span class="slide-num light">07 / 12</span>
+  </div>
+  <div class="slide-body" style="background:var(--ink);padding:40px 64px;">
+    <div class="ey light">Copilot architecture</div>
+    <h2 style="color:var(--paper);margin-bottom:28px;">Knows your numbers before you ask.</h2>
+    <div class="g2" style="gap:32px;">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:12px;">Context assembly — asyncio.gather()</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div class="cell dark" style="padding:10px 14px;display:flex;align-items:center;gap:10px;"><div style="font-family:var(--mono);font-size:10px;color:var(--p300);width:20px;">01</div><div style="font-size:12px;color:rgba(255,255,255,0.8);">Monthly spend to date</div></div>
+          <div class="cell dark" style="padding:10px 14px;display:flex;align-items:center;gap:10px;"><div style="font-family:var(--mono);font-size:10px;color:var(--p300);width:20px;">02</div><div style="font-size:12px;color:rgba(255,255,255,0.8);">Unacknowledged alert count</div></div>
+          <div class="cell dark" style="padding:10px 14px;display:flex;align-items:center;gap:10px;"><div style="font-family:var(--mono);font-size:10px;color:var(--p300);width:20px;">03</div><div style="font-size:12px;color:rgba(255,255,255,0.8);">Open savings opportunities ($)</div></div>
+          <div class="cell dark" style="padding:10px 14px;display:flex;align-items:center;gap:10px;"><div style="font-family:var(--mono);font-size:10px;color:var(--p300);width:20px;">04</div><div style="font-size:12px;color:rgba(255,255,255,0.8);">Top 5 cost-driving services</div></div>
+        </div>
+        <div style="margin-top:10px;padding:10px 14px;background:rgba(112,48,160,0.1);border:1px solid rgba(177,128,248,0.2);border-radius:2px;font-family:var(--mono);font-size:11px;color:var(--p300);">Single parallel round-trip → minimal latency</div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.35);margin-bottom:12px;">SSE streaming delivery</div>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:18px;">
+          <pre style="font-family:var(--mono);font-size:12px;color:rgba(255,255,255,0.7);line-height:1.9;">POST /api/v1/copilot/chat
+  → persist user message
+  → build_context()
+  → stream_chat(msg, ctx, history[-12:])
+
+  OpenRouter stream=true:
+  data: {"content": "EC2..."}\n\n
+  data: {"content": " costs..."}\n\n
+  data: [DONE]\n\n
+
+  → persist assistant reply</pre>
+        </div>
+        <div style="margin-top:12px;display:flex;align-items:center;gap:8px;font-size:12px;">
+          <span style="background:var(--p500);color:white;padding:4px 10px;border-radius:2px;font-weight:600;font-size:11px;">OpenRouter</span>
+          <span style="color:rgba(255,255,255,0.3);font-family:var(--mono);font-size:10px;">fail →</span>
+          <span style="background:rgba(255,255,255,0.1);color:var(--paper);padding:4px 10px;border-radius:2px;font-size:11px;">Ollama</span>
+          <span style="color:rgba(255,255,255,0.3);font-family:var(--mono);font-size:10px;">fail →</span>
+          <span style="color:rgba(255,255,255,0.4);padding:4px 10px;font-size:11px;">sanitized error</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 8 — DEPLOYMENT
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">08 / 12</span>
+  </div>
+  <div class="slide-body pad-sm">
+    <div class="ey blue">Deployment</div>
+    <h3 style="margin-bottom:24px;">Local in 3 commands. Kubernetes in 1.</h3>
+    <div class="g3" style="gap:20px;">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">Option A — Docker</div>
+        <div style="background:var(--ink);border-radius:2px;padding:16px;">
+          <pre style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.8);line-height:1.8;">cp backend/.env.example \
+  backend/.env
+docker compose up \
+  --build -d
+docker compose exec backend \
+  alembic upgrade head</pre>
+        </div>
+        <div style="margin-top:8px;font-size:12px;color:var(--ink4);">→ localhost:3036 · localhost:8122/docs</div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">Option B — Kubernetes</div>
+        <div style="background:var(--ink);border-radius:2px;padding:16px;">
+          <pre style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.8);line-height:1.8;">helm upgrade --install \
+  dclaw-cost ./helm \
+  --namespace dclaw \
+  --create-namespace \
+  --values helm/values.yaml</pre>
+        </div>
+        <div style="margin-top:8px;font-size:12px;color:var(--ink4);">CloudNativePG manages PostgreSQL</div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">Option C — Local Dev</div>
+        <div style="background:var(--ink);border-radius:2px;padding:16px;">
+          <pre style="font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.8);line-height:1.8;">cd backend
+uvicorn app.api.main:app \
+  --reload --port 8122
+
+cd web
+npm run dev</pre>
+        </div>
+        <div style="margin-top:8px;font-size:12px;color:var(--ink4);">Hot reload on both services</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;">
+      <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">CI/CD Workflows</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="tag ok">ci.yml — pytest + build</span>
+        <span class="tag">build-backend.yml → GHCR</span>
+        <span class="tag">build-frontend.yml → GHCR</span>
+        <span class="tag">deploy.yml — Helm upgrade</span>
+        <span class="tag neutral">claude.yml — AI review</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 9 — API SURFACE
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">09 / 12</span>
+  </div>
+  <div class="slide-body pad-sm">
+    <div class="ey blue">API surface</div>
+    <h3 style="margin-bottom:20px;">136 endpoints · 17 route groups · Interactive docs at localhost:8122/docs</h3>
+    <div class="g2" style="gap:20px;align-items:start;">
+      <table style="font-size:12px;">
+        <thead><tr><th>Route group</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">/health</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/cloud-accounts</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/billing-records</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/budgets</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/cost-alerts</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/recommendations</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/waste-items</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/dashboard</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+          <tr><td class="mono">/api/v1/copilot</td><td><span class="tag ok" style="font-size:10px;">P0</span></td></tr>
+        </tbody>
+      </table>
+      <table style="font-size:12px;">
+        <thead><tr><th>Route group</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">/api/v1/ri-plans</td><td><span class="tag" style="font-size:10px;">P1</span></td></tr>
+          <tr><td class="mono">/api/v1/waste-scan</td><td><span class="tag" style="font-size:10px;">P1</span></td></tr>
+          <tr><td class="mono">/api/v1/cost-allocation</td><td><span class="tag" style="font-size:10px;">P1</span></td></tr>
+          <tr><td class="mono">/api/v1/container-costs</td><td><span class="tag" style="font-size:10px;">P1</span></td></tr>
+          <tr><td class="mono">/api/v1/reports</td><td><span class="tag neutral" style="font-size:10px;">P2</span></td></tr>
+          <tr><td class="mono">/api/v1/spot-strategy</td><td><span class="tag neutral" style="font-size:10px;">P2</span></td></tr>
+          <tr><td class="mono">/api/v1/saas</td><td><span class="tag neutral" style="font-size:10px;">P2</span></td></tr>
+          <tr><td class="mono">/api/v1/carbon</td><td><span class="tag neutral" style="font-size:10px;">P2</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 10 — HARDENING (P0.5)
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">10 / 12</span>
+  </div>
+  <div class="slide-body pad-sm">
+    <div class="ey blue">PLAN-v1.4 · P0.5 Sprint</div>
+    <h3 style="margin-bottom:20px;">All product features shipped. Now: hardening for production.</h3>
+    <div class="g2" style="gap:20px;align-items:start;">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--err);margin-bottom:10px;">Critical — production blockers</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="cell" style="border-left:3px solid var(--err);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.1 — Fix Frontend CI</h4><p style="font-size:11px;">build-frontend.yml: ./frontend → ./web</p></div>
+          <div class="cell" style="border-left:3px solid var(--err);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.2 — Logto JWT Auth</h4><p style="font-size:11px;">All 136 /api/v1/* routes unprotected</p></div>
+          <div class="cell" style="border-left:3px solid var(--err);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.3 — Remove Hardcoded Secret</h4><p style="font-size:11px;">secret_key default = "change-me-in-production"</p></div>
+          <div class="cell" style="border-left:3px solid var(--err);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.4 — Copilot Security</h4><p style="font-size:11px;">Auth + rate limit + session isolation + error sanitization</p></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--warn);margin-bottom:10px;">High + Medium priority</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="cell" style="border-left:3px solid var(--warn);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.5 — Fix CORS</h4><p style="font-size:11px;">allow_origins=["*"] + credentials is browser-rejected</p></div>
+          <div class="cell" style="border-left:3px solid var(--warn);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.6 — Billing Idempotency</h4><p style="font-size:11px;">source_record_id — retries create duplicate billing data</p></div>
+          <div class="cell" style="border-left:3px solid var(--warn);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.7 — Observability</h4><p style="font-size:11px;">structlog + Prometheus + Sentry DSN</p></div>
+          <div class="cell" style="border-left:3px solid var(--p300);padding:12px 14px;"><h4 style="font-size:13px;margin-bottom:3px;">P0.5.9/10/11 — Tests + Manifest</h4><p style="font-size:11px;">Service layer tests, vitest, DPanel manifest</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 11 — ROADMAP
+════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-hdr">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.6"/></svg><span class="logo-name">DClaw Cost</span></div>
+    <span class="slide-num">11 / 12</span>
+  </div>
+  <div class="slide-body">
+    <div class="ey blue">Roadmap</div>
+    <h3 style="margin-bottom:28px;">All v1.2 features shipped. Three phases ahead.</h3>
+    <div class="g3" style="gap:20px;align-items:start;">
+      <div class="cell blue-bg">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--p500);margin-bottom:10px;">Phase 1 — Now (P0.5)</div>
+        <h4 style="margin-bottom:12px;">Security & Reliability</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink3);">
+          <div>✓ Logto JWT authentication</div>
+          <div>✓ Fix broken frontend CI</div>
+          <div>✓ Copilot rate limiting</div>
+          <div>✓ Billing ingest idempotency</div>
+          <div>✓ Observability stack</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">Phase 2 — Next Quarter</div>
+        <h4 style="margin-bottom:12px;">Intelligence</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink3);">
+          <div>Redis cache for dashboard aggregations</div>
+          <div>Proactive copilot: daily spend digest</div>
+          <div>Budget forecast accuracy feedback</div>
+          <div>Multi-tenancy: per-org isolation</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink4);margin-bottom:10px;">Phase 3 — Following Quarter</div>
+        <h4 style="margin-bottom:12px;">Agentic</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink3);">
+          <div>AWS CUR / GCP BQ / Azure EA integrations</div>
+          <div>Real utilization metrics (not billing-derived)</div>
+          <div>Streaming waste scan with progress SSE</div>
+          <div>Copilot tool-use: create budget via chat</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SLIDE 12 — CTA
+════════════════════════════════════════════════════════ -->
+<div class="slide" style="background:var(--ink);">
+  <div style="position:absolute;right:0;top:0;bottom:0;width:320px;background:var(--p500);opacity:0.08;"></div>
+  <div class="slide-hdr dark">
+    <div class="logo-row"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><polygon points="32,4 60,20 60,44 32,60 4,44 4,20" fill="#6E55A4"/><polygon points="32,4 60,20 32,36 4,20" fill="#9783C0"/><polygon points="4,20 32,36 32,60 4,44" fill="#D5D5D5" opacity="0.5"/></svg><span class="logo-name white">DClaw Cost</span></div>
+    <span class="slide-num light">12 / 12</span>
+  </div>
+  <div class="slide-body" style="background:transparent;padding:56px 72px;justify-content:center;">
+    <div class="ey light">Get started</div>
+    <h2 style="color:var(--paper);margin-bottom:32px;">Running in 3 minutes.</h2>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:2px;padding:24px;margin-bottom:32px;max-width:600px;">
+      <pre style="font-family:var(--mono);font-size:13px;color:rgba(255,255,255,0.85);line-height:1.9;">git clone https://github.com/dclawstack/dclaw-cost
+cp backend/.env.example backend/.env
+# add OPENROUTER_API_KEY
+
+docker compose up -d
+docker compose exec backend alembic upgrade head
+# → http://localhost:3036</pre>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;gap:4px;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);">GitHub</div><div style="font-family:var(--mono);font-size:13px;color:var(--p300);">github.com/dclawstack/dclaw-cost</div></div>
+      <div style="display:flex;flex-direction:column;gap:4px;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);">API Docs</div><div style="font-family:var(--mono);font-size:13px;color:var(--p300);">localhost:8122/docs</div></div>
+      <div style="display:flex;flex-direction:column;gap:4px;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);">Roadmap</div><div style="font-family:var(--mono);font-size:13px;color:var(--p300);">PLAN-v1.4.md</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
