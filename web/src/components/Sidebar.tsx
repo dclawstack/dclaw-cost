@@ -55,18 +55,32 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="flex h-screen w-56 flex-shrink-0 flex-col bg-gray-900 text-white overflow-y-auto">
-      {/* Logo */}
-      <div className="flex items-center gap-2 px-4 py-4 border-b border-gray-700 sticky top-0 bg-gray-900 z-10">
-        <DollarSign className="h-5 w-5 text-blue-400 flex-shrink-0" />
-        <span className="font-bold tracking-tight">DClaw Cost</span>
+    <aside
+      className="flex h-screen w-56 flex-shrink-0 flex-col bg-white overflow-y-auto"
+      style={{ borderRight: "1px solid #ededed", boxShadow: "2px 0 15px rgba(0,0,0,0.04)" }}
+    >
+      {/* Brand */}
+      <div
+        className="flex items-center gap-2 px-4 py-4 sticky top-0 bg-white z-10"
+        style={{ borderBottom: "1px solid #ededed" }}
+      >
+        <DollarSign className="h-5 w-5 flex-shrink-0" style={{ color: "#7030A0" }} />
+        <span
+          className="font-bold tracking-tight text-[#333333]"
+          style={{ fontFamily: "'Raleway', sans-serif" }}
+        >
+          DClaw Cost
+        </span>
       </div>
 
       {/* Nav groups */}
       <nav className="flex-1 px-2 py-3 space-y-4">
         {GROUPS.map((group) => (
           <div key={group.label}>
-            <p className="px-3 mb-1 text-[10px] font-semibold uppercase tracking-widest text-gray-500">
+            <p
+              className="px-3 mb-1 text-[10px] font-semibold uppercase tracking-widest text-[#aaaaaa]"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
               {group.label}
             </p>
             <div className="space-y-0.5">
@@ -77,11 +91,12 @@ export default function Sidebar() {
                     key={href}
                     href={href}
                     className={cn(
-                      "flex items-center gap-2.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                      "flex items-center gap-2.5 rounded-lg px-3 py-1.5 text-sm font-medium transition-all duration-200",
                       active
-                        ? "bg-blue-600 text-white"
-                        : "text-gray-400 hover:bg-gray-800 hover:text-white"
+                        ? "bg-[#7030A0] text-white shadow-sm"
+                        : "text-[#555555] hover:bg-[#f5eefb] hover:text-[#7030A0]"
                     )}
+                    style={{ fontFamily: "'Poppins', sans-serif" }}
                   >
                     <Icon className="h-3.5 w-3.5 flex-shrink-0" />
                     <span className="truncate">{label}</span>
@@ -93,7 +108,10 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="px-4 py-2 border-t border-gray-700 text-[10px] text-gray-600">
+      <div
+        className="px-4 py-2 text-[10px] text-[#aaaaaa]"
+        style={{ borderTop: "1px solid #ededed", fontFamily: "'Poppins', sans-serif" }}
+      >
         v1.0 · All P0–P2 features
       </div>
     </aside>

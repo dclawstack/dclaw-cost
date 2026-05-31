@@ -37,12 +37,13 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./web
       dockerfile: Dockerfile
-      args:
-        NEXT_PUBLIC_API_URL: http://localhost:8122
     environment:
       PORT: 3036
+      # Server-side rewrite proxy — the backend URL is never exposed to the browser.
+      # For Vercel, set BACKEND_URL in Project Settings → Environment Variables.
+      BACKEND_URL: http://backend:8122
     ports:
       - "3036:3036"
     depends_on:

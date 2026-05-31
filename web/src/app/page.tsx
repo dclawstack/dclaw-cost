@@ -58,7 +58,7 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
   "GitHub": [
     { label: "Repository",  href: GITHUB },
     { label: "Backend",     href: `${GITHUB}/tree/main/backend` },
-    { label: "Frontend",    href: `${GITHUB}/tree/main/frontend` },
+    { label: "Frontend",    href: `${GITHUB}/tree/main/web` },
     { label: "Helm chart",  href: `${GITHUB}/tree/main/helm` },
     { label: "Issues",      href: `${GITHUB}/issues` },
     { label: "Releases",    href: `${GITHUB}/releases` },

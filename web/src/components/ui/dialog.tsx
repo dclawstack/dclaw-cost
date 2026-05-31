@@ -1,11 +1,26 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Dialog = ({ children, open, onOpenChange }: { children: React.ReactNode; open?: boolean; onOpenChange?: (open: boolean) => void }) => {
+const Dialog = ({
+  children,
+  open,
+  onOpenChange,
+}: {
+  children: React.ReactNode
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+}) => {
   if (!open) return null
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={() => onOpenChange?.(false)}>
-      <div className="relative bg-background rounded-lg shadow-lg max-w-lg w-full mx-4" onClick={e => e.stopPropagation()}>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+      onClick={() => onOpenChange?.(false)}
+    >
+      <div
+        className="relative bg-white rounded-[10px] max-w-lg w-full mx-4"
+        style={{ boxShadow: "0px 4px 30px rgba(112,48,160,0.15)" }}
+        onClick={(e) => e.stopPropagation()}
+      >
         {children}
       </div>
     </div>
@@ -22,8 +37,14 @@ const DialogContent = React.forwardRef<
 ))
 DialogContent.displayName = "DialogContent"
 
-const DialogHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)} {...props} />
+const DialogHeader = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)}
+    {...props}
+  />
 )
 DialogHeader.displayName = "DialogHeader"
 
@@ -31,7 +52,15 @@ const DialogTitle = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h2 ref={ref} className={cn("text-lg font-semibold leading-none tracking-tight", className)} {...props} />
+  <h2
+    ref={ref}
+    className={cn(
+      "text-lg font-semibold leading-none tracking-tight text-[#333333]",
+      className
+    )}
+    style={{ fontFamily: "'Raleway', sans-serif" }}
+    {...props}
+  />
 ))
 DialogTitle.displayName = "DialogTitle"
 

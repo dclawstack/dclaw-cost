@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes: int = 60
 
     openrouter_api_key: str = ""
-    openrouter_model: str = "moonshotai/kimi-k2"
+    openrouter_model: str = "anthropic/claude-opus-4-8"
 
     ollama_base_url: str = "http://localhost:11434"
     ollama_model: str = "llama3.2"

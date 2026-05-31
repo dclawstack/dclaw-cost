@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Poppins:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,76 @@
 
 /* ─────────────────────────────────────────────
    One Convergence Design System — DClaw Cost
-   Signature: Purple #7030A0 · White #FFFFFF
+   Signature: Purple #7030A0 · White #ffffff
+   Mirror of dclaw-migrate/web and dclaw-finance/frontend
    ───────────────────────────────────────────── */
 @layer base {
   :root {
+    /* ── Core surfaces ── */
     --background:         0 0% 100%;
-    --foreground:         0 0% 27%;
+    --foreground:         0 0% 27%;          /* #444444 */
 
+    /* ── Card / Popover ── */
     --card:               0 0% 100%;
     --card-foreground:    0 0% 27%;
     --popover:            0 0% 100%;
     --popover-foreground: 0 0% 27%;
 
-    /* Primary — Purple #7030A0 */
+    /* ── Primary — Purple #7030A0 ── */
     --primary:            281 53% 41%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary:          0 0% 97%;
+    /* ── Secondary — Light Gray ── */
+    --secondary:          0 0% 97%;          /* #f7f7f7 */
     --secondary-foreground: 0 0% 27%;
 
+    /* ── Muted ── */
     --muted:              0 0% 97%;
-    --muted-foreground:   0 0% 47%;
+    --muted-foreground:   0 0% 47%;          /* #777777 */
 
-    --accent:             270 100% 97%;
+    /* ── Accent — Light Purple #E7EDFF ── */
+    --accent:             228 100% 95%;
     --accent-foreground:  281 53% 41%;
 
-    --destructive:        11 82% 48%;
+    /* ── Destructive ── */
+    --destructive:        11 82% 48%;        /* #ed3c0d */
     --destructive-foreground: 0 0% 100%;
 
-    --border:             0 0% 93%;
+    /* ── Border / Input / Ring ── */
+    --border:             0 0% 93%;          /* #ededed */
     --input:              0 0% 93%;
     --ring:               281 53% 41%;
-    --radius:             0.625rem;
 
-    /* OneConvergence purple scale */
-    --purple-light:       270 90% 74%;   /* #B180F8 */
-    --purple-base:        281 53% 41%;   /* #7030A0 */
-    --purple-dark:        281 58% 37%;   /* #682899 */
-    --purple-subtle:      270 100% 97%;
+    /* ── Shape ── */
+    --radius:             0.625rem;          /* 10px cards */
+
+    /* ── Semantic status tokens ── */
+    --success:            150 77% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-subtle:     150 60% 96%;
+
+    --warning:            38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-subtle:     48 96% 95%;
+
+    --info:               217 91% 60%;
+    --info-foreground:    0 0% 100%;
+    --info-subtle:        214 100% 97%;
+
+    /* ── OneConvergence purple scale ── */
+    --purple-light:       270 90% 74%;       /* #B180F8 */
+    --purple-base:        281 53% 41%;       /* #7030A0 */
+    --purple-dark:        281 58% 37%;       /* #682899 */
+    --purple-subtle:      270 100% 97%;      /* near-white lavender bg */
   }
 
-  * { @apply border-border; }
+  * {
+    @apply border-border;
+  }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -58,5 +83,65 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', ui-sans-serif, system-ui, sans-serif;
     color: hsl(0 0% 21%);
+  }
+
+  .font-numeric, [data-numeric] {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+@layer components {
+  /* ── Typography scale ── */
+  .type-display-lg  { @apply text-5xl font-bold tracking-tighter leading-none; }
+  .type-display     { @apply text-4xl font-bold tracking-tight leading-none; }
+  .type-heading-xl  { @apply text-2xl font-semibold tracking-tight leading-tight; }
+  .type-heading-lg  { @apply text-xl font-semibold tracking-tight leading-snug; }
+  .type-heading     { @apply text-lg font-semibold leading-snug; }
+  .type-heading-sm  { @apply text-base font-semibold leading-snug; }
+  .type-label-lg    { @apply text-sm font-semibold tracking-wide uppercase text-muted-foreground; }
+  .type-label       { @apply text-xs font-semibold tracking-wider uppercase text-muted-foreground; }
+  .type-body-lg     { @apply text-base font-normal leading-relaxed; }
+  .type-body        { @apply text-sm font-normal leading-normal; }
+  .type-body-sm     { @apply text-xs font-normal leading-normal text-muted-foreground; }
+
+  /* ── Cost amounts (tabular nums) ── */
+  .type-amount-xl { @apply text-4xl font-bold leading-none; font-variant-numeric: tabular-nums lining-nums; }
+  .type-amount-lg { @apply text-2xl font-bold leading-none; font-variant-numeric: tabular-nums lining-nums; }
+  .type-amount    { @apply text-lg font-semibold leading-tight; font-variant-numeric: tabular-nums lining-nums; }
+  .type-amount-sm { @apply text-sm font-medium; font-variant-numeric: tabular-nums lining-nums; }
+
+  /* ── Semantic color helpers ── */
+  .text-success { color: hsl(var(--success)); }
+  .text-warning { color: hsl(var(--warning)); }
+  .text-info    { color: hsl(var(--info)); }
+
+  .bg-success-subtle { background-color: hsl(var(--success-subtle)); }
+  .bg-warning-subtle { background-color: hsl(var(--warning-subtle)); }
+  .bg-info-subtle    { background-color: hsl(var(--info-subtle)); }
+
+  /* ── Status badge helpers ── */
+  .badge-active   { @apply bg-success-subtle text-success border-transparent; }
+  .badge-warning  { @apply bg-warning-subtle text-warning border-transparent; }
+  .badge-critical { @apply bg-destructive/10 text-destructive border-transparent; }
+  .badge-idle     { @apply bg-muted text-muted-foreground border-transparent; }
+
+  /* ── OneConvergence card hover (purple on hover) ── */
+  .card-oc {
+    @apply transition-all duration-300 ease-in-out cursor-pointer;
+  }
+  .card-oc:hover {
+    background-color: hsl(var(--purple-base));
+    color: white;
+    box-shadow: 0px 2px 20px rgba(112, 48, 160, 0.3);
+  }
+  .card-oc:hover h1,
+  .card-oc:hover h2,
+  .card-oc:hover h3,
+  .card-oc:hover h4,
+  .card-oc:hover h5,
+  .card-oc:hover h6,
+  .card-oc:hover p,
+  .card-oc:hover span {
+    color: white;
   }
 }

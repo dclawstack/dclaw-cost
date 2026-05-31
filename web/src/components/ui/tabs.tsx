@@ -1,12 +1,32 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Tabs = ({ children, defaultValue, className }: { children: React.ReactNode; defaultValue?: string; className?: string }) => {
-  const [active, setActive] = React.useState(defaultValue)
+const Tabs = ({
+  children,
+  defaultValue,
+  value,
+  onValueChange,
+  className,
+}: {
+  children: React.ReactNode
+  defaultValue?: string
+  value?: string
+  onValueChange?: (value: string) => void
+  className?: string
+}) => {
+  const [internal, setInternal] = React.useState(defaultValue)
+  const controlled = value !== undefined
+  const active = controlled ? value : internal
+  const setActive = (v: string) => {
+    if (!controlled) setInternal(v)
+    onValueChange?.(v)
+  }
   return (
     <div className={cn("w-full", className)}>
-      {React.Children.map(children, child =>
-        React.isValidElement(child) ? React.cloneElement(child as React.ReactElement<any>, { active, setActive }) : child
+      {React.Children.map(children, (child) =>
+        React.isValidElement(child)
+          ? React.cloneElement(child as React.ReactElement<any>, { active, setActive })
+          : child
       )}
     </div>
   )
@@ -16,7 +36,14 @@ const TabsList = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { active?: string; setActive?: (v: string) => void }
 >(({ className, children, ...props }, ref) => (
-  <div ref={ref} className={cn("inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground", className)} {...props}>
+  <div
+    ref={ref}
+    className={cn(
+      "inline-flex h-10 items-center justify-center rounded-full bg-[#f7f7f7] p-1 text-[#777777]",
+      className
+    )}
+    {...props}
+  >
     {children}
   </div>
 ))
@@ -24,14 +51,20 @@ TabsList.displayName = "TabsList"
 
 const TabsTrigger = React.forwardRef<
   HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string; active?: string; setActive?: (v: string) => void }
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    value: string
+    active?: string
+    setActive?: (v: string) => void
+  }
 >(({ className, value, active, setActive, ...props }, ref) => (
   <button
     ref={ref}
     onClick={() => setActive?.(value)}
     className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
-      active === value ? "bg-background text-foreground shadow-sm" : "hover:bg-background/50 hover:text-foreground",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      active === value
+        ? "bg-[#7030A0] text-white shadow-sm"
+        : "text-[#444444] hover:text-[#7030A0] hover:bg-white",
       className
     )}
     {...props}
@@ -47,7 +80,10 @@ const TabsContent = React.forwardRef<
   return (
     <div
       ref={ref}
-      className={cn("mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2", className)}
+      className={cn(
+        "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        className
+      )}
       {...props}
     />
   )

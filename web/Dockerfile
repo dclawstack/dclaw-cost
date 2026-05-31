@@ -7,8 +7,8 @@ RUN npm ci
 
 COPY . .
 
-ARG NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+# web/ uses server-side rewrites (BACKEND_URL), not NEXT_PUBLIC_API_URL.
+# No ARG needed here — BACKEND_URL is read at request time, not baked at build time.
 
 RUN npm run build
 
