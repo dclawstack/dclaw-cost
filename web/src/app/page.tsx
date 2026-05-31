@@ -593,6 +593,101 @@ export default function LandingPage() {
           </FadeUp>
         </section>
 
+        {/* ── ROADMAP ─────────────────────────────────────────────────── */}
+        <section id="roadmap" className="py-32 px-6 bg-white relative overflow-hidden">
+          <div className="mx-auto max-w-7xl">
+            <FadeUp className="text-center mb-20">
+              <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#7030A0] bg-[#f3e8ff] px-4 py-2 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Roadmap
+              </span>
+              <h2 className="text-5xl md:text-6xl font-black mt-6 mb-4" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                Built in the open.<br />
+                <span className="shimmer-text">Shipped in sequence.</span>
+              </h2>
+              <p className="text-[#666] text-lg max-w-2xl mx-auto" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Every feature tracked publicly. Every sprint grounded in the PRD.
+              </p>
+            </FadeUp>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              {/* Live */}
+              <FadeUp delay={0}>
+                <div className="bg-[#faf6ff] border border-[#ece6f5] rounded-2xl p-8 h-full">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                      </span>
+                      Live
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-black text-[#1a0a2e] mb-6" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                    v1.2 · All features shipped
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "AI Cost Copilot — streaming SSE, OpenRouter & Ollama fallback",
+                      "Multi-cloud billing — AWS, GCP, Azure, on-prem unified",
+                      "Resource right-sizing with AI confidence scoring",
+                      "Budget alerts with 7-day spend forecast",
+                      "Reserved Instance Planner — 6 commitment types, break-even analysis",
+                      "Waste detection — 5 types, on-demand deep scan",
+                      "Cost allocation — tag-based showback & chargeback reports",
+                      "Container cost analysis — per-namespace & per-pod K8s breakdown",
+                      "FinOps reports — 12-month trend & unit economics",
+                      "Spot instance strategy — interruption-risk scoring",
+                      "SaaS spend management — renewal alerts & cost-per-seat",
+                      "Carbon footprint — 19-region intensity, green migration suggestions",
+                    ].map(item => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-[#444] leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                        <span className="text-[#7030A0] mt-0.5 flex-shrink-0 font-bold">›</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+              {/* Next */}
+              <FadeUp delay={120}>
+                <div className="bg-white border border-[#ece6f5] rounded-2xl p-8 h-full">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="bg-[#f3e8ff] border border-[#e2d4f0] text-[#7030A0] text-xs font-bold px-3 py-1 rounded-full" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                      Next
+                    </span>
+                    <span className="text-xs text-[#999] font-mono">PLAN-v1.4 · P0.5</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-[#1a0a2e] mb-6" style={{ fontFamily: "'Raleway', sans-serif" }}>
+                    Security & reliability hardening
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "Logto JWT authentication on all 136 API routes",
+                      "Fix CI/CD pipeline — frontend Docker build directory",
+                      "Copilot security — rate limiting & session ownership isolation",
+                      "Billing ingest idempotency — duplicate-proof on pipeline retry",
+                      "CORS hardening — scoped origin allowlist, drop wildcard",
+                      "Observability stack — structlog, Prometheus metrics, Sentry DSN",
+                      "Service-layer tests — alert thresholds, RI math, waste heuristics",
+                      "Frontend test infrastructure — vitest + React Testing Library",
+                      "Parallelize copilot context DB queries via asyncio.gather",
+                      "DPanel manifest for DClaw platform registration",
+                    ].map(item => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-[#444] leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                        <span className="text-[#c084fc] mt-0.5 flex-shrink-0 font-bold">›</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+
+            </div>
+          </div>
+        </section>
+
         {/* ── FOOTER ──────────────────────────────────────────────────── */}
         <footer className="bg-[#080410] border-t border-white/10 px-6 pt-20 pb-10">
           <div className="mx-auto max-w-7xl">
