@@ -1,111 +1,1687 @@
 {
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/__init__.py": { "mtime": 1779331209.347089, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/conftest.py": { "mtime": 1779331209.347089, "ast_hash": "c48a07389d5230090845fa3312a7cb1a", "semantic_hash": "c48a07389d5230090845fa3312a7cb1a" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_health.py": { "mtime": 1779331209.347089, "ast_hash": "e0eecc6564252a71207faac0de9f6ab4", "semantic_hash": "e0eecc6564252a71207faac0de9f6ab4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_billing_records.py": { "mtime": 1779335682.0, "ast_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4", "semantic_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_budgets.py": { "mtime": 1779334767.0, "ast_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5", "semantic_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_carbon.py": { "mtime": 1779349876.0, "ast_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6", "semantic_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cloud_accounts.py": { "mtime": 1779334751.0, "ast_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1", "semantic_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_container_costs.py": { "mtime": 1779349817.0, "ast_hash": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2", "semantic_hash": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cost_alerts.py": { "mtime": 1779334775.0, "ast_hash": "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3", "semantic_hash": "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cost_allocation.py": { "mtime": 1779349808.0, "ast_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d5", "semantic_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_dashboard.py": { "mtime": 1779334801.0, "ast_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e6", "semantic_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_recommendations.py": { "mtime": 1779335690.0, "ast_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f7", "semantic_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_reports.py": { "mtime": 1779349889.0, "ast_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a2", "semantic_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_ri_plans.py": { "mtime": 1779349795.0, "ast_hash": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b3", "semantic_hash": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_saas.py": { "mtime": 1779349863.0, "ast_hash": "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c4", "semantic_hash": "f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_spot_strategy.py": { "mtime": 1779349849.0, "ast_hash": "a2b3c4d5e6f7a2b3c4d5e6f7a2b3c4d5", "semantic_hash": "a2b3c4d5e6f7a2b3c4d5e6f7a2b3c4d5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_waste_items.py": { "mtime": 1779334788.0, "ast_hash": "b3c4d5e6f7a2b3c4d5e6f7a2b3c4d5e6", "semantic_hash": "b3c4d5e6f7a2b3c4d5e6f7a2b3c4d5e6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/__init__.py": { "mtime": 1779331209.3460891, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/__init__.py": { "mtime": 1779331209.3460891, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/main.py": { "mtime": 1779349901.0, "ast_hash": "f250a0135062b8609006adeb85c80d4e", "semantic_hash": "f250a0135062b8609006adeb85c80d4e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/routes/__init__.py": { "mtime": 1779331209.3460891, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/routes/health.py": { "mtime": 1779331209.3460891, "ast_hash": "51f50cb90a70efb0f8cd954397c68f10", "semantic_hash": "51f50cb90a70efb0f8cd954397c68f10" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/__init__.py": { "mtime": 1779349906.0, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/billing_records.py": { "mtime": 1779335682.0, "ast_hash": "a1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6", "semantic_hash": "a1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/budgets.py": { "mtime": 1779334767.0, "ast_hash": "b2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7", "semantic_hash": "b2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/carbon.py": { "mtime": 1779349876.0, "ast_hash": "c3d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8", "semantic_hash": "c3d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cloud_accounts.py": { "mtime": 1779334751.0, "ast_hash": "d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9", "semantic_hash": "d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/container_costs.py": { "mtime": 1779349817.0, "ast_hash": "e5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0", "semantic_hash": "e5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/copilot.py": { "mtime": 1779335673.0, "ast_hash": "f6a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1", "semantic_hash": "f6a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost_alerts.py": { "mtime": 1779334775.0, "ast_hash": "a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2", "semantic_hash": "a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost_allocation.py": { "mtime": 1779349808.0, "ast_hash": "b8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3", "semantic_hash": "b8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost.py": { "mtime": 1779334824.0, "ast_hash": "5e398ea5d11ac7a3c880653b28ed9f38", "semantic_hash": "5e398ea5d11ac7a3c880653b28ed9f38" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/dashboard.py": { "mtime": 1779334801.0, "ast_hash": "c9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4", "semantic_hash": "c9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/recommendations.py": { "mtime": 1779335690.0, "ast_hash": "d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5", "semantic_hash": "d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/reports.py": { "mtime": 1779349889.0, "ast_hash": "e1d2c3b4a5f6e7d8c9b0a1f2e3d4c5b6", "semantic_hash": "e1d2c3b4a5f6e7d8c9b0a1f2e3d4c5b6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/ri_plans.py": { "mtime": 1779349795.0, "ast_hash": "f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7", "semantic_hash": "f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/saas.py": { "mtime": 1779349863.0, "ast_hash": "a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8", "semantic_hash": "a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/spot_strategy.py": { "mtime": 1779349849.0, "ast_hash": "b4a5f6e7d8c9b0a1f2e3d4c5b6a7f8e9", "semantic_hash": "b4a5f6e7d8c9b0a1f2e3d4c5b6a7f8e9" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/waste_items.py": { "mtime": 1779334788.0, "ast_hash": "c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0", "semantic_hash": "c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/waste_scan.py": { "mtime": 1779349800.0, "ast_hash": "d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a1", "semantic_hash": "d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/__init__.py": { "mtime": 1779331209.3460891, "ast_hash": "d41d8cd98f00b204e9800998ecf8427e", "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/config.py": { "mtime": 1780132711.0, "ast_hash": "9955717bcb6f451ce54a0079986af4f7", "semantic_hash": "9955717bcb6f451ce54a0079986af4f7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/database.py": { "mtime": 1779331209.3460891, "ast_hash": "a55a40e371b173ab887ebf5e27546850", "semantic_hash": "a55a40e371b173ab887ebf5e27546850" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/utils.py": { "mtime": 1779331209.3460891, "ast_hash": "2eb4fa433770dbcf9b7ebd03c16e560b", "semantic_hash": "2eb4fa433770dbcf9b7ebd03c16e560b" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/copilot_service.py": { "mtime": 1779335673.0, "ast_hash": "e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2", "semantic_hash": "e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/alert_service.py": { "mtime": 1779334801.0, "ast_hash": "f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3", "semantic_hash": "f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/analyzer_service.py": { "mtime": 1779335690.0, "ast_hash": "a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4", "semantic_hash": "a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/waste_scanner_service.py": { "mtime": 1779349800.0, "ast_hash": "b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5", "semantic_hash": "b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/ri_planner_service.py": { "mtime": 1779349795.0, "ast_hash": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6", "semantic_hash": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/cost_allocation_service.py": { "mtime": 1779349808.0, "ast_hash": "d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7", "semantic_hash": "d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/spot_strategy_service.py": { "mtime": 1779349849.0, "ast_hash": "e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8", "semantic_hash": "e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/carbon_service.py": { "mtime": 1779349876.0, "ast_hash": "f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9", "semantic_hash": "f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/base.py": { "mtime": 1779331209.3460891, "ast_hash": "6fbdbd7a1b1fbb8a6ce2ecf6f38450ff", "semantic_hash": "6fbdbd7a1b1fbb8a6ce2ecf6f38450ff" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/billing_record.py": { "mtime": 1779334640.0, "ast_hash": "a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0", "semantic_hash": "a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/budget.py": { "mtime": 1779334645.0, "ast_hash": "b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1", "semantic_hash": "b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/base_repo.py": { "mtime": 1779331209.3460891, "ast_hash": "9d02d98e0b3a4809d383f544a32265b7", "semantic_hash": "9d02d98e0b3a4809d383f544a32265b7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/env.py": { "mtime": 1779331209.3460891, "ast_hash": "99162b643f6883d973e030b8ef5b270e", "semantic_hash": "99162b643f6883d973e030b8ef5b270e" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/requirements.txt": { "mtime": 1779331209.347089, "ast_hash": "973cb52b26fd448774f049c60feac28f", "semantic_hash": "973cb52b26fd448774f049c60feac28f" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/package.json": { "mtime": 1779504099.0, "ast_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4", "semantic_hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/tsconfig.json": { "mtime": 1779504099.0, "ast_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5", "semantic_hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/postcss.config.mjs": { "mtime": 1779504099.0, "ast_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6", "semantic_hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/tailwind.config.ts": { "mtime": 1779504099.0, "ast_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1", "semantic_hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/page.tsx": { "mtime": 1780248557.0, "ast_hash": "f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4", "semantic_hash": "f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/layout.tsx": { "mtime": 1780129406.0, "ast_hash": "a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5", "semantic_hash": "a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/layout.tsx": { "mtime": 1780211963.0, "ast_hash": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6", "semantic_hash": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/dashboard/page.tsx": { "mtime": 1779504084.0, "ast_hash": "c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", "semantic_hash": "c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/lib/api.ts": { "mtime": 1779504186.0, "ast_hash": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8", "semantic_hash": "d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/lib/utils.ts": { "mtime": 1779504099.0, "ast_hash": "e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9", "semantic_hash": "e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/Sidebar.tsx": { "mtime": 1780211956.0, "ast_hash": "f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0", "semantic_hash": "f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/CopilotWidget.tsx": { "mtime": 1779504216.0, "ast_hash": "a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1", "semantic_hash": "a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/README.md": { "mtime": 1780246881.0, "ast_hash": "b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2", "semantic_hash": "b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PRODUCT-SPEC.md": { "mtime": 1780246976.0, "ast_hash": "c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3", "semantic_hash": "c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PLAN-v1.2.md": { "mtime": 1779331209.345089, "ast_hash": "dc0e2850384873caba98cdf8e8155549", "semantic_hash": "dc0e2850384873caba98cdf8e8155549" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PLAN-v1.4.md": { "mtime": 1780244079.0, "ast_hash": "d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4", "semantic_hash": "d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/REVISED-PRD.md": { "mtime": 1779331209.345089, "ast_hash": "e0c6b700b2e8639e25ec4806a2535d82", "semantic_hash": "e0c6b700b2e8639e25ec4806a2535d82" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/AGENTS.md": { "mtime": 1780210082.0, "ast_hash": "130cf98923c166a9376712ab3a9d6017", "semantic_hash": "130cf98923c166a9376712ab3a9d6017" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/CLAUDE.md": { "mtime": 1779331872.3992615, "ast_hash": "e2bc4aa3d584ea3c6121404607b2fac1", "semantic_hash": "e2bc4aa3d584ea3c6121404607b2fac1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/Infographics/architecture-diagram.md": { "mtime": 1780244100.0, "ast_hash": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6", "semantic_hash": "f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/Infographics/dclaw-cost-infograph.html": { "mtime": 1780244200.0, "ast_hash": "a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7", "semantic_hash": "a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/slides/deck-content.md": { "mtime": 1780244300.0, "ast_hash": "b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8", "semantic_hash": "b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/slides/dclaw-cost-deck.html": { "mtime": 1780244400.0, "ast_hash": "c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9", "semantic_hash": "c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/test_analysis.md": { "mtime": 1780244500.0, "ast_hash": "d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0", "semantic_hash": "d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/testforge-dclaw-cost.json": { "mtime": 1780244500.0, "ast_hash": "e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1", "semantic_hash": "e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/testforge-dclaw-cost.md": { "mtime": 1780244500.0, "ast_hash": "f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2", "semantic_hash": "f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/tier2.json": { "mtime": 1780244500.0, "ast_hash": "a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3", "semantic_hash": "a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docker-compose.yml": { "mtime": 1779331209.347089, "ast_hash": "368a9b894688dd1835b84c434c094974", "semantic_hash": "368a9b894688dd1835b84c434c094974" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/ci.yml": { "mtime": 1779331209.345089, "ast_hash": "18675c093b7986a8092e68e8bde846e1", "semantic_hash": "18675c093b7986a8092e68e8bde846e1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/build-backend.yml": { "mtime": 1779331209.345089, "ast_hash": "4479112d2f8c53a03994ade2b9eec7f8", "semantic_hash": "4479112d2f8c53a03994ade2b9eec7f8" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/build-frontend.yml": { "mtime": 1779331209.345089, "ast_hash": "5079400de856707524c884e89e366799", "semantic_hash": "5079400de856707524c884e89e366799" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/deploy.yml": { "mtime": 1779331209.345089, "ast_hash": "6189511ef967818635b995f0f04477aa", "semantic_hash": "6189511ef967818635b995f0f04477aa" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/claude.yml": { "mtime": 1779331209.345089, "ast_hash": "995b9db52dace3af043903f678a61551", "semantic_hash": "995b9db52dace3af043903f678a61551" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/claude-code-review.yml": { "mtime": 1779331209.345089, "ast_hash": "5079400de856707524c884e89e366799", "semantic_hash": "5079400de856707524c884e89e366799" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/Chart.yaml": { "mtime": 1779331209.3490891, "ast_hash": "24a08082349631a72022357716d24cd1", "semantic_hash": "24a08082349631a72022357716d24cd1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/values.yaml": { "mtime": 1779331209.3490891, "ast_hash": "91def9f828f4dbf00669100d8385eb66", "semantic_hash": "91def9f828f4dbf00669100d8385eb66" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/deployment.yaml": { "mtime": 1779331209.3490891, "ast_hash": "d9e04cbcdbe7f1a0483040f90d4c07ae", "semantic_hash": "d9e04cbcdbe7f1a0483040f90d4c07ae" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/service.yaml": { "mtime": 1779331209.3490891, "ast_hash": "3c871e3de514581590418a3fc6aa7067", "semantic_hash": "3c871e3de514581590418a3fc6aa7067" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/ingress.yaml": { "mtime": 1779331209.3490891, "ast_hash": "b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4", "semantic_hash": "b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/cloudnativepg.yaml": { "mtime": 1779349901.0, "ast_hash": "c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5", "semantic_hash": "c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/meta.json": { "mtime": 1779331209.347089, "ast_hash": "68009773a716fba6b29af38b0a48c430", "semantic_hash": "68009773a716fba6b29af38b0a48c430" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/README.md": { "mtime": 1779331209.347089, "ast_hash": "331175e6d829c9bb6ae3e61abf8baea1", "semantic_hash": "331175e6d829c9bb6ae3e61abf8baea1" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/stack.md": { "mtime": 1779331209.347089, "ast_hash": "d266c5176d35b210e50acfdcd2503858", "semantic_hash": "d266c5176d35b210e50acfdcd2503858" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/api.md": { "mtime": 1779331209.347089, "ast_hash": "9106464a8e7594ad49c69fcf051f568a", "semantic_hash": "9106464a8e7594ad49c69fcf051f568a" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/architecture.md": { "mtime": 1779331209.347089, "ast_hash": "54303e6e90e7c7cef6c88caebafee11c", "semantic_hash": "54303e6e90e7c7cef6c88caebafee11c" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/quickstart.md": { "mtime": 1779331209.347089, "ast_hash": "ad007335d2fc6bc0238270435f3db288", "semantic_hash": "ad007335d2fc6bc0238270435f3db288" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/configuration.md": { "mtime": 1779331209.347089, "ast_hash": "2055f91a8dc8e0c7474ad00ef18854c4", "semantic_hash": "2055f91a8dc8e0c7474ad00ef18854c4" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/installation.md": { "mtime": 1779331209.347089, "ast_hash": "edcdfcaddc4fb6826dad8d38665ffcca", "semantic_hash": "edcdfcaddc4fb6826dad8d38665ffcca" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/releases/changelog.md": { "mtime": 1779331209.347089, "ast_hash": "a40f4eb48f38d4b6097071645a35a4dc", "semantic_hash": "a40f4eb48f38d4b6097071645a35a4dc" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/releases/roadmap.md": { "mtime": 1779331209.347089, "ast_hash": "2177d911629a959b0f962cb5fa9acdd7", "semantic_hash": "2177d911629a959b0f962cb5fa9acdd7" },
-  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/guides/best-practices.md": { "mtime": 1779331209.347089, "ast_hash": "f1fef7472c1340b058b3708c20101218", "semantic_hash": "f1fef7472c1340b058b3708c20101218" }
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/next-env.d.ts": {
+    "mtime": 1779349231.5881586,
+    "ast_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838",
+    "semantic_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/package.json": {
+    "mtime": 1779331209.348089,
+    "ast_hash": "f9e3e75310d4c724b021e8193f2147d2",
+    "semantic_hash": "f9e3e75310d4c724b021e8193f2147d2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/tsconfig.json": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "3bd7a3770c6b44dbcaab1d2f175db8bd",
+    "semantic_hash": "3bd7a3770c6b44dbcaab1d2f175db8bd"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/postcss.config.mjs": {
+    "mtime": 1779331209.348089,
+    "ast_hash": "fe13e972825095c90d22b2112d757993",
+    "semantic_hash": "fe13e972825095c90d22b2112d757993"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/tailwind.config.ts": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "bcafbbf0cfe58aeb67034c286851441d",
+    "semantic_hash": "bcafbbf0cfe58aeb67034c286851441d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/next.config.js": {
+    "mtime": 1779331209.348089,
+    "ast_hash": "13fbb9936a12daacc1b5f95f1a1c602e",
+    "semantic_hash": "13fbb9936a12daacc1b5f95f1a1c602e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/public/dclaw-manifest.json": {
+    "mtime": 1779351673.4002905,
+    "ast_hash": "36a1bb607d11f78d193c45dacfbd3611",
+    "semantic_hash": "36a1bb607d11f78d193c45dacfbd3611"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/page.tsx": {
+    "mtime": 1779335843.7355866,
+    "ast_hash": "8cc2d364930978d58da5e7fa1a3355c4",
+    "semantic_hash": "8cc2d364930978d58da5e7fa1a3355c4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/layout.tsx": {
+    "mtime": 1779335834.7206626,
+    "ast_hash": "ac90dfd2fb3dd76868f9c89fc5b0d975",
+    "semantic_hash": "ac90dfd2fb3dd76868f9c89fc5b0d975"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/billing/page.tsx": {
+    "mtime": 1779349258.0493102,
+    "ast_hash": "472307a95fff4180ff5e58835a514f65",
+    "semantic_hash": "472307a95fff4180ff5e58835a514f65"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/saas/page.tsx": {
+    "mtime": 1779351340.09175,
+    "ast_hash": "28756c82a291bceb3bd5a897e115e9bd",
+    "semantic_hash": "28756c82a291bceb3bd5a897e115e9bd"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/copilot/page.tsx": {
+    "mtime": 1779349000.303972,
+    "ast_hash": "34bb17dc31653c256565ccd68d5510d1",
+    "semantic_hash": "34bb17dc31653c256565ccd68d5510d1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/container-costs/page.tsx": {
+    "mtime": 1779351247.2400475,
+    "ast_hash": "c4641b696f27fa3f98942fa9a039941f",
+    "semantic_hash": "c4641b696f27fa3f98942fa9a039941f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/cloud-accounts/page.tsx": {
+    "mtime": 1779349252.9292805,
+    "ast_hash": "c7070d2a0b2106746eed6598752de29b",
+    "semantic_hash": "c7070d2a0b2106746eed6598752de29b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/ri-planner/page.tsx": {
+    "mtime": 1779351162.2664073,
+    "ast_hash": "87a4bd3e17579304a3a34a7c6e840e84",
+    "semantic_hash": "87a4bd3e17579304a3a34a7c6e840e84"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/budgets/page.tsx": {
+    "mtime": 1779349265.8383553,
+    "ast_hash": "eb20d129e2ab00f8c2764878c1d346b5",
+    "semantic_hash": "eb20d129e2ab00f8c2764878c1d346b5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/reports/page.tsx": {
+    "mtime": 1779351274.6762547,
+    "ast_hash": "2a9fe31ff4632b751716997cb3d8ba2d",
+    "semantic_hash": "2a9fe31ff4632b751716997cb3d8ba2d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/waste/page.tsx": {
+    "mtime": 1779351191.2766254,
+    "ast_hash": "09cb6571f9cdc066f1af01b094d5e87f",
+    "semantic_hash": "09cb6571f9cdc066f1af01b094d5e87f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/spot-strategy/page.tsx": {
+    "mtime": 1779351303.261471,
+    "ast_hash": "0a2b859f7f1f6c96797c9adad5fedb36",
+    "semantic_hash": "0a2b859f7f1f6c96797c9adad5fedb36"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/carbon/page.tsx": {
+    "mtime": 1779351367.501958,
+    "ast_hash": "e9417a77b934069f4a3528b181accaf3",
+    "semantic_hash": "e9417a77b934069f4a3528b181accaf3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/cost-allocation/page.tsx": {
+    "mtime": 1779351223.855871,
+    "ast_hash": "3cc93efae81a4ee6bb92446bf9c0efaf",
+    "semantic_hash": "3cc93efae81a4ee6bb92446bf9c0efaf"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/recommendations/page.tsx": {
+    "mtime": 1779349271.4613879,
+    "ast_hash": "11efdb1d738a2f95bd07587c8c3c8eb5",
+    "semantic_hash": "11efdb1d738a2f95bd07587c8c3c8eb5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/app/dashboard/page.tsx": {
+    "mtime": 1779335871.191371,
+    "ast_hash": "f4a06936ad8c5a737de10f9866169a2f",
+    "semantic_hash": "f4a06936ad8c5a737de10f9866169a2f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/lib/utils.ts": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "ea1c194ee828369e6fcdde84b4d8b8ba",
+    "semantic_hash": "ea1c194ee828369e6fcdde84b4d8b8ba"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/lib/api.ts": {
+    "mtime": 1779349952.4359388,
+    "ast_hash": "f73ae9dd43df2f8453d668770619813c",
+    "semantic_hash": "f73ae9dd43df2f8453d668770619813c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/CopilotWidget.tsx": {
+    "mtime": 1779335816.8148212,
+    "ast_hash": "4321a6030eb1cc95b6680d7f535d2082",
+    "semantic_hash": "4321a6030eb1cc95b6680d7f535d2082"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/Sidebar.tsx": {
+    "mtime": 1779349969.19106,
+    "ast_hash": "0e0f1a570494881c96377ed30fe07b7d",
+    "semantic_hash": "0e0f1a570494881c96377ed30fe07b7d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/label.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "874216b95b72f23579a562f78955a276",
+    "semantic_hash": "874216b95b72f23579a562f78955a276"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/avatar.tsx": {
+    "mtime": 1779331209.348089,
+    "ast_hash": "cd70cb254ea891a7d55c64a2304a8196",
+    "semantic_hash": "cd70cb254ea891a7d55c64a2304a8196"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/card.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "7e91edc9bf303578c1e7bcdde9366134",
+    "semantic_hash": "7e91edc9bf303578c1e7bcdde9366134"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/button.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "97b90752432a6ed8629f9774424d2ebe",
+    "semantic_hash": "97b90752432a6ed8629f9774424d2ebe"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/select.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "e47ac9814247139df2ab1d7d233fa453",
+    "semantic_hash": "e47ac9814247139df2ab1d7d233fa453"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/table.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "0d12893a077e8a94c0b4ec6b8d16e1dc",
+    "semantic_hash": "0d12893a077e8a94c0b4ec6b8d16e1dc"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/badge.tsx": {
+    "mtime": 1779331209.348089,
+    "ast_hash": "b23999a2d3f73b74d46c949dfa469552",
+    "semantic_hash": "b23999a2d3f73b74d46c949dfa469552"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/tabs.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "7d4fe584503dc4122d11418239e05f98",
+    "semantic_hash": "7d4fe584503dc4122d11418239e05f98"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/dialog.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "6394d8caae9db6ca79e465921a839982",
+    "semantic_hash": "6394d8caae9db6ca79e465921a839982"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/frontend.bak/src/components/ui/input.tsx": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "20c7d814efed7c1cb30937a9bcca5089",
+    "semantic_hash": "20c7d814efed7c1cb30937a9bcca5089"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/next-env.d.ts": {
+    "mtime": 1779504133.9096339,
+    "ast_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838",
+    "semantic_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/package.json": {
+    "mtime": 1779504099.0481477,
+    "ast_hash": "e8a974432bf5a741b8b0eb451ac7be8c",
+    "semantic_hash": "e8a974432bf5a741b8b0eb451ac7be8c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/tsconfig.json": {
+    "mtime": 1779504105.737677,
+    "ast_hash": "cbd1e6e28e5d74beb737ddb32e68cf7c",
+    "semantic_hash": "cbd1e6e28e5d74beb737ddb32e68cf7c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/postcss.config.mjs": {
+    "mtime": 1779504118.4367154,
+    "ast_hash": "427f41435583d6e5a0f8111f316f7c73",
+    "semantic_hash": "427f41435583d6e5a0f8111f316f7c73"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/tailwind.config.ts": {
+    "mtime": 1780211837.360551,
+    "ast_hash": "146651582ebfc5566b14a79b951c059c",
+    "semantic_hash": "146651582ebfc5566b14a79b951c059c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/next.config.js": {
+    "mtime": 1780211776.5081718,
+    "ast_hash": "9e4727cc48b7550e65f25e9c3fabdf83",
+    "semantic_hash": "9e4727cc48b7550e65f25e9c3fabdf83"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/project.json": {
+    "mtime": 1779516104.6835015,
+    "ast_hash": "805d4a0267eb9ce3a6e10b0844611cd6",
+    "semantic_hash": "805d4a0267eb9ce3a6e10b0844611cd6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/config.json": {
+    "mtime": 1779516122.0751867,
+    "ast_hash": "092780c5f55afbc93ac7b02e74b6323d",
+    "semantic_hash": "092780c5f55afbc93ac7b02e74b6323d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/builds.json": {
+    "mtime": 1779516104.8165066,
+    "ast_hash": "3ea03b5f5aec0b4d1e1d3d47c68e2830",
+    "semantic_hash": "3ea03b5f5aec0b4d1e1d3d47c68e2830"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/recommendations.prerender-config.json": {
+    "mtime": 1779516122.0641863,
+    "ast_hash": "93d296a6cdfa5cdbb3b5f482dc79c636",
+    "semantic_hash": "93d296a6cdfa5cdbb3b5f482dc79c636"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/saas.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "8184a66e2283710cf66cff3fdf02b598",
+    "semantic_hash": "8184a66e2283710cf66cff3fdf02b598"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/reports.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "ebbe123c501c4be0ecaecbff5d6310fa",
+    "semantic_hash": "ebbe123c501c4be0ecaecbff5d6310fa"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/reports.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "a105f1d92e7924198e754a38c08112f0",
+    "semantic_hash": "a105f1d92e7924198e754a38c08112f0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/spot-strategy.rsc.prerender-config.json": {
+    "mtime": 1779516122.0631862,
+    "ast_hash": "f7eb3346d1a6e20ac3ec73e441697901",
+    "semantic_hash": "f7eb3346d1a6e20ac3ec73e441697901"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/container-costs.prerender-config.json": {
+    "mtime": 1779516122.0661864,
+    "ast_hash": "785da4b032bab273ee74a2d65426431b",
+    "semantic_hash": "785da4b032bab273ee74a2d65426431b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/waste.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "93ccba265105a3941b8a88ac1613619f",
+    "semantic_hash": "93ccba265105a3941b8a88ac1613619f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/index.rsc.prerender-config.json": {
+    "mtime": 1779516122.0601861,
+    "ast_hash": "53357ff19f4e1097bf6f923868bceca6",
+    "semantic_hash": "53357ff19f4e1097bf6f923868bceca6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/copilot.rsc.prerender-config.json": {
+    "mtime": 1779516122.0601861,
+    "ast_hash": "97c493be3cf3069f90a37b64e218ac57",
+    "semantic_hash": "97c493be3cf3069f90a37b64e218ac57"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/billing.prerender-config.json": {
+    "mtime": 1779516122.0641863,
+    "ast_hash": "e633728bbc16d3cb4f764c41849c4817",
+    "semantic_hash": "e633728bbc16d3cb4f764c41849c4817"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/budgets.rsc.prerender-config.json": {
+    "mtime": 1779516122.0601861,
+    "ast_hash": "09885a1d6086ddbc8a986f7b030af0eb",
+    "semantic_hash": "09885a1d6086ddbc8a986f7b030af0eb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cost-allocation.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "586c1cfffda0f6d84fa609c4608f5390",
+    "semantic_hash": "586c1cfffda0f6d84fa609c4608f5390"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/carbon.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "5c601c6160ec0720c16f6f008398b6d4",
+    "semantic_hash": "5c601c6160ec0720c16f6f008398b6d4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/copilot.prerender-config.json": {
+    "mtime": 1779516122.0661864,
+    "ast_hash": "93cb2d4b15b22f33e556b5f560937b38",
+    "semantic_hash": "93cb2d4b15b22f33e556b5f560937b38"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/index.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "c3c45410f09ac91847ebfca1997321c6",
+    "semantic_hash": "c3c45410f09ac91847ebfca1997321c6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/dashboard.rsc.prerender-config.json": {
+    "mtime": 1779516122.061186,
+    "ast_hash": "46dd3a5b2062db07989bf6dcc67d0f63",
+    "semantic_hash": "46dd3a5b2062db07989bf6dcc67d0f63"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/budgets.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "682d70118be1329ebc5455ca510b264b",
+    "semantic_hash": "682d70118be1329ebc5455ca510b264b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/dashboard.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "ce23c7214a1c00b04952b592f7dd4d60",
+    "semantic_hash": "ce23c7214a1c00b04952b592f7dd4d60"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/saas.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "99131eefc9feb72189e55f36601b45f7",
+    "semantic_hash": "99131eefc9feb72189e55f36601b45f7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/ri-planner.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "c5393bd91a1ba9268eb5fcdbb99d02a4",
+    "semantic_hash": "c5393bd91a1ba9268eb5fcdbb99d02a4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/container-costs.rsc.prerender-config.json": {
+    "mtime": 1779516122.061186,
+    "ast_hash": "5a8508aef579cc11d6868cfe67bb551d",
+    "semantic_hash": "5a8508aef579cc11d6868cfe67bb551d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/ri-planner.prerender-config.json": {
+    "mtime": 1779516122.0641863,
+    "ast_hash": "5cbfc45d910aaec1cd2eb395d2c176de",
+    "semantic_hash": "5cbfc45d910aaec1cd2eb395d2c176de"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cloud-accounts.prerender-config.json": {
+    "mtime": 1779516122.0661864,
+    "ast_hash": "fc0c40da34b7c4cb2d72f830713eedc4",
+    "semantic_hash": "fc0c40da34b7c4cb2d72f830713eedc4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cost-allocation.prerender-config.json": {
+    "mtime": 1779516122.0661864,
+    "ast_hash": "073e9b9c4e236827852584dc06633237",
+    "semantic_hash": "073e9b9c4e236827852584dc06633237"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/waste.rsc.prerender-config.json": {
+    "mtime": 1779516122.0631862,
+    "ast_hash": "a7083e9b95779988bbd3d13b8f884be9",
+    "semantic_hash": "a7083e9b95779988bbd3d13b8f884be9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/spot-strategy.prerender-config.json": {
+    "mtime": 1779516122.0651863,
+    "ast_hash": "ae833d823c21941c17a24e101cefce1d",
+    "semantic_hash": "ae833d823c21941c17a24e101cefce1d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cloud-accounts.rsc.prerender-config.json": {
+    "mtime": 1779516122.0601861,
+    "ast_hash": "664df33c00faae53afd92342a9b3e78e",
+    "semantic_hash": "664df33c00faae53afd92342a9b3e78e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/recommendations.rsc.prerender-config.json": {
+    "mtime": 1779516122.0621862,
+    "ast_hash": "20a3cd9c8873747c40d0ba9ab310fff5",
+    "semantic_hash": "20a3cd9c8873747c40d0ba9ab310fff5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/billing.rsc.prerender-config.json": {
+    "mtime": 1779516122.061186,
+    "ast_hash": "addb744b3de532a98d1e27458525e454",
+    "semantic_hash": "addb744b3de532a98d1e27458525e454"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/carbon.prerender-config.json": {
+    "mtime": 1779516122.0661864,
+    "ast_hash": "d1ce142e2aeb322b9506b63711274d67",
+    "semantic_hash": "d1ce142e2aeb322b9506b63711274d67"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/index.rsc.func/.vc-config.json": {
+    "mtime": 1779516122.059186,
+    "ast_hash": "1a84098cfd344b9691a4e5860a5f01c4",
+    "semantic_hash": "1a84098cfd344b9691a4e5860a5f01c4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/_not-found.func/.vc-config.json": {
+    "mtime": 1779516122.056186,
+    "ast_hash": "176db78c77037e66497222d366ed9faf",
+    "semantic_hash": "176db78c77037e66497222d366ed9faf"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/diagnostics/cli_traces.json": {
+    "mtime": 1779516122.0871873,
+    "ast_hash": "e4ed8be9a26c54c8fdc794eec50ebd72",
+    "semantic_hash": "e4ed8be9a26c54c8fdc794eec50ebd72"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_app.rsc.json": {
+    "mtime": 1779516122.0631862,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": "99914b932bd37a50b983c5e7c90ae93b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_error.rsc.json": {
+    "mtime": 1779516122.0631862,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": "99914b932bd37a50b983c5e7c90ae93b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_document.rsc.json": {
+    "mtime": 1779516122.0641863,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": "99914b932bd37a50b983c5e7c90ae93b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/404.rsc.json": {
+    "mtime": 1779516122.0641863,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": "99914b932bd37a50b983c5e7c90ae93b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/BIDjy1Zsy5jPU_cI33JSI/_buildManifest.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "1ffa1fc7fc8685a5aed232b8dfd39cd2",
+    "semantic_hash": "1ffa1fc7fc8685a5aed232b8dfd39cd2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/BIDjy1Zsy5jPU_cI33JSI/_ssgManifest.js": {
+    "mtime": 1779516119.2020736,
+    "ast_hash": "b404e23d62d95bafd03ad7747cc0e88b",
+    "semantic_hash": "b404e23d62d95bafd03ad7747cc0e88b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/framework-f66176bb897dc684.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "bf0dbea2c1509e290fc7ddbdd9477a3b",
+    "semantic_hash": "bf0dbea2c1509e290fc7ddbdd9477a3b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/972-a0e92741977e0772.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "f4b13ad7edddc9f56fea315f7e3f1ff8",
+    "semantic_hash": "f4b13ad7edddc9f56fea315f7e3f1ff8"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/724-c646bd4deaa6b4ce.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "5e9809f770fc6a5a3d4a9ba9660c43db",
+    "semantic_hash": "5e9809f770fc6a5a3d4a9ba9660c43db"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/590-4207863cb2652cf9.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "f13e8f48ba6cae5deb40d6455855664a",
+    "semantic_hash": "f13e8f48ba6cae5deb40d6455855664a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/polyfills-42372ed130431b0a.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "846118c33b2c0e922d7b3a7676f81f6f",
+    "semantic_hash": "846118c33b2c0e922d7b3a7676f81f6f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/318-da76607db7f83e32.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "c4bddd4c6b81e96b013003f97a6d9029",
+    "semantic_hash": "c4bddd4c6b81e96b013003f97a6d9029"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/main-249600638ab26319.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "8c6a34dd43d1e4dea31902573ef94f07",
+    "semantic_hash": "8c6a34dd43d1e4dea31902573ef94f07"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/117-e5868bd395f30b6a.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "d13e87eb771cb1dc6c862544c92dd720",
+    "semantic_hash": "d13e87eb771cb1dc6c862544c92dd720"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/main-app-471f87569fadbf81.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "1cdc62fc3d0398a67b4dc7f3257b5198",
+    "semantic_hash": "1cdc62fc3d0398a67b4dc7f3257b5198"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/fd9d1056-964883165fe8e48d.js": {
+    "mtime": 1779516114.113873,
+    "ast_hash": "d70ea42503ecdf865cc5b50951e7a260",
+    "semantic_hash": "d70ea42503ecdf865cc5b50951e7a260"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/webpack-9d964d8cb0d81fe9.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "2e1662c5b3966e5eaab6e2d6eb58b2e0",
+    "semantic_hash": "2e1662c5b3966e5eaab6e2d6eb58b2e0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/pages/_error-7ba65e1336b92748.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "67ec72307d2c56138924cecc32ab91f9",
+    "semantic_hash": "67ec72307d2c56138924cecc32ab91f9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/pages/_app-72b849fbd24ac258.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "05d5b2f0ba56f113727492764735dcbb",
+    "semantic_hash": "05d5b2f0ba56f113727492764735dcbb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/layout-c9331bfe5e46d007.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "d855eefd7505a9a0cab3d75fbacadb21",
+    "semantic_hash": "d855eefd7505a9a0cab3d75fbacadb21"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/page-ec0cac99f3d82d76.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "7cec9ab3580208af4e99a7a12d7e6b2c",
+    "semantic_hash": "7cec9ab3580208af4e99a7a12d7e6b2c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/layout-aaa8e07b4104c727.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "9fd47ddec4edcda5bf807f24c7dad8fc",
+    "semantic_hash": "9fd47ddec4edcda5bf807f24c7dad8fc"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/billing/page-f08f2245e2d0004e.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "af1ebbc17e49f90fcd2b254fdf2eb7a3",
+    "semantic_hash": "af1ebbc17e49f90fcd2b254fdf2eb7a3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/saas/page-9fdf5b5f648d4f1a.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "232e1fe333242e0385b27da06bf3db6a",
+    "semantic_hash": "232e1fe333242e0385b27da06bf3db6a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/copilot/page-1c6c88e5e5471848.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "80d98e6e353338ff23e6ef6a3ee82e45",
+    "semantic_hash": "80d98e6e353338ff23e6ef6a3ee82e45"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/container-costs/page-fa3c23d417f7974a.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "2b122c2046f2a320ed40df9c2460be9e",
+    "semantic_hash": "2b122c2046f2a320ed40df9c2460be9e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/cloud-accounts/page-f6c0da8ffbc30689.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "8f3ee02ec55e261379ebdbf66969eb4c",
+    "semantic_hash": "8f3ee02ec55e261379ebdbf66969eb4c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/ri-planner/page-41eda5b3d87ff2f4.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "0266589b7cb8085d99c4ed67c1ad2a6b",
+    "semantic_hash": "0266589b7cb8085d99c4ed67c1ad2a6b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/budgets/page-22063beb1dd605b8.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "921a4929f4d6feb24cc8a3cba1fee3a0",
+    "semantic_hash": "921a4929f4d6feb24cc8a3cba1fee3a0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/reports/page-ff38409fdf0b1d63.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "5f58fc052e2406eb82a593f85e982118",
+    "semantic_hash": "5f58fc052e2406eb82a593f85e982118"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/waste/page-c998e2fb3788e5cc.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "4897c5864f810a2fd3edefe964b076d2",
+    "semantic_hash": "4897c5864f810a2fd3edefe964b076d2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/spot-strategy/page-8ff8140986bf5ece.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "81cc2057876575e7cb1f8dbfd7abd974",
+    "semantic_hash": "81cc2057876575e7cb1f8dbfd7abd974"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/carbon/page-76fb39a99c487aca.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "3cfb099c05971c76a243c3dc746a6e57",
+    "semantic_hash": "3cfb099c05971c76a243c3dc746a6e57"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/cost-allocation/page-faff77bc1dd211d0.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "d91ab382f271c17c4763f5ac7588abb9",
+    "semantic_hash": "d91ab382f271c17c4763f5ac7588abb9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/recommendations/page-594017c801ac77da.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "26f0268c0220c37b6fdfa4c26890b863",
+    "semantic_hash": "26f0268c0220c37b6fdfa4c26890b863"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/(app)/dashboard/page-2a31bf0b11fc169a.js": {
+    "mtime": 1779516114.111873,
+    "ast_hash": "b9050953523b08037bdf611080952979",
+    "semantic_hash": "b9050953523b08037bdf611080952979"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/chunks/app/_not-found/page-a84e524ccd2e5709.js": {
+    "mtime": 1779516114.1098728,
+    "ast_hash": "021aa90f6d9d5ac2b29621170e78fce1",
+    "semantic_hash": "021aa90f6d9d5ac2b29621170e78fce1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/page.tsx": {
+    "mtime": 1780248557.6222732,
+    "ast_hash": "5e0836a273934cc836b49d5181453d41",
+    "semantic_hash": "5e0836a273934cc836b49d5181453d41"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/layout.tsx": {
+    "mtime": 1780129406.8092556,
+    "ast_hash": "ccfb2c239053cc91d17a27eb03db4950",
+    "semantic_hash": "ccfb2c239053cc91d17a27eb03db4950"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/layout.tsx": {
+    "mtime": 1780211963.7892938,
+    "ast_hash": "f243c26d4ac246e312a538e8cdf43847",
+    "semantic_hash": "f243c26d4ac246e312a538e8cdf43847"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/billing/page.tsx": {
+    "mtime": 1779504084.6960604,
+    "ast_hash": "472307a95fff4180ff5e58835a514f65",
+    "semantic_hash": "472307a95fff4180ff5e58835a514f65"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/saas/page.tsx": {
+    "mtime": 1779504084.7790663,
+    "ast_hash": "28756c82a291bceb3bd5a897e115e9bd",
+    "semantic_hash": "28756c82a291bceb3bd5a897e115e9bd"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/copilot/page.tsx": {
+    "mtime": 1779514552.4178784,
+    "ast_hash": "b900688d698f520400aff8058fc65c45",
+    "semantic_hash": "b900688d698f520400aff8058fc65c45"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/container-costs/page.tsx": {
+    "mtime": 1779504084.7340631,
+    "ast_hash": "c4641b696f27fa3f98942fa9a039941f",
+    "semantic_hash": "c4641b696f27fa3f98942fa9a039941f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/cloud-accounts/page.tsx": {
+    "mtime": 1779504084.7210622,
+    "ast_hash": "c7070d2a0b2106746eed6598752de29b",
+    "semantic_hash": "c7070d2a0b2106746eed6598752de29b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/ri-planner/page.tsx": {
+    "mtime": 1779504084.771066,
+    "ast_hash": "87a4bd3e17579304a3a34a7c6e840e84",
+    "semantic_hash": "87a4bd3e17579304a3a34a7c6e840e84"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/budgets/page.tsx": {
+    "mtime": 1779504084.7080612,
+    "ast_hash": "eb20d129e2ab00f8c2764878c1d346b5",
+    "semantic_hash": "eb20d129e2ab00f8c2764878c1d346b5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/reports/page.tsx": {
+    "mtime": 1779504084.7620652,
+    "ast_hash": "2a9fe31ff4632b751716997cb3d8ba2d",
+    "semantic_hash": "2a9fe31ff4632b751716997cb3d8ba2d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/waste/page.tsx": {
+    "mtime": 1779504084.801068,
+    "ast_hash": "09cb6571f9cdc066f1af01b094d5e87f",
+    "semantic_hash": "09cb6571f9cdc066f1af01b094d5e87f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/spot-strategy/page.tsx": {
+    "mtime": 1779504084.7900672,
+    "ast_hash": "0a2b859f7f1f6c96797c9adad5fedb36",
+    "semantic_hash": "0a2b859f7f1f6c96797c9adad5fedb36"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/carbon/page.tsx": {
+    "mtime": 1779514559.5621445,
+    "ast_hash": "e9417a77b934069f4a3528b181accaf3",
+    "semantic_hash": "e9417a77b934069f4a3528b181accaf3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/cost-allocation/page.tsx": {
+    "mtime": 1779504084.7440639,
+    "ast_hash": "3cc93efae81a4ee6bb92446bf9c0efaf",
+    "semantic_hash": "3cc93efae81a4ee6bb92446bf9c0efaf"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/recommendations/page.tsx": {
+    "mtime": 1779514569.8215277,
+    "ast_hash": "504c84c19835025bed0c96e9ac8dce3a",
+    "semantic_hash": "504c84c19835025bed0c96e9ac8dce3a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/app/(app)/dashboard/page.tsx": {
+    "mtime": 1779504084.7540646,
+    "ast_hash": "f4a06936ad8c5a737de10f9866169a2f",
+    "semantic_hash": "f4a06936ad8c5a737de10f9866169a2f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/lib/utils.ts": {
+    "mtime": 1779504084.6720586,
+    "ast_hash": "ea1c194ee828369e6fcdde84b4d8b8ba",
+    "semantic_hash": "ea1c194ee828369e6fcdde84b4d8b8ba"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/lib/api.ts": {
+    "mtime": 1779504186.826883,
+    "ast_hash": "99a9c5307e4b36d3174ed16f8e628df2",
+    "semantic_hash": "99a9c5307e4b36d3174ed16f8e628df2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/CopilotWidget.tsx": {
+    "mtime": 1779504216.6666882,
+    "ast_hash": "c578c0194af2c19f67efb1959d61dfaf",
+    "semantic_hash": "c578c0194af2c19f67efb1959d61dfaf"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/Sidebar.tsx": {
+    "mtime": 1780211956.8222542,
+    "ast_hash": "7bdc007c28cc68c41099fda8584a45b8",
+    "semantic_hash": "7bdc007c28cc68c41099fda8584a45b8"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/label.tsx": {
+    "mtime": 1779504084.6620579,
+    "ast_hash": "874216b95b72f23579a562f78955a276",
+    "semantic_hash": "874216b95b72f23579a562f78955a276"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/avatar.tsx": {
+    "mtime": 1779504084.6620579,
+    "ast_hash": "cd70cb254ea891a7d55c64a2304a8196",
+    "semantic_hash": "cd70cb254ea891a7d55c64a2304a8196"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/card.tsx": {
+    "mtime": 1780211863.1487072,
+    "ast_hash": "15c64d68d66e3943870d165f9134e083",
+    "semantic_hash": "15c64d68d66e3943870d165f9134e083"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/button.tsx": {
+    "mtime": 1780211853.5786495,
+    "ast_hash": "009cf4c6fe4f2c701e327aec65af021f",
+    "semantic_hash": "009cf4c6fe4f2c701e327aec65af021f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/select.tsx": {
+    "mtime": 1780211881.7858186,
+    "ast_hash": "d45057a25437978f008194893305dc38",
+    "semantic_hash": "d45057a25437978f008194893305dc38"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/table.tsx": {
+    "mtime": 1780211902.0949383,
+    "ast_hash": "a816c90d2104ee52e8dd27591510a091",
+    "semantic_hash": "a816c90d2104ee52e8dd27591510a091"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/badge.tsx": {
+    "mtime": 1780211869.0407426,
+    "ast_hash": "8214c7cd8031308951eb3ef27058adeb",
+    "semantic_hash": "8214c7cd8031308951eb3ef27058adeb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/tabs.tsx": {
+    "mtime": 1780211914.1420088,
+    "ast_hash": "b92c7fef9aec5a508cf42fc9c957b3fe",
+    "semantic_hash": "b92c7fef9aec5a508cf42fc9c957b3fe"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/dialog.tsx": {
+    "mtime": 1780211890.986873,
+    "ast_hash": "b84c89e2053add3c72fd2b574624c889",
+    "semantic_hash": "b84c89e2053add3c72fd2b574624c889"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/src/components/ui/input.tsx": {
+    "mtime": 1780211875.0577786,
+    "ast_hash": "44b6fab3b1bc2303203e08fc811f833f",
+    "semantic_hash": "44b6fab3b1bc2303203e08fc811f833f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/testforge-dclaw-cost.json": {
+    "mtime": 1780232954.8583467,
+    "ast_hash": "c133411ae00dbec1bc03a9d34d3d9447",
+    "semantic_hash": "c133411ae00dbec1bc03a9d34d3d9447"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/tier2.json": {
+    "mtime": 1780233090.9590013,
+    "ast_hash": "7fa9f0a9acc25bfd2ff1e6213f4e41b5",
+    "semantic_hash": "7fa9f0a9acc25bfd2ff1e6213f4e41b5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/__init__.py": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_dashboard.py": {
+    "mtime": 1779351843.4655945,
+    "ast_hash": "de35333a178a269bed81ed388a0cada6",
+    "semantic_hash": "de35333a178a269bed81ed388a0cada6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cost_allocation.py": {
+    "mtime": 1779351803.3632867,
+    "ast_hash": "2db6832b6fa51b245983a4e07ae2dc71",
+    "semantic_hash": "2db6832b6fa51b245983a4e07ae2dc71"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_container_costs.py": {
+    "mtime": 1779351818.1004,
+    "ast_hash": "2b233391965bd320b28a04627421e099",
+    "semantic_hash": "2b233391965bd320b28a04627421e099"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_billing_records.py": {
+    "mtime": 1779334883.867954,
+    "ast_hash": "08b8b0cf5721c5c5cf0eef334a62bcde",
+    "semantic_hash": "08b8b0cf5721c5c5cf0eef334a62bcde"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_spot_strategy.py": {
+    "mtime": 1779351832.9215138,
+    "ast_hash": "fca7f8903530af385e74e5f6748fe3bf",
+    "semantic_hash": "fca7f8903530af385e74e5f6748fe3bf"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_waste_items.py": {
+    "mtime": 1779351763.0129774,
+    "ast_hash": "6fed6e60796b6756b02cdecae8ac0608",
+    "semantic_hash": "6fed6e60796b6756b02cdecae8ac0608"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_ri_plans.py": {
+    "mtime": 1779351775.0860698,
+    "ast_hash": "9239725345ab62bdbfbd7ef6d799cff1",
+    "semantic_hash": "9239725345ab62bdbfbd7ef6d799cff1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_saas.py": {
+    "mtime": 1779351788.269171,
+    "ast_hash": "ff20b2de066aa72950731c2a54a0fb59",
+    "semantic_hash": "ff20b2de066aa72950731c2a54a0fb59"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_budgets.py": {
+    "mtime": 1779334893.109127,
+    "ast_hash": "fabfa2a9adc54f161dd41f195f0cb85c",
+    "semantic_hash": "fabfa2a9adc54f161dd41f195f0cb85c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/conftest.py": {
+    "mtime": 1779334828.3218842,
+    "ast_hash": "21eb1fd3719e4a01827c19c25a3611e7",
+    "semantic_hash": "21eb1fd3719e4a01827c19c25a3611e7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cloud_accounts.py": {
+    "mtime": 1779334867.3446414,
+    "ast_hash": "8609642916fcec53c9e4597005696ca2",
+    "semantic_hash": "8609642916fcec53c9e4597005696ca2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_recommendations.py": {
+    "mtime": 1779351749.00787,
+    "ast_hash": "18ebea7f97af49976c6431363d13b250",
+    "semantic_hash": "18ebea7f97af49976c6431363d13b250"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_reports.py": {
+    "mtime": 1779351866.5937722,
+    "ast_hash": "f62ea841bed6efec8ef60c97556280e9",
+    "semantic_hash": "f62ea841bed6efec8ef60c97556280e9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_carbon.py": {
+    "mtime": 1779351856.3666937,
+    "ast_hash": "39ef1cfd990f5ccedc1a2f646e11ccf3",
+    "semantic_hash": "39ef1cfd990f5ccedc1a2f646e11ccf3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_cost_alerts.py": {
+    "mtime": 1779351738.335788,
+    "ast_hash": "cd033d44a9183857cd34b23119d34ee0",
+    "semantic_hash": "cd033d44a9183857cd34b23119d34ee0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/tests/test_health.py": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "e0eecc6564252a71207faac0de9f6ab4",
+    "semantic_hash": "e0eecc6564252a71207faac0de9f6ab4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/main.py": {
+    "mtime": 1779349901.7405734,
+    "ast_hash": "a335ca145158f5c5549f4fe4b79d58f7",
+    "semantic_hash": "a335ca145158f5c5549f4fe4b79d58f7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/routes/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/routes/health.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "51f50cb90a70efb0f8cd954397c68f10",
+    "semantic_hash": "51f50cb90a70efb0f8cd954397c68f10"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/__init__.py": {
+    "mtime": 1779349906.1156049,
+    "ast_hash": "691f6308c15c631fd94f86376f9d7345",
+    "semantic_hash": "691f6308c15c631fd94f86376f9d7345"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/waste_scan.py": {
+    "mtime": 1779349800.042849,
+    "ast_hash": "25e22d87db18ac19b242c70c98f1824e",
+    "semantic_hash": "25e22d87db18ac19b242c70c98f1824e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/reports.py": {
+    "mtime": 1779349889.7614875,
+    "ast_hash": "a732a0645cf19156818d7f0cc66e31d5",
+    "semantic_hash": "a732a0645cf19156818d7f0cc66e31d5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/waste_items.py": {
+    "mtime": 1779334788.3230786,
+    "ast_hash": "e37ae83f80806ab569559c54d8f27451",
+    "semantic_hash": "e37ae83f80806ab569559c54d8f27451"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/spot_strategy.py": {
+    "mtime": 1779349849.942203,
+    "ast_hash": "f1e1941da27cc6b6e29757f5962053ab",
+    "semantic_hash": "f1e1941da27cc6b6e29757f5962053ab"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/dashboard.py": {
+    "mtime": 1779334801.6023495,
+    "ast_hash": "fd34d34e2c358b214d1feb6444bfa3f6",
+    "semantic_hash": "fd34d34e2c358b214d1feb6444bfa3f6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost_alerts.py": {
+    "mtime": 1779334775.656817,
+    "ast_hash": "9b24327d636ad96df9daaf93b5e3a232",
+    "semantic_hash": "9b24327d636ad96df9daaf93b5e3a232"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/budgets.py": {
+    "mtime": 1779334767.2296412,
+    "ast_hash": "67d177f45a48e5da1047e606f9c8a503",
+    "semantic_hash": "67d177f45a48e5da1047e606f9c8a503"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/billing_records.py": {
+    "mtime": 1779335682.347618,
+    "ast_hash": "729397e17264e1c9ffa94e464df7efb6",
+    "semantic_hash": "729397e17264e1c9ffa94e464df7efb6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost_allocation.py": {
+    "mtime": 1779349808.7509108,
+    "ast_hash": "57d038cb48346a8c7fc628d4fb7c2c28",
+    "semantic_hash": "57d038cb48346a8c7fc628d4fb7c2c28"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cost.py": {
+    "mtime": 1779334824.7448132,
+    "ast_hash": "f3fd6c5ef5b70eff291c76de8d0f5b9a",
+    "semantic_hash": "f3fd6c5ef5b70eff291c76de8d0f5b9a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/copilot.py": {
+    "mtime": 1779335673.9525163,
+    "ast_hash": "37713f8892139bcabf5c716c0379a26d",
+    "semantic_hash": "37713f8892139bcabf5c716c0379a26d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/carbon.py": {
+    "mtime": 1779349876.558393,
+    "ast_hash": "e815c8e35be113b5427dc72fe13c992f",
+    "semantic_hash": "e815c8e35be113b5427dc72fe13c992f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/ri_plans.py": {
+    "mtime": 1779349795.5398173,
+    "ast_hash": "4b93ab4ea1cc5969068d2909820ff3f6",
+    "semantic_hash": "4b93ab4ea1cc5969068d2909820ff3f6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/cloud_accounts.py": {
+    "mtime": 1779334751.1033006,
+    "ast_hash": "4d3b31d6fc3ec9cb0801ef9c671caed9",
+    "semantic_hash": "4d3b31d6fc3ec9cb0801ef9c671caed9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/container_costs.py": {
+    "mtime": 1779349817.972976,
+    "ast_hash": "51983b28789d758790800e82012a7d19",
+    "semantic_hash": "51983b28789d758790800e82012a7d19"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/recommendations.py": {
+    "mtime": 1779335690.5937178,
+    "ast_hash": "e3222f7669531e2447c4b3577d1abc57",
+    "semantic_hash": "e3222f7669531e2447c4b3577d1abc57"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/api/v1/saas.py": {
+    "mtime": 1779349863.3062983,
+    "ast_hash": "15c151ad4e18cc23db7c171b76a572c1",
+    "semantic_hash": "15c151ad4e18cc23db7c171b76a572c1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/database.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "a55a40e371b173ab887ebf5e27546850",
+    "semantic_hash": "a55a40e371b173ab887ebf5e27546850"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/config.py": {
+    "mtime": 1780132711.8567712,
+    "ast_hash": "8680132f84faa5aa9875b88c88578c02",
+    "semantic_hash": "8680132f84faa5aa9875b88c88578c02"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/core/utils.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "2eb4fa433770dbcf9b7ebd03c16e560b",
+    "semantic_hash": "2eb4fa433770dbcf9b7ebd03c16e560b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/spot_strategy_service.py": {
+    "mtime": 1779349764.8016012,
+    "ast_hash": "937500f4f0a3a2646c8b29dede600788",
+    "semantic_hash": "937500f4f0a3a2646c8b29dede600788"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/copilot_service.py": {
+    "mtime": 1780123226.8813179,
+    "ast_hash": "f83679460584ed321f236cdd9ca3fcb7",
+    "semantic_hash": "f83679460584ed321f236cdd9ca3fcb7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/ri_planner_service.py": {
+    "mtime": 1779349711.976233,
+    "ast_hash": "252ef745b2e157ebbfdf021dd96fad63",
+    "semantic_hash": "252ef745b2e157ebbfdf021dd96fad63"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/analyzer_service.py": {
+    "mtime": 1779335645.3101673,
+    "ast_hash": "5f6138983eaa15b18a9735ae5591d2b2",
+    "semantic_hash": "5f6138983eaa15b18a9735ae5591d2b2"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/waste_scanner_service.py": {
+    "mtime": 1779349732.2973742,
+    "ast_hash": "70dd1f2b5e558afa9289c58d6cd2a13f",
+    "semantic_hash": "70dd1f2b5e558afa9289c58d6cd2a13f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/cost_allocation_service.py": {
+    "mtime": 1779349746.2134712,
+    "ast_hash": "a69a68116b2ef4a5dbf33cdb183848a7",
+    "semantic_hash": "a69a68116b2ef4a5dbf33cdb183848a7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/alert_service.py": {
+    "mtime": 1779335629.5349739,
+    "ast_hash": "60b81e47569ac21ef7da89ce51a872fa",
+    "semantic_hash": "60b81e47569ac21ef7da89ce51a872fa"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/services/carbon_service.py": {
+    "mtime": 1779349785.5127468,
+    "ast_hash": "a241a3eabfd0cebb78f1a7d5564463c7",
+    "semantic_hash": "a241a3eabfd0cebb78f1a7d5564463c7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/__init__.py": {
+    "mtime": 1779349592.4384167,
+    "ast_hash": "83f85ddff67320e26ff009c32cf91a59",
+    "semantic_hash": "83f85ddff67320e26ff009c32cf91a59"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/ri_plan.py": {
+    "mtime": 1779349547.9041195,
+    "ast_hash": "0140304ec30fa564a007a6fc0f01af23",
+    "semantic_hash": "0140304ec30fa564a007a6fc0f01af23"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/spot_strategy.py": {
+    "mtime": 1779349577.1903145,
+    "ast_hash": "a9ac7706e8a81a620e28d16bb2b0fcc0",
+    "semantic_hash": "a9ac7706e8a81a620e28d16bb2b0fcc0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/carbon_record.py": {
+    "mtime": 1779349585.5613706,
+    "ast_hash": "112d6b9e3572114025bb8e2156dcd5e5",
+    "semantic_hash": "112d6b9e3572114025bb8e2156dcd5e5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/container_cost.py": {
+    "mtime": 1779349562.0312133,
+    "ast_hash": "32bed65d8a32922534a7b9989c26422c",
+    "semantic_hash": "32bed65d8a32922534a7b9989c26422c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/base.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "6fbdbd7a1b1fbb8a6ce2ecf6f38450ff",
+    "semantic_hash": "6fbdbd7a1b1fbb8a6ce2ecf6f38450ff"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/saas_subscription.py": {
+    "mtime": 1779349569.6642642,
+    "ast_hash": "793045f0a017b00628c798c16a9b5b37",
+    "semantic_hash": "793045f0a017b00628c798c16a9b5b37"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/recommendation.py": {
+    "mtime": 1779334656.9441943,
+    "ast_hash": "780bef4667254ea15957b804c1edf359",
+    "semantic_hash": "780bef4667254ea15957b804c1edf359"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/billing_record.py": {
+    "mtime": 1779334640.1007946,
+    "ast_hash": "628efb67c0c2ec49a08defdd9f102aca",
+    "semantic_hash": "628efb67c0c2ec49a08defdd9f102aca"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/tag_allocation.py": {
+    "mtime": 1779349553.865159,
+    "ast_hash": "96f8315cc7a9d926631ee4ee9aa9bad6",
+    "semantic_hash": "96f8315cc7a9d926631ee4ee9aa9bad6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/copilot_message.py": {
+    "mtime": 1779335597.6205795,
+    "ast_hash": "478cc971d4b95c9d3240e2430c4b57ba",
+    "semantic_hash": "478cc971d4b95c9d3240e2430c4b57ba"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/cost_alert.py": {
+    "mtime": 1779334650.5580435,
+    "ast_hash": "16c1b435c701a61674a9b9b3cd708690",
+    "semantic_hash": "16c1b435c701a61674a9b9b3cd708690"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/budget.py": {
+    "mtime": 1779334645.1699157,
+    "ast_hash": "263760211e1d44730c52a89ab6123a10",
+    "semantic_hash": "263760211e1d44730c52a89ab6123a10"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/waste_item.py": {
+    "mtime": 1779334662.483324,
+    "ast_hash": "6a6a32fa3fb8748e34cd9f17a3e2ebfa",
+    "semantic_hash": "6a6a32fa3fb8748e34cd9f17a3e2ebfa"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/models/cloud_account.py": {
+    "mtime": 1779334633.2456295,
+    "ast_hash": "a08708c1bcaedd19fd62d4e112df5623",
+    "semantic_hash": "a08708c1bcaedd19fd62d4e112df5623"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/utils/__init__.py": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/ri_plan.py": {
+    "mtime": 1779349602.4604843,
+    "ast_hash": "4def0de2611dd853e99809cb135fbc9d",
+    "semantic_hash": "4def0de2611dd853e99809cb135fbc9d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/spot_strategy.py": {
+    "mtime": 1779349632.1776853,
+    "ast_hash": "e10763b0900b0408dfa950ebc87c344e",
+    "semantic_hash": "e10763b0900b0408dfa950ebc87c344e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/carbon_record.py": {
+    "mtime": 1779349638.1167257,
+    "ast_hash": "920ddc7c57b335d53ffe77700ee6d5ee",
+    "semantic_hash": "920ddc7c57b335d53ffe77700ee6d5ee"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/container_cost.py": {
+    "mtime": 1779349617.3315847,
+    "ast_hash": "f5d15f5898befcf7078d1f07185702ac",
+    "semantic_hash": "f5d15f5898befcf7078d1f07185702ac"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/copilot.py": {
+    "mtime": 1779335610.155735,
+    "ast_hash": "79b247880b07efd935ba254c18a6bec4",
+    "semantic_hash": "79b247880b07efd935ba254c18a6bec4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/saas_subscription.py": {
+    "mtime": 1779349626.1636443,
+    "ast_hash": "c4a5cef3f5e69c1f0609463818e2726f",
+    "semantic_hash": "c4a5cef3f5e69c1f0609463818e2726f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/recommendation.py": {
+    "mtime": 1779334701.543218,
+    "ast_hash": "55f6f3f3c1a93cf65116ac4a1017ed3e",
+    "semantic_hash": "55f6f3f3c1a93cf65116ac4a1017ed3e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/billing_record.py": {
+    "mtime": 1779334686.7238832,
+    "ast_hash": "6dde2cccf0ebd013b74ac77ac7b9a4f4",
+    "semantic_hash": "6dde2cccf0ebd013b74ac77ac7b9a4f4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/tag_allocation.py": {
+    "mtime": 1779349609.1735294,
+    "ast_hash": "6436348f3f051fe9b4ca70d7882ad921",
+    "semantic_hash": "6436348f3f051fe9b4ca70d7882ad921"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/cost_alert.py": {
+    "mtime": 1779334696.8111117,
+    "ast_hash": "68d551d9f3040187fc75ee1beb3472c9",
+    "semantic_hash": "68d551d9f3040187fc75ee1beb3472c9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/budget.py": {
+    "mtime": 1779334692.7730205,
+    "ast_hash": "907a51d9af5742582894b5ca2a6c2c0c",
+    "semantic_hash": "907a51d9af5742582894b5ca2a6c2c0c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/waste_item.py": {
+    "mtime": 1779334705.9933174,
+    "ast_hash": "32b17429671f28207ab060f3645bdaed",
+    "semantic_hash": "32b17429671f28207ab060f3645bdaed"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/schemas/cloud_account.py": {
+    "mtime": 1779334681.675768,
+    "ast_hash": "076dc523d2dd313247b3e38b11fa20de",
+    "semantic_hash": "076dc523d2dd313247b3e38b11fa20de"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/tag_allocation_repo.py": {
+    "mtime": 1779349658.9168675,
+    "ast_hash": "5d4a4fbb36f0050056808a38a7dbee2a",
+    "semantic_hash": "5d4a4fbb36f0050056808a38a7dbee2a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/cloud_account_repo.py": {
+    "mtime": 1779334710.0464077,
+    "ast_hash": "2484e5dec0c6e27bcdbe01e072ac7c37",
+    "semantic_hash": "2484e5dec0c6e27bcdbe01e072ac7c37"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/waste_item_repo.py": {
+    "mtime": 1779334742.8761246,
+    "ast_hash": "c8d8aa0dbf052c43527268ca03485835",
+    "semantic_hash": "c8d8aa0dbf052c43527268ca03485835"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/saas_repo.py": {
+    "mtime": 1779349677.3079937,
+    "ast_hash": "d25abe1e8d4467635dc0a0bd0757d526",
+    "semantic_hash": "d25abe1e8d4467635dc0a0bd0757d526"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/recommendation_repo.py": {
+    "mtime": 1779334737.595011,
+    "ast_hash": "5faf3ec7d05746d22a3527723a907307",
+    "semantic_hash": "5faf3ec7d05746d22a3527723a907307"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/carbon_repo.py": {
+    "mtime": 1779349691.9940948,
+    "ast_hash": "cc0c992b29888240df6c875049601f6e",
+    "semantic_hash": "cc0c992b29888240df6c875049601f6e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/spot_strategy_repo.py": {
+    "mtime": 1779349683.3210351,
+    "ast_hash": "6d9d4d905f2209f2b944466907698c1e",
+    "semantic_hash": "6d9d4d905f2209f2b944466907698c1e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/cost_alert_repo.py": {
+    "mtime": 1779334731.6098814,
+    "ast_hash": "679d89b6f726dc5fb3aa80c703bd2f54",
+    "semantic_hash": "679d89b6f726dc5fb3aa80c703bd2f54"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/ri_plan_repo.py": {
+    "mtime": 1779349645.7247775,
+    "ast_hash": "61022d17cdfec365bbc1b128f6d943a6",
+    "semantic_hash": "61022d17cdfec365bbc1b128f6d943a6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/copilot_repo.py": {
+    "mtime": 1779335616.21481,
+    "ast_hash": "7c01b8ebddbd7695be88c36aa5945639",
+    "semantic_hash": "7c01b8ebddbd7695be88c36aa5945639"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/container_cost_repo.py": {
+    "mtime": 1779349666.7989216,
+    "ast_hash": "1fbcee8e6835625001b6b96eb067dea3",
+    "semantic_hash": "1fbcee8e6835625001b6b96eb067dea3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/base_repo.py": {
+    "mtime": 1779334628.1235056,
+    "ast_hash": "123b59027711cdbe1c1bbe75a9f4a1d7",
+    "semantic_hash": "123b59027711cdbe1c1bbe75a9f4a1d7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/billing_record_repo.py": {
+    "mtime": 1779334721.4076586,
+    "ast_hash": "ebcaaa7380dd3ad59aad0079fe1a4292",
+    "semantic_hash": "ebcaaa7380dd3ad59aad0079fe1a4292"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/app/repositories/budget_repo.py": {
+    "mtime": 1779334725.086739,
+    "ast_hash": "29555f764bb5965acc02ab18e0c91405",
+    "semantic_hash": "29555f764bb5965acc02ab18e0c91405"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/__init__.py": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/env.py": {
+    "mtime": 1779334677.318668,
+    "ast_hash": "7dcfb23e09d16d33d5b222102f3ac91c",
+    "semantic_hash": "7dcfb23e09d16d33d5b222102f3ac91c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/versions/fe9b0e1b7424_initial_domain_models.py": {
+    "mtime": 1779335094.6115916,
+    "ast_hash": "ad2548cd665cac48a49cbfcafe813c79",
+    "semantic_hash": "ad2548cd665cac48a49cbfcafe813c79"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/versions/a908b6f84839_add_copilot_messages.py": {
+    "mtime": 1779335774.173242,
+    "ast_hash": "144d366bde35893d53be339eb0209f4e",
+    "semantic_hash": "144d366bde35893d53be339eb0209f4e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/alembic/versions/84c1da7d71a3_p1_p2_features.py": {
+    "mtime": 1779349916.325678,
+    "ast_hash": "810141c59f8708326a35992c4aa846b1",
+    "semantic_hash": "810141c59f8708326a35992c4aa846b1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/meta.json": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "68009773a716fba6b29af38b0a48c430",
+    "semantic_hash": "68009773a716fba6b29af38b0a48c430"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.claude/settings.local.json": {
+    "mtime": 1780273794.8508413,
+    "ast_hash": "756ae11c9af6fd3ffb21d4fc7e9a70ba",
+    "semantic_hash": "756ae11c9af6fd3ffb21d4fc7e9a70ba"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PRODUCT-SPEC.md": {
+    "mtime": 1780246976.4658875,
+    "ast_hash": "8458ca53f9b17fce02583e2a9c262ff8",
+    "semantic_hash": "8458ca53f9b17fce02583e2a9c262ff8"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docker-compose.yml": {
+    "mtime": 1780211791.0382638,
+    "ast_hash": "dbe9daddd94fc4d672a321a9cd49811d",
+    "semantic_hash": "dbe9daddd94fc4d672a321a9cd49811d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PATCHES.md": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "991733c05665246cf2093b4e5727a8f8",
+    "semantic_hash": "991733c05665246cf2093b4e5727a8f8"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/RUN.md": {
+    "mtime": 1779358297.25675,
+    "ast_hash": "8024c388d2207b24b859b382b99c352a",
+    "semantic_hash": "8024c388d2207b24b859b382b99c352a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/agent_v2.md": {
+    "mtime": 1780210155.3103914,
+    "ast_hash": "efc2a90817c95735a9a9ffe56fcc19df",
+    "semantic_hash": "efc2a90817c95735a9a9ffe56fcc19df"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PLAN-v1.2.md": {
+    "mtime": 1779351721.2796574,
+    "ast_hash": "177c37bb61a246cd1e7e6a6161b0c740",
+    "semantic_hash": "177c37bb61a246cd1e7e6a6161b0c740"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/TEAM-ONBOARDING-GUIDE.md": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "dbd8f5d3dafd8e6c8eb668ffa3e748be",
+    "semantic_hash": "dbd8f5d3dafd8e6c8eb668ffa3e748be"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/AGENT-PROMPTS.md": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "575029013c93c0caddbb2c5fdcacda8b",
+    "semantic_hash": "575029013c93c0caddbb2c5fdcacda8b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.aider.chat.history.md": {
+    "mtime": 1780209217.284683,
+    "ast_hash": "69a8deeb8fd0f0aeb35007920975f986",
+    "semantic_hash": "69a8deeb8fd0f0aeb35007920975f986"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PLAN-v1.4.md": {
+    "mtime": 1780244079.4207108,
+    "ast_hash": "4748f27e59346efb5ecf8e5121aba641",
+    "semantic_hash": "4748f27e59346efb5ecf8e5121aba641"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/REVISED-PRD.md": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "e0c6b700b2e8639e25ec4806a2535d82",
+    "semantic_hash": "e0c6b700b2e8639e25ec4806a2535d82"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/AGENTS.md": {
+    "mtime": 1780210082.7463763,
+    "ast_hash": "130cf98923c166a9376712ab3a9d6017",
+    "semantic_hash": "130cf98923c166a9376712ab3a9d6017"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/CLAUDE.md": {
+    "mtime": 1779334190.7703454,
+    "ast_hash": "1a945b27d1d638f799bdd664faafd118",
+    "semantic_hash": "1a945b27d1d638f799bdd664faafd118"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/PATCH-2026-05-15-shared-hub-postgres.md": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "9ca6f76d54df4d000849af7a3fcb54eb",
+    "semantic_hash": "9ca6f76d54df4d000849af7a3fcb54eb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/README.md": {
+    "mtime": 1780246881.419073,
+    "ast_hash": "7e6b30ca716803509eb41b34d8260a79",
+    "semantic_hash": "7e6b30ca716803509eb41b34d8260a79"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/SCALING-PLAYBOOK.md": {
+    "mtime": 1779331209.3460891,
+    "ast_hash": "a0c71a78655fd06053a1109e3d85ebca",
+    "semantic_hash": "a0c71a78655fd06053a1109e3d85ebca"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/README.txt": {
+    "mtime": 1779515934.6778026,
+    "ast_hash": "2b13c79d37d6ed82a3255b83b6815034",
+    "semantic_hash": "2b13c79d37d6ed82a3255b83b6815034"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/index.prerender-fallback.html": {
+    "mtime": 1779516118.8550599,
+    "ast_hash": "105d6c9d5c3fdb55d26dcc553b67826d",
+    "semantic_hash": "105d6c9d5c3fdb55d26dcc553b67826d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/waste.prerender-fallback.html": {
+    "mtime": 1779516118.9260626,
+    "ast_hash": "06b0e6d27bde79c9cc902cd0c1994879",
+    "semantic_hash": "06b0e6d27bde79c9cc902cd0c1994879"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cost-allocation.prerender-fallback.html": {
+    "mtime": 1779516119.010066,
+    "ast_hash": "52e753b6fa5b30015eb3b3c7767ae69e",
+    "semantic_hash": "52e753b6fa5b30015eb3b3c7767ae69e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/ri-planner.prerender-fallback.html": {
+    "mtime": 1779516118.8910613,
+    "ast_hash": "c01316d7fefef58eaa1ef816b2b06231",
+    "semantic_hash": "c01316d7fefef58eaa1ef816b2b06231"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/budgets.prerender-fallback.html": {
+    "mtime": 1779516118.886061,
+    "ast_hash": "83fb597fe90ecd7f6339fac90fff32fc",
+    "semantic_hash": "83fb597fe90ecd7f6339fac90fff32fc"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/spot-strategy.prerender-fallback.html": {
+    "mtime": 1779516118.8940613,
+    "ast_hash": "fed0e15e075edce5ec6d3bc01bd07feb",
+    "semantic_hash": "fed0e15e075edce5ec6d3bc01bd07feb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/copilot.prerender-fallback.html": {
+    "mtime": 1779516119.008066,
+    "ast_hash": "cc332d906f083d648c429b0b50b0fe58",
+    "semantic_hash": "cc332d906f083d648c429b0b50b0fe58"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/dashboard.prerender-fallback.html": {
+    "mtime": 1779516118.8530598,
+    "ast_hash": "e681b5a22476ee4517fd8901381883ed",
+    "semantic_hash": "e681b5a22476ee4517fd8901381883ed"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/reports.prerender-fallback.html": {
+    "mtime": 1779516118.8760607,
+    "ast_hash": "9899f9914f556eaec92a3146274caeb5",
+    "semantic_hash": "9899f9914f556eaec92a3146274caeb5"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/carbon.prerender-fallback.html": {
+    "mtime": 1779516119.0060658,
+    "ast_hash": "de71fa12cdc2cde3d3e8b025209156ef",
+    "semantic_hash": "de71fa12cdc2cde3d3e8b025209156ef"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/saas.prerender-fallback.html": {
+    "mtime": 1779516118.886061,
+    "ast_hash": "c9f57d371ccecf494d5343d038fe6f36",
+    "semantic_hash": "c9f57d371ccecf494d5343d038fe6f36"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/container-costs.prerender-fallback.html": {
+    "mtime": 1779516119.0290666,
+    "ast_hash": "ec19af4267d88ec5e979c50a3c501d7d",
+    "semantic_hash": "ec19af4267d88ec5e979c50a3c501d7d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/cloud-accounts.prerender-fallback.html": {
+    "mtime": 1779516119.0200663,
+    "ast_hash": "06370c34d878d5e271efc60934183243",
+    "semantic_hash": "06370c34d878d5e271efc60934183243"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/billing.prerender-fallback.html": {
+    "mtime": 1779516118.8420594,
+    "ast_hash": "3ff851033e46a2859193d06d60d43547",
+    "semantic_hash": "3ff851033e46a2859193d06d60d43547"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/functions/recommendations.prerender-fallback.html": {
+    "mtime": 1779516118.8650603,
+    "ast_hash": "cf04cdcf2461b612311342be25205394",
+    "semantic_hash": "cf04cdcf2461b612311342be25205394"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/500.html": {
+    "mtime": 1779516118.9550638,
+    "ast_hash": "95149ba31d9e32247fa2d55c4ae5a723",
+    "semantic_hash": "95149ba31d9e32247fa2d55c4ae5a723"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/404.html": {
+    "mtime": 1779516119.0720685,
+    "ast_hash": "38560e2f541fe91202dc3b3db98b64f0",
+    "semantic_hash": "38560e2f541fe91202dc3b3db98b64f0"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/web/.vercel/output/static/_next/static/not-found.txt": {
+    "mtime": 1779516122.0691864,
+    "ast_hash": "9d1ead73e678fa2f51a70a933b0bf017",
+    "semantic_hash": "9d1ead73e678fa2f51a70a933b0bf017"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/testforge-dclaw-cost.md": {
+    "mtime": 1780232954.1853437,
+    "ast_hash": "b1ea38177f61db21a383672b3efaf287",
+    "semantic_hash": "b1ea38177f61db21a383672b3efaf287"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/test_analysis.md": {
+    "mtime": 1780243773.3465781,
+    "ast_hash": "b52ceb3d3b1515d38d790d13c46ea8cd",
+    "semantic_hash": "b52ceb3d3b1515d38d790d13c46ea8cd"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/ci.yml": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "18675c093b7986a8092e68e8bde846e1",
+    "semantic_hash": "18675c093b7986a8092e68e8bde846e1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/claude-code-review.yml": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "5079400de856707524c884e89e366799",
+    "semantic_hash": "5079400de856707524c884e89e366799"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/build-frontend.yml": {
+    "mtime": 1780123188.4952843,
+    "ast_hash": "7e14b22c77dc55a9e2c9e8e6e85ed60c",
+    "semantic_hash": "7e14b22c77dc55a9e2c9e8e6e85ed60c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/build-backend.yml": {
+    "mtime": 1780123184.4661758,
+    "ast_hash": "9d4656e84e850d0d7791470c4ed23b2c",
+    "semantic_hash": "9d4656e84e850d0d7791470c4ed23b2c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/claude.yml": {
+    "mtime": 1779331209.345089,
+    "ast_hash": "995b9db52dace3af043903f678a61551",
+    "semantic_hash": "995b9db52dace3af043903f678a61551"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/.github/workflows/deploy.yml": {
+    "mtime": 1780123194.9604583,
+    "ast_hash": "eb2410ed5edd5bcc69d798aee897706a",
+    "semantic_hash": "eb2410ed5edd5bcc69d798aee897706a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/slides/deck-content.md": {
+    "mtime": 1780247673.4663565,
+    "ast_hash": "7238a42933bee4584fe8a15b9dcc870d",
+    "semantic_hash": "7238a42933bee4584fe8a15b9dcc870d"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/slides/dclaw-cost-deck.html": {
+    "mtime": 1780247682.4766278,
+    "ast_hash": "1e7af48f9bc98837ebbfbe83d0b94eee",
+    "semantic_hash": "1e7af48f9bc98837ebbfbe83d0b94eee"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/backend/requirements.txt": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "973cb52b26fd448774f049c60feac28f",
+    "semantic_hash": "973cb52b26fd448774f049c60feac28f"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/README.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "331175e6d829c9bb6ae3e61abf8baea1",
+    "semantic_hash": "331175e6d829c9bb6ae3e61abf8baea1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/stack.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "d266c5176d35b210e50acfdcd2503858",
+    "semantic_hash": "d266c5176d35b210e50acfdcd2503858"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/api.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "9106464a8e7594ad49c69fcf051f568a",
+    "semantic_hash": "9106464a8e7594ad49c69fcf051f568a"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/architecture.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "54303e6e90e7c7cef6c88caebafee11c",
+    "semantic_hash": "54303e6e90e7c7cef6c88caebafee11c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/reference/index.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "eeec5fdac54f63cb20fa4dfe1580e9eb",
+    "semantic_hash": "eeec5fdac54f63cb20fa4dfe1580e9eb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/troubleshooting/common-issues.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "41d895f7ef5aff0954f18a49ec222183",
+    "semantic_hash": "41d895f7ef5aff0954f18a49ec222183"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/troubleshooting/faq.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "a47f06725596173d95c33a17ddb034a6",
+    "semantic_hash": "a47f06725596173d95c33a17ddb034a6"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/troubleshooting/index.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "bfc117c04acc8660cc89fe95901d607e",
+    "semantic_hash": "bfc117c04acc8660cc89fe95901d607e"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/releases/changelog.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "a40f4eb48f38d4b6097071645a35a4dc",
+    "semantic_hash": "a40f4eb48f38d4b6097071645a35a4dc"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/releases/roadmap.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "2177d911629a959b0f962cb5fa9acdd7",
+    "semantic_hash": "2177d911629a959b0f962cb5fa9acdd7"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/releases/index.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "8dbf405e5a8aed98c222abaee449ec93",
+    "semantic_hash": "8dbf405e5a8aed98c222abaee449ec93"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/quickstart.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "ad007335d2fc6bc0238270435f3db288",
+    "semantic_hash": "ad007335d2fc6bc0238270435f3db288"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/configuration.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "2055f91a8dc8e0c7474ad00ef18854c4",
+    "semantic_hash": "2055f91a8dc8e0c7474ad00ef18854c4"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/installation.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "edcdfcaddc4fb6826dad8d38665ffcca",
+    "semantic_hash": "edcdfcaddc4fb6826dad8d38665ffcca"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/getting-started/index.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "73603aa3d0f512ca49505c0f2cec4521",
+    "semantic_hash": "73603aa3d0f512ca49505c0f2cec4521"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/guides/best-practices.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "f1fef7472c1340b058b3708c20101218",
+    "semantic_hash": "f1fef7472c1340b058b3708c20101218"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/guides/use-cases.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "fb596d797d3d57d39466624af0ee63d3",
+    "semantic_hash": "fb596d797d3d57d39466624af0ee63d3"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/docs/guides/index.md": {
+    "mtime": 1779331209.347089,
+    "ast_hash": "b938de0a691ed5ba477ce42060d841bd",
+    "semantic_hash": "b938de0a691ed5ba477ce42060d841bd"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/Infographics/dclaw-cost-infograph.html": {
+    "mtime": 1780247664.4850852,
+    "ast_hash": "14f4f42ae59c4d13312bb08937cfdd77",
+    "semantic_hash": "14f4f42ae59c4d13312bb08937cfdd77"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/Infographics/architecture-diagram.md": {
+    "mtime": 1780247040.2511773,
+    "ast_hash": "82af14e9e4165861ed320b6b390a46f1",
+    "semantic_hash": "82af14e9e4165861ed320b6b390a46f1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/obsidian/Cost-v1.4-Roadmap.md": {
+    "mtime": 1780272537.458342,
+    "ast_hash": "fd428b77a89f121615b5df6f259b2a51",
+    "semantic_hash": "fd428b77a89f121615b5df6f259b2a51"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/obsidian/Cost-TestForge-2026-05-31.md": {
+    "mtime": 1780272537.4633422,
+    "ast_hash": "f78c28f045a3f7fb55e4c98548dce577",
+    "semantic_hash": "f78c28f045a3f7fb55e4c98548dce577"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/obsidian/Cost-Architecture.md": {
+    "mtime": 1780272537.453342,
+    "ast_hash": "a65897eefb5ddb9caff35c9d5ac34d86",
+    "semantic_hash": "a65897eefb5ddb9caff35c9d5ac34d86"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/Chart.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "24a08082349631a72022357716d24cd1",
+    "semantic_hash": "24a08082349631a72022357716d24cd1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/values.yaml": {
+    "mtime": 1780123200.1285975,
+    "ast_hash": "b27de2b0b27c49e4568d350d189d2378",
+    "semantic_hash": "b27de2b0b27c49e4568d350d189d2378"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/NOTES.txt": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "0d8c686e4a08a665267d3d8fe03707c9",
+    "semantic_hash": "0d8c686e4a08a665267d3d8fe03707c9"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/ingress.yaml": {
+    "mtime": 1780123178.721021,
+    "ast_hash": "79ee07834d62d7a4228897971e46bbcb",
+    "semantic_hash": "79ee07834d62d7a4228897971e46bbcb"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/cloudnativepg.yaml": {
+    "mtime": 1780123180.3740656,
+    "ast_hash": "09998eaf534f5670f0f8d0ab5d548ccc",
+    "semantic_hash": "09998eaf534f5670f0f8d0ab5d548ccc"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/service.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "3c871e3de514581590418a3fc6aa7067",
+    "semantic_hash": "3c871e3de514581590418a3fc6aa7067"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/templates/deployment.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "d9e04cbcdbe7f1a0483040f90d4c07ae",
+    "semantic_hash": "d9e04cbcdbe7f1a0483040f90d4c07ae"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/Chart.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "e53519271db9272f160341e59ccb47aa",
+    "semantic_hash": "e53519271db9272f160341e59ccb47aa"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/values.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "540cffce58e7f5c4f6cf1d5c8d67663c",
+    "semantic_hash": "540cffce58e7f5c4f6cf1d5c8d67663c"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/templates/serviceaccount.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "09b17cd87efcf61c8a5b7019aa333fa1",
+    "semantic_hash": "09b17cd87efcf61c8a5b7019aa333fa1"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/templates/ingress.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "d7cbc3c363389dac095ee979d31a8999",
+    "semantic_hash": "d7cbc3c363389dac095ee979d31a8999"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/templates/service.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "79f58d5ebfc4a1563792d58fc74257af",
+    "semantic_hash": "79f58d5ebfc4a1563792d58fc74257af"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/helm/dclaw-cost/templates/deployment.yaml": {
+    "mtime": 1779331209.3490891,
+    "ast_hash": "a41c9a83027239abe70d4aeed5d4d01b",
+    "semantic_hash": "a41c9a83027239abe70d4aeed5d4d01b"
+  },
+  "/home/chandraja/AI_white_noise/dclaw/dclaw-cost/testforge/TestForge MCP \u2014 Local Analysis.pdf": {
+    "mtime": 1780232965.4973917,
+    "ast_hash": "0317836215162f7bc1c11a408a09fd12",
+    "semantic_hash": "0317836215162f7bc1c11a408a09fd12"
+  }
 }
