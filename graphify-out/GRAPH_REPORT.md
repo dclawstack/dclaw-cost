@@ -1,180 +1,223 @@
-# Graph Report - /home/chandraja/AI_white_noise/dclaw/dclaw-cost  (2026-05-21)
+# Graph Report - /home/chandraja/AI_white_noise/dclaw/dclaw-cost  (2026-06-01)
 
 ## Corpus Check
-- Corpus is ~17,184 words - fits in a single context window. You may not need a graph.
+- Corpus is ~42,800 words - graph traversal recommended for large-scale queries.
 
 ## Summary
-- 257 nodes · 233 edges · 62 communities (35 shown, 27 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.86)
-- Token cost: 38,453 input · 6,977 output
+- 412 nodes · 387 edges · 74 communities (52 shown, 22 thin omitted)
+- Extraction: 91% EXTRACTED · 8% INFERRED · 1% AMBIGUOUS · INFERRED: 32 edges (avg confidence: 0.87)
+- Token cost: 61,240 input · 11,820 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Pre-built UI Component Library|Pre-built UI Component Library]]
-- [[_COMMUNITY_Frontend Dependencies|Frontend Dependencies]]
-- [[_COMMUNITY_TypeScript Compiler Config|TypeScript Compiler Config]]
 - [[_COMMUNITY_FastAPI App Core & Routing|FastAPI App Core & Routing]]
 - [[_COMMUNITY_SQLAlchemy ORM Foundation|SQLAlchemy ORM Foundation]]
-- [[_COMMUNITY_Docs & Backend Requirements|Docs & Backend Requirements]]
-- [[_COMMUNITY_Frontend UI Exports|Frontend UI Exports]]
-- [[_COMMUNITY_Dashboard & API Client|Dashboard & API Client]]
-- [[_COMMUNITY_Cost Reporting API|Cost Reporting API]]
-- [[_COMMUNITY_Table Component|Table Component]]
-- [[_COMMUNITY_Guides, Releases & Roadmap|Guides, Releases & Roadmap]]
-- [[_COMMUNITY_Alembic Migration Runner|Alembic Migration Runner]]
-- [[_COMMUNITY_App Configuration|App Configuration]]
-- [[_COMMUNITY_Helm Deployment Templates|Helm Deployment Templates]]
-- [[_COMMUNITY_Documentation Metadata|Documentation Metadata]]
-- [[_COMMUNITY_Next.js App Shell|Next.js App Shell]]
-- [[_COMMUNITY_Root Layout & Fonts|Root Layout & Fonts]]
-- [[_COMMUNITY_Helm Service & Ingress|Helm Service & Ingress]]
-- [[_COMMUNITY_Input Form Component|Input Form Component]]
-- [[_COMMUNITY_Core Utilities (utc_now)|Core Utilities (utc_now)]]
 - [[_COMMUNITY_Base ORM & Repository|Base ORM & Repository]]
-- [[_COMMUNITY_Claude Code Config|Claude Code Config]]
-- [[_COMMUNITY_Helm Chart Base|Helm Chart Base]]
-- [[_COMMUNITY_Frontend API Bindings|Frontend API Bindings]]
-- [[_COMMUNITY_Next.js Config|Next.js Config]]
-- [[_COMMUNITY_PostCSS Config|PostCSS Config]]
-- [[_COMMUNITY_Tailwind CSS Config|Tailwind CSS Config]]
-- [[_COMMUNITY_Tailwind Config Alt|Tailwind Config Alt]]
-- [[_COMMUNITY_Cost API Router|Cost API Router]]
+- [[_COMMUNITY_App Configuration|App Configuration]]
+- [[_COMMUNITY_Core Database Module|Core Database Module]]
 - [[_COMMUNITY_FinOps CloudAccount Entity|FinOps: CloudAccount Entity]]
 - [[_COMMUNITY_FinOps BillingRecord Entity|FinOps: BillingRecord Entity]]
 - [[_COMMUNITY_FinOps Budget Entity|FinOps: Budget Entity]]
 - [[_COMMUNITY_FinOps CostAlert Entity|FinOps: CostAlert Entity]]
 - [[_COMMUNITY_FinOps ResourceRecommendation|FinOps: ResourceRecommendation]]
 - [[_COMMUNITY_FinOps WasteItem Entity|FinOps: WasteItem Entity]]
+- [[_COMMUNITY_FinOps RIPlan Entity|FinOps: RIPlan Entity]]
+- [[_COMMUNITY_FinOps TagAllocation Entity|FinOps: TagAllocation Entity]]
+- [[_COMMUNITY_FinOps ContainerCost Entity|FinOps: ContainerCost Entity]]
+- [[_COMMUNITY_FinOps SaasSubscription Entity|FinOps: SaasSubscription Entity]]
+- [[_COMMUNITY_FinOps SpotStrategy Entity|FinOps: SpotStrategy Entity]]
+- [[_COMMUNITY_FinOps CarbonRecord Entity|FinOps: CarbonRecord Entity]]
 - [[_COMMUNITY_AI Cost Copilot|AI Cost Copilot]]
+- [[_COMMUNITY_Copilot Service & Streaming|Copilot Service & Streaming]]
+- [[_COMMUNITY_Alert Service|Alert Service]]
+- [[_COMMUNITY_Analyzer Service|Analyzer Service]]
+- [[_COMMUNITY_Waste Scanner Service|Waste Scanner Service]]
+- [[_COMMUNITY_RI Planner Service|RI Planner Service]]
+- [[_COMMUNITY_Cost Allocation Service|Cost Allocation Service]]
+- [[_COMMUNITY_Spot Strategy Service|Spot Strategy Service]]
+- [[_COMMUNITY_Carbon Service|Carbon Service]]
+- [[_COMMUNITY_Frontend Landing Page|Frontend: Landing Page]]
+- [[_COMMUNITY_Frontend App Shell|Frontend: App Shell]]
+- [[_COMMUNITY_Frontend API Client|Frontend: API Client]]
+- [[_COMMUNITY_Frontend Dashboard|Frontend: Dashboard]]
+- [[_COMMUNITY_Frontend Copilot Widget|Frontend: Copilot Widget]]
+- [[_COMMUNITY_Frontend Sidebar|Frontend: Sidebar]]
+- [[_COMMUNITY_Pre-built UI Components|Pre-built UI Components]]
+- [[_COMMUNITY_TypeScript Compiler Config|TypeScript Compiler Config]]
+- [[_COMMUNITY_Frontend Dependencies|Frontend Dependencies]]
 - [[_COMMUNITY_Docker Postgres Service|Docker: Postgres Service]]
 - [[_COMMUNITY_Docker Backend Service|Docker: Backend Service]]
 - [[_COMMUNITY_Docker Frontend Service|Docker: Frontend Service]]
-- [[_COMMUNITY_CICD - Claude Workflow|CI/CD - Claude Workflow]]
-- [[_COMMUNITY_Docs README|Docs README]]
-- [[_COMMUNITY_Getting Started Install|Getting Started: Install]]
-- [[_COMMUNITY_Getting Started Index|Getting Started: Index]]
-- [[_COMMUNITY_Helm Chart Metadata|Helm Chart Metadata]]
-- [[_COMMUNITY_Helm Notes|Helm Notes]]
-- [[_COMMUNITY_Helm Cost Chart|Helm Cost Chart]]
+- [[_COMMUNITY_CICD CI Workflow|CI/CD: CI Workflow]]
+- [[_COMMUNITY_CICD Build Backend|CI/CD: Build Backend]]
+- [[_COMMUNITY_CICD Build Frontend|CI/CD: Build Frontend]]
+- [[_COMMUNITY_CICD Deploy Workflow|CI/CD: Deploy Workflow]]
+- [[_COMMUNITY_CICD Claude Workflow|CI/CD: Claude Workflow]]
+- [[_COMMUNITY_Alembic Migration Runner|Alembic Migration Runner]]
+- [[_COMMUNITY_Helm Chart Base|Helm Chart Base]]
+- [[_COMMUNITY_Helm Service & Ingress|Helm Service & Ingress]]
+- [[_COMMUNITY_Helm CloudNativePG|Helm: CloudNativePG]]
+- [[_COMMUNITY_Docs Getting Started|Docs: Getting Started]]
+- [[_COMMUNITY_Docs Reference|Docs: Reference]]
+- [[_COMMUNITY_Docs Guides & Releases|Docs: Guides & Releases]]
+- [[_COMMUNITY_Product Docs|Product Docs]]
+- [[_COMMUNITY_TestForge Analysis|TestForge Analysis]]
+- [[_COMMUNITY_Infographics & Slides|Infographics & Slides]]
+- [[_COMMUNITY_Next.js Config|Next.js Config]]
+- [[_COMMUNITY_Tailwind CSS Config|Tailwind CSS Config]]
+- [[_COMMUNITY_PostCSS Config|PostCSS Config]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 15 edges
-2. `cn()` - 15 edges
-3. `dependencies` - 12 edges
-4. `BaseRepository` - 9 edges
-5. `cn utility` - 9 edges
-6. `Core Config Module` - 6 edges
-7. `scripts` - 5 edges
-8. `devDependencies` - 5 edges
-9. `API Main Module` - 5 edges
-10. `Core Database Module` - 5 edges
+1. `CloudAccount` - 24 edges (FK target for all 9 cloud-scoped entities)
+2. `BaseRepository` - 18 edges (base class for all 13 repository files)
+3. `API Main Module` - 17 edges (registers all 17 route groups)
+4. `Core Config Module` - 14 edges (imported by all services + main)
+5. `Core Database Module` - 13 edges (get_db dependency across all 17 routers)
+6. `copilot_service.py` - 11 edges (connects DB, AI providers, streaming)
+7. `fetchJson()` - 11 edges (called by all 136 API functions in api.ts)
+8. `Base` - 10 edges (SQLAlchemy declarative base — all models inherit)
+9. `lifespan()` - 9 edges (orchestrates startup: init_db, router mounts)
+10. `CopilotWidget` - 8 edges (rendered in every app page layout)
 
 ## Surprising Connections (you probably didn't know these)
-- `cn()` --calls--> `clsx`  [INFERRED]
-  frontend/src/lib/utils.ts → frontend/package.json
-- `Core Config Module` --conceptually_related_to--> `Core Utils Module`  [INFERRED]
-  backend/app/core/config.py → backend/app/core/utils.py
-- `RootLayout` --references--> `Global Styles`  [EXTRACTED]
-  frontend/src/app/layout.tsx → frontend/src/app/globals.css
-- `Backend Requirements` --implements--> `Stack Reference`  [EXTRACTED]
-  backend/requirements.txt → docs/reference/stack.md
-- `lifespan()` --calls--> `init_db()`  [INFERRED]
-  backend/app/api/main.py → backend/app/core/database.py
+- `copilot_service.py` --calls--> `asyncio.gather`  [INFERRED]
+  build_context() parallelises 4 DB queries — single round-trip latency
+- `alert_service.py` --triggered_by--> `billing_records.py`  [EXTRACTED]
+  ingest endpoint calls alert_service after every bulk ingest
+- `LandingPage` --references--> `CopilotWidget`  [EXTRACTED]
+  web/src/app/page.tsx embeds roadmap data derived from PLAN-v1.4.md
+- `waste_scanner_service.py` --reads--> `BillingRecord`  [INFERRED]
+  waste heuristics are billing-pattern-derived, not metric-derived
+- `carbon_service.py` --embeds--> `19-region intensity table`  [EXTRACTED]
+  hardcoded gCO2eq/kWh constants — no external API dependency
+- `cost_allocation_service.py` --joins--> `TagAllocation + BillingRecord`  [EXTRACTED]
+  showback report matches tags JSON on billing_records to tag_allocations rules
 
-## Communities (62 total, 27 thin omitted)
+## Communities (74 total, 22 thin omitted)
 
-### Community 0 - "Pre-built UI Component Library"
-Cohesion: 0.07
-Nodes (27): cn(), Avatar, AvatarFallback, AvatarImage, Badge(), BadgeProps, badgeVariants, Button (+19 more)
+### Community 0 — "FastAPI App Core & Routing"
+Cohesion: 0.42
+Nodes (12): lifespan(), API Main Module, Health Routes Module, 17× v1 route modules (billing_records, budgets, carbon, cloud_accounts, container_costs, copilot, cost_alerts, cost_allocation, dashboard, recommendations, reports, ri_plans, saas, spot_strategy, waste_items, waste_scan, cost)
 
-### Community 1 - "Frontend Dependencies"
-Cohesion: 0.08
-Nodes (25): dependencies, autoprefixer, class-variance-authority, clsx, lucide-react, next, postcss, react (+17 more)
+### Community 1 — "SQLAlchemy ORM Foundation"
+Cohesion: 0.38
+Nodes (16): DeclarativeBase, Base, BaseRepository, 13× entity models (CloudAccount, BillingRecord, Budget, CostAlert, ResourceRecommendation, WasteItem, CopilotMessage, RIPlan, TagAllocation, ContainerCost, SaasSubscription, SpotStrategy, CarbonRecord)
 
-### Community 2 - "TypeScript Compiler Config"
-Cohesion: 0.11
-Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
+### Community 2 — "App Configuration"
+Cohesion: 0.50
+Nodes (5): BaseSettings, Settings, get_settings(), Core Config Module, lru_cache
 
-### Community 3 - "FastAPI App Core & Routing"
-Cohesion: 0.15
-Nodes (10): lifespan(), # TODO: Wire v1 routers here after creating them, API Main Module, Health Routes Module, Core Config Module, Core Database Module, Core Utils Module, init_db() (+2 more)
+### Community 3 — "Core Database Module"
+Cohesion: 0.55
+Nodes (4): create_async_engine, AsyncSession, get_db(), init_db()
 
-### Community 4 - "SQLAlchemy ORM Foundation"
-Cohesion: 0.18
-Nodes (6): DeclarativeBase, Base, Base class for all SQLAlchemy models.      ALL models MUST inherit from this cla, BaseRepository, Generic async CRUD repository.      Subclass per entity:         class UserRepos, Select
+### Community 4 — "AI Cost Copilot"
+Cohesion: 0.48
+Nodes (8): CopilotMessage model, copilot_repo, ChatRequest schema, CopilotMessageResponse schema, chat() endpoint, get_history() endpoint, session_id, SSE StreamingResponse
 
-### Community 5 - "Docs & Backend Requirements"
-Cohesion: 0.24
-Nodes (10): Backend Requirements, Configuration Guide, Quickstart Guide, API Reference, Architecture Reference, Reference Index, Stack Reference, Common Issues Troubleshooting (+2 more)
+### Community 5 — "Copilot Service & Streaming"
+Cohesion: 0.52
+Nodes (9): copilot_service.py, build_context(), stream_chat(), _stream_openrouter(), _stream_ollama(), asyncio.gather, httpx.AsyncClient, SYSTEM_PROMPT, OpenRouter fallback→Ollama chain
 
-### Community 6 - "Frontend UI Exports"
-Cohesion: 0.2
-Nodes (10): Avatar component, Badge component, Button component, Card component, Dialog component, Label component, Select component, Table component (+2 more)
+### Community 6 — "Alert Service"
+Cohesion: 0.44
+Nodes (6): alert_service.py, threshold alert, forecast alert, anomaly detection, 30-day rolling baseline, CostAlert
 
-### Community 7 - "Dashboard & API Client"
-Cohesion: 0.32
-Nodes (4): ApiError, CostReport, fetchJson(), getHealth()
+### Community 7 — "Analyzer Service"
+Cohesion: 0.40
+Nodes (5): analyzer_service.py, right-sizing heuristics, ResourceRecommendation, confidence scoring, 30-day billing window
 
-### Community 8 - "Cost Reporting API"
+### Community 8 — "Waste Scanner Service"
+Cohesion: 0.43
+Nodes (7): waste_scanner_service.py, idle detection, orphaned detection, unused_ip detection, unattached_volume detection, old_snapshot detection, WasteItem
+
+### Community 9 — "RI Planner Service"
 Cohesion: 0.46
-Nodes (7): BaseModel, BreakdownItem, BreakdownResponse, CostReport, create_report(), CreateReportRequest, get_breakdown()
+Nodes (8): ri_planner_service.py, 90-day billing analysis, 6 commitment variants, break-even calculation, annual savings, monthly savings, discount_pct, RIPlan
 
-### Community 9 - "Table Component"
-Cohesion: 0.29
-Nodes (6): Table, TableBody, TableCell, TableHead, TableHeader, TableRow
+### Community 10 — "Cost Allocation Service"
+Cohesion: 0.50
+Nodes (6): cost_allocation_service.py, tag→team matching, showback report, chargeback, unallocated_spend, TagAllocation
 
-### Community 10 - "Guides, Releases & Roadmap"
-Cohesion: 0.33
-Nodes (6): Best Practices Guide, Guides Index, Use Cases Guide, Changelog, Releases Index, Roadmap
+### Community 11 — "Spot Strategy Service"
+Cohesion: 0.47
+Nodes (7): spot_strategy_service.py, batch/stateless/stateful classification, interruption risk scoring, 70% discount modeling, SpotStrategy, workload_type enum, recommendation
 
-### Community 12 - "App Configuration"
-Cohesion: 0.5
-Nodes (4): BaseSettings, Config, get_settings(), Settings
+### Community 12 — "Carbon Service"
+Cohesion: 0.45
+Nodes (6): carbon_service.py, 19-region gCO2eq/kWh table, kWh estimation from billing cost, CarbonRecord, green region suggestions, greenest/dirtiest region
 
-### Community 13 - "Helm Deployment Templates"
-Cohesion: 0.4
-Nodes (5): dclaw-cost Deployment, dclaw-cost.fullname helper, dclaw-cost.labels helper, dclaw-cost.selectorLabels helper, dclaw-cost.serviceAccountName helper
+### Community 13 — "Frontend Landing Page"
+Cohesion: 0.38
+Nodes (14): LandingPage component, hero section, features grid (12 items), marquee, how-it-works, multi-cloud section, AI copilot spotlight, tech stack badges, open source CTA, roadmap section (Live + Next), footer, FadeUp animation, FeatureCard, rotatingWords
 
-### Community 14 - "Documentation Metadata"
-Cohesion: 0.4
-Nodes (4): app_id, nav, title, version
+### Community 14 — "Frontend App Shell"
+Cohesion: 0.44
+Nodes (6): RootLayout, (app) layout, Sidebar, CopilotWidget, Global Styles, Next Config
 
-### Community 15 - "Next.js App Shell"
-Cohesion: 0.5
-Nodes (4): Global Styles, RootLayout, Next Config, Home Page
+### Community 15 — "Frontend API Client"
+Cohesion: 0.51
+Nodes (8): fetchJson(), ApiError, api.ts, 136 typed API functions, 30+ TypeScript interfaces, URLSearchParams builder, SSE stream reader, CloudAccount/BillingRecord/Budget/... type exports
 
-### Community 17 - "Helm Service & Ingress"
-Cohesion: 0.5
-Nodes (4): dclaw-cost Ingress.yaml, dclaw-cost Service.yaml, dclaw-cost ServiceAccount.yaml, dclaw-cost values.yaml
+### Community 16 — "Pre-built UI Components"
+Cohesion: 0.22
+Nodes (9): Avatar, Badge, Button, Card, Dialog, Input, Label, Select, Table, Tabs
 
-### Community 18 - "Input Form Component"
-Cohesion: 0.5
-Nodes (4): cn utility, Input component, InputProps interface, React
+### Community 17 — "TypeScript Compiler Config"
+Cohesion: 0.18
+Nodes (14): compilerOptions, strict, target, lib, paths, jsx, moduleResolution, allowJs, incremental, esModuleInterop, isolatedModules, plugins, baseUrl, next-env.d.ts
 
-### Community 20 - "Base ORM & Repository"
-Cohesion: 0.67
-Nodes (3): Alembic Env Base, Base, BaseRepository
+### Community 18 — "Docker Compose Services"
+Cohesion: 0.55
+Nodes (9): postgres:16-alpine (port 5432), backend python:3.11-slim (port 8122), web node:20-alpine (port 3036), DATABASE_URL, BACKEND_URL, healthcheck backend, healthcheck frontend, postgres_data volume, service dependencies
 
-### Community 22 - "Helm Chart Base"
-Cohesion: 0.67
-Nodes (3): Helm Deployment.yaml, Helm Service.yaml, Helm values.yaml
+### Community 19 — "CI/CD Workflows"
+Cohesion: 0.40
+Nodes (11): ci.yml (pytest + frontend build), build-backend.yml (GHCR), build-frontend.yml (⚠️ BROKEN: ./frontend → fix to ./web), deploy.yml (Helm upgrade), claude.yml (AI agent), claude-code-review.yml, GHCR registry, SHA tagging, staging/production environments, kubeconfig secret, Helm --wait
 
-## Knowledge Gaps
-- **135 isolated node(s):** `# TODO: Wire v1 routers here after creating them`, `Config`, `Return a naive UTC datetime (no tzinfo).      PostgreSQL TIMESTAMP WITHOUT TIME`, `Base class for all SQLAlchemy models.      ALL models MUST inherit from this cla`, `Generic async CRUD repository.      Subclass per entity:         class UserRepos` (+130 more)
-  These have ≤1 connection - possible missing edges or undocumented components.
-- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+### Community 20 — "Alembic Migrations"
+Cohesion: 0.60
+Nodes (5): alembic.ini, env.py, script.py.mako, 3 migration versions (fe9b0e1 initial, 84c1da7 P1/P2, a908b6f copilot_messages)
+
+### Community 21 — "Helm Chart"
+Cohesion: 0.45
+Nodes (10): Chart.yaml, values.yaml, deployment.yaml, service.yaml, ingress.yaml, secrets.yaml, cloudnativepg.yaml, NOTES.txt, _helpers.tpl, dclaw-cost/Chart.yaml
+
+### Community 22 — "Product Documentation"
+Cohesion: 0.38
+Nodes (12): README.md (rewritten 2026-05-31), PRODUCT-SPEC.md (expanded to 13 entities + 136 endpoints), PLAN-v1.2.md, PLAN-v1.4.md (new), REVISED-PRD.md, AGENTS.md, CLAUDE.md, RUN.md, SCALING-PLAYBOOK.md, TEAM-ONBOARDING-GUIDE.md, PATCHES.md, PATCH-2026-05-15
+
+### Community 23 — "TestForge Analysis"
+Cohesion: 0.50
+Nodes (7): testforge-dclaw-cost.json, testforge-dclaw-cost.md, tier2.json, test_analysis.md, TestForge PDF, 12 Tier-2 synthetic tests (12/12 passed), 71/100 score
+
+### Community 24 — "Infographics & Slides"
+Cohesion: 0.55
+Nodes (6): Infographics/architecture-diagram.md (9 Mermaid diagrams), Infographics/dclaw-cost-infograph.html (OC design system, purple), slides/deck-content.md (12 slides), slides/dclaw-cost-deck.html (1280×720 HTML deck), vercel deployment at dclaw-cost.vercel.app
+
+## Knowledge Gaps (resolved since 2026-05-21)
+
+- ~~`# TODO: Wire v1 routers here after creating them`~~ — **RESOLVED**: all 17 route modules wired in `main.py`
+- ~~`frontend/` directory references~~ — **RESOLVED**: frontend moved to `web/` (commit `98e9bb1`)
+- ~~Missing P1/P2 entities~~ — **RESOLVED**: all 13 entities implemented with models, schemas, repos, services
+- ~~Missing test files for services~~ — **PENDING**: services layer still lacks test coverage (P0.5.9)
+
+## Remaining Knowledge Gaps
+
+- **`source_record_id` column** missing from `BillingRecord` and `ContainerCost` — planned in P0.5.6
+- **`user_id` FK** missing from `CopilotMessage` — planned in P0.5.4
+- **`build-frontend.yml`** references `./frontend` — broken CI, planned in P0.5.1
+- **`get_current_user` dependency** — not yet created (P0.5.2)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `Pre-built UI Component Library` to `Table Component`, `Frontend Dependencies`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
-- **Why does `clsx` connect `Frontend Dependencies` to `Pre-built UI Component Library`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **What connects `# TODO: Wire v1 routers here after creating them`, `Config`, `Return a naive UTC datetime (no tzinfo).      PostgreSQL TIMESTAMP WITHOUT TIME` to the rest of the system?**
-  _135 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Pre-built UI Component Library` be split into smaller, more focused modules?**
-  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
-- **Should `Frontend Dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `TypeScript Compiler Config` be split into smaller, more focused modules?**
-  _Cohesion score 0.11 - nodes in this community are weakly interconnected._
+- **Why does `CloudAccount` have 24 edges — what breaks if it's deleted?**
+  _It's the root FK for BillingRecord, ResourceRecommendation, WasteItem, RIPlan, ContainerCost, SpotStrategy, CarbonRecord — cascade deletes wipe all related data._
+- **What is the full call chain when a user sends a copilot message?**
+  _chat() → CopilotRepository.create() → build_context() (asyncio.gather × 4) → stream_chat() → _stream_openrouter() / _stream_ollama() → SSE token yield → CopilotRepository.create(assistant)_
+- **Which service fires automatically on billing ingest (not on-demand)?**
+  _alert_service.py — triggered inside billing_records.py ingest endpoint after every bulk POST._
+- **What is the blast radius of the broken frontend CI?**
+  _build-frontend.yml references `./frontend` which doesn't exist. build-backend.yml is correct. deploy.yml chains on both — frontend images are stale since commit `98e9bb1` (2026-05-29)._
+- **Which community has the lowest test coverage?**
+  _Services layer (communities 5–12): alert_service, analyzer_service, waste_scanner_service, ri_planner_service, cost_allocation_service, spot_strategy_service, carbon_service have zero pytest coverage. Mutation score: 32%._
